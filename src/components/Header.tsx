@@ -1,71 +1,125 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const navLinks = [
-    { href: "/", label: "Início" },
-    { href: "/a-metodologia", label: "Metodologia" },
-    { href: "/solucao-marketing", label: "Solução" },
-    { href: "/o-que-entrego", label: "Serviços" },
-    { href: "/para-quem-e", label: "Para Quem É" },
-    { href: "/sobre-o-lucas-gabriel", label: "Sobre" },
+    { href: "/#solucao", label: "Solução" },
+    { href: "/#metodologia", label: "A Metodologia" },
+    { href: "/#entrego", label: "O que entrego" },
+    { href: "/#quem", label: "Para quem é" },
+    { href: "/#sobre", label: "Sobre o Lucas Gabriel" },
   ];
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-neutral-950/80 border-b border-neutral-200 dark:border-neutral-800 transition-colors">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="w-9 h-9 rounded-lg bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white font-bold text-lg shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform">
+    <header className="sticky top-0 z-50 glass-nav transition-all">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[74px] flex items-center justify-between">
+        {/* Brand Logo */}
+        <Link href="/" className="flex items-center gap-3 group">
+          <div className="w-10 h-10 rounded-lg bg-gradient-to-tr from-[#3671FF] to-[#66AFFF] flex items-center justify-center text-white font-black text-lg shadow-lg shadow-[#4E83FF]/25 group-hover:scale-105 transition-transform duration-300">
             LG
           </div>
-          <div>
-            <span className="font-bold text-lg tracking-tight text-neutral-900 dark:text-neutral-100 group-hover:text-blue-600 transition-colors">
+          <div className="flex flex-col">
+            <span className="font-extrabold text-lg tracking-tight text-white group-hover:text-[#66AFFF] transition-colors font-sans">
               Lucas Gabriel
             </span>
-            <span className="block text-[10px] uppercase font-semibold tracking-wider text-blue-600 dark:text-blue-400">
+            <span className="text-[10px] uppercase font-bold tracking-widest text-[#4E83FF] -mt-1 font-sora">
               Aceleração de Negócios
             </span>
           </div>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-6">
+        {/* Desktop Navigation */}
+        <nav className="hidden lg:flex items-center gap-7">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-neutral-600 hover:text-blue-600 dark:text-neutral-300 dark:hover:text-blue-400 transition-colors"
+              className="text-[13px] font-medium text-neutral-300 hover:text-[#66AFFF] transition-colors duration-200 tracking-wide"
             >
               {link.label}
             </Link>
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
-          <a
+        {/* CTA Button */}
+        <div className="hidden sm:flex items-center">
+          <motion.a
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.98 }}
             href="https://wa.me/5511949845827?text=Ol%C3%A1%21%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20seu%20servi%C3%A7o"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 text-xs md:text-sm font-semibold rounded-lg bg-blue-600 hover:bg-blue-700 text-white shadow-sm transition-colors"
+            className="btn-luxo-azul !py-2.5 !px-5 !text-xs !rounded-full"
           >
             <span>Falar no WhatsApp</span>
-            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            <svg
+              className="w-3.5 h-3.5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2.2}
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
             </svg>
-          </a>
+          </motion.a>
         </div>
+
+        {/* Mobile menu button */}
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          type="button"
+          className="lg:hidden p-2 text-neutral-300 hover:text-white focus:outline-none"
+          aria-label="Abrir menu"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {mobileMenuOpen ? (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            )}
+          </svg>
+        </button>
       </div>
 
-      {/* Mobile nav pills */}
-      <div className="md:hidden border-t border-neutral-100 dark:border-neutral-900 px-4 py-2 overflow-x-auto flex gap-2 no-scrollbar">
-        {navLinks.map((link) => (
-          <Link
-            key={link.href}
-            href={link.href}
-            className="text-xs font-medium px-3 py-1.5 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 whitespace-nowrap"
-          >
-            {link.label}
-          </Link>
-        ))}
-      </div>
+      {/* Mobile Drawer */}
+      {mobileMenuOpen && (
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          className="lg:hidden bg-neutral-950/95 border-b border-neutral-800 px-5 py-4 space-y-3"
+        >
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setMobileMenuOpen(false)}
+              className="block text-sm font-medium text-neutral-200 hover:text-[#4E83FF] py-2 border-b border-neutral-900"
+            >
+              {link.label}
+            </Link>
+          ))}
+          <div className="pt-2">
+            <a
+              href="https://wa.me/5511949845827?text=Ol%C3%A1%21%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20seu%20servi%C3%A7o"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-luxo-azul w-full !py-3 !text-sm text-center"
+            >
+              Quero me aplicar
+            </a>
+          </div>
+        </motion.div>
+      )}
     </header>
   );
 }

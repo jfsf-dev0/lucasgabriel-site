@@ -1,26 +1,408 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #070707;
+  --foreground: #ffffff;
+  --accent-blue: #4E83FF;
+  --accent-blue-light: #66AFFF;
+  --accent-orange: #FF7B00;
+  --accent-orange-bright: #FF9500;
+  --surface-dark: #0E0E0E;
+  --surface-card: #151515;
+  --border-subtle: rgba(255, 255, 255, 0.09);
+  --border-blue: rgba(78, 131, 255, 0.35);
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+}
+
+.font-sora {
+  font-family: var(--font-sora), 'Sora', sans-serif;
+}
+
+/* ==========================================================================
+   BUTTONS LUXO (EXACT ELEMENTOR STYLING)
+   ========================================================================== */
+
+@keyframes lightPass {
+  0% {
+    left: -45%;
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  25% {
+    left: 140%;
+    opacity: 0;
+  }
+  100% {
+    left: 140%;
+    opacity: 0;
+  }
+}
+
+@keyframes floatingIcon {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-floating {
+  animation: floatingIcon 3s ease-in-out infinite;
+}
+
+/* Botão Luxo Azul (Principal) */
+.btn-luxo-azul {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 18px 36px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #66afff, #4e83ff);
+  border: 1px solid #3671FF;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 0 18px rgba(78, 131, 255, 0.35), 0 0 40px rgba(54, 113, 255, 0.18);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-luxo-azul::before {
+  content: '';
+  position: absolute;
+  top: -120%;
+  left: -40%;
+  width: 70px;
+  height: 320%;
+  background: linear-gradient(90deg, transparent, rgba(180, 210, 255, 0.7), transparent);
+  transform: rotate(25deg);
+  animation: lightPass 3.5s linear infinite;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.btn-luxo-azul::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.18), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.btn-luxo-azul:hover {
+  transform: translateY(-2px) scale(1.01);
+  border-color: #66afff;
+  box-shadow: 0 0 25px rgba(78, 131, 255, 0.55), 0 0 60px rgba(54, 113, 255, 0.28), inset 0 0 18px rgba(255, 255, 255, 0.08);
+}
+
+.btn-luxo-azul:hover::after {
+  opacity: 1;
+}
+
+/* Botão Luxo Laranja (Aceleração / Destaque) */
+.btn-luxo {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 18px 36px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ff7b00, #ff9500);
+  border: 1px solid #ffb14a;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 0 18px rgba(255, 140, 0, 0.35), 0 0 40px rgba(255, 120, 0, 0.18);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-luxo::before {
+  content: '';
+  position: absolute;
+  top: -120%;
+  left: -40%;
+  width: 70px;
+  height: 320%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.85), transparent);
+  transform: rotate(25deg);
+  animation: lightPass 3.5s linear infinite;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.btn-luxo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.18), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.btn-luxo:hover {
+  transform: translateY(-2px) scale(1.01);
+  border-color: #ffd27d;
+  box-shadow: 0 0 25px rgba(255, 140, 0, 0.55), 0 0 60px rgba(255, 120, 0, 0.28), inset 0 0 18px rgba(255, 255, 255, 0.08);
+}
+
+.btn-luxo:hover::after {
+  opacity: 1;
+}
+
+/* ==========================================================================
+   GRADIENT TEXT & ACCENTS
+   ========================================================================== */
+
+.text-gradient-blue {
+  background: -webkit-linear-gradient(-90deg, #66afff, #4e83ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-orange {
+  background: -webkit-linear-gradient(-90deg, #ff9500, #ff5300);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Divisor em Losango (Rhombus Divider do Elementor) */
+.rhombus-divider {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.rhombus-divider-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 24px auto;
+  width: 100%;
+}
+
+.rhombus-divider::before,
+.rhombus-divider::after,
+.rhombus-divider-center::before,
+.rhombus-divider-center::after {
+  content: '';
+  height: 2px;
+  background: linear-gradient(90deg, rgba(78, 131, 255, 0.4), transparent);
+  flex: 1;
+  max-width: 120px;
+}
+
+.rhombus-divider::after,
+.rhombus-divider-center::after {
+  background: linear-gradient(270deg, rgba(78, 131, 255, 0.4), transparent);
+}
+
+.rhombus-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #4E83FF;
+  transform: rotate(45deg);
+  margin: 0 10px;
+  box-shadow: 0 0 8px #4E83FF;
+}
+
+/* ==========================================================================
+   PROCESS / STEP CARDS (KPS PROCESS)
+   ========================================================================== */
+
+.kps-step {
+  position: relative;
+  background: #070707;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 26px;
+  padding: 44px 40px 48px;
+  transition: transform 0.38s ease, border-color 0.38s ease, box-shadow 0.38s ease, background 0.38s ease;
+  overflow: hidden;
+}
+
+.kps-step::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #4e83ff, transparent);
+  opacity: 0;
+  transition: opacity 0.38s ease;
+}
+
+.kps-step:hover::before {
+  opacity: 1;
+}
+
+.kps-step:hover {
+  transform: translateY(-6px);
+  border-color: rgba(78, 131, 255, 0.18);
+  background: rgba(78, 131, 255, 0.025);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5), 0 0 50px rgba(78, 131, 255, 0.07);
+}
+
+.kps-icon-wrap {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: rgba(78, 131, 255, 0.1);
+  border: 1.5px solid rgba(78, 131, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+  transition: transform 0.38s ease, background 0.38s ease, box-shadow 0.38s ease;
+}
+
+.kps-icon-wrap svg {
+  width: 22px;
+  height: 22px;
+  stroke: #4e83ff;
+  fill: none;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.kps-step:hover .kps-icon-wrap {
+  transform: scale(1.08);
+  background: rgba(78, 131, 255, 0.16);
+  box-shadow: 0 0 28px rgba(78, 131, 255, 0.2);
+}
+
+.kps-divider {
+  width: 36px;
+  height: 2px;
+  background: #4e83ff;
+  border-radius: 2px;
+  margin: 20px 0 0;
+  opacity: 0.4;
+  transition: opacity 0.38s ease, width 0.38s ease;
+}
+
+.kps-step:hover .kps-divider {
+  opacity: 0.7;
+  width: 52px;
+}
+
+/* ==========================================================================
+   FLOW LIST (FASES 01 A 04)
+   ========================================================================== */
+
+.flow-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.flow-item {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  position: relative;
+  padding-bottom: 32px;
+}
+
+.flow-item:last-child {
+  padding-bottom: 0;
+}
+
+.flow-left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.flow-dot {
+  min-width: 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(78, 131, 255, 0.1);
+  border: 2px solid #4e83ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 18px rgba(78, 131, 255, 0.25);
+  transition: all 0.3s ease;
+}
+
+.flow-dot svg {
+  width: 18px;
+  height: 18px;
+  stroke: #4e83ff;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.flow-item:hover .flow-dot {
+  background: rgba(78, 131, 255, 0.25);
+  box-shadow: 0 0 25px rgba(78, 131, 255, 0.5);
+  transform: scale(1.08);
+}
+
+.flow-line {
+  width: 2px;
+  flex: 1;
+  min-height: 40px;
+  background: linear-gradient(to bottom, #4e83ff, transparent);
+  margin-top: 6px;
+}
+
+.flow-item:last-child .flow-line {
+  display: none;
+}
+
+.flow-label {
+  font-family: 'Sora', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #4e83ff;
+  text-transform: uppercase;
+  margin: 0 0 4px;
+  opacity: 0.85;
+}
+
+/* Glassmorphism Navigation */
+.glass-nav {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }

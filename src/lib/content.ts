@@ -1,32 +1,11 @@
 import fs from "fs";
 import path from "path";
+import { Post, slugify } from "./slugify";
 
-export interface Post {
-  title: string;
-  slug: string;
-  date: string;
-  status: "published" | "draft";
-  author: string;
-  excerpt: string;
-  image: string;
-  categories: string[];
-  tags: string[];
-  content: string;
-}
+export type { Post };
+export { slugify };
 
 const CONTENT_DIR = path.join(process.cwd(), "src/content");
-
-export function slugify(text: string): string {
-  return text
-    .toString()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase()
-    .trim()
-    .replace(/\s+/g, "-")
-    .replace(/[^\w-]+/g, "")
-    .replace(/--+/g, "-");
-}
 
 function parseFrontmatter(raw: string): { data: Record<string, unknown>; content: string } {
   const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);

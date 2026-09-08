@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Post, slugify } from "@/lib/content";
+import { Post, slugify } from "@/lib/slugify";
 import MarkdownRenderer from "./MarkdownRenderer";
 
 interface PostLayoutProps {
@@ -15,10 +15,10 @@ export default function PostLayout({ post }: PostLayoutProps) {
   });
 
   return (
-    <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
       {/* Breadcrumb */}
-      <nav className="flex items-center gap-2 text-xs text-neutral-500 dark:text-neutral-400 mb-6">
-        <Link href="/" className="hover:text-blue-600 transition-colors">
+      <nav className="flex items-center gap-2 text-xs text-neutral-400 mb-8 font-sora">
+        <Link href="/" className="hover:text-[#66AFFF] transition-colors">
           Início
         </Link>
         <span>/</span>
@@ -26,26 +26,26 @@ export default function PostLayout({ post }: PostLayoutProps) {
           <>
             <Link
               href={`/categoria/${slugify(post.categories[0])}`}
-              className="hover:text-blue-600 transition-colors"
+              className="hover:text-[#66AFFF] transition-colors"
             >
               {post.categories[0]}
             </Link>
             <span>/</span>
           </>
         )}
-        <span className="text-neutral-900 dark:text-neutral-200 truncate max-w-[200px]">
+        <span className="text-white truncate max-w-[240px]">
           {post.title}
         </span>
       </nav>
 
       {/* Header */}
-      <header className="mb-8">
+      <header className="mb-10">
         <div className="flex flex-wrap gap-2 mb-4">
           {post.categories.map((cat) => (
             <Link
               key={cat}
               href={`/categoria/${slugify(cat)}`}
-              className="text-xs font-semibold px-3 py-1 rounded-full bg-blue-50 text-blue-700 dark:bg-blue-950/50 dark:text-blue-300 hover:bg-blue-100 transition-colors"
+              className="text-xs font-semibold px-3 py-1 rounded-full bg-[#4E83FF]/15 text-[#66AFFF] border border-[#4E83FF]/30 hover:bg-[#4E83FF]/25 transition-colors font-sora"
             >
               {cat}
             </Link>
@@ -57,25 +57,25 @@ export default function PostLayout({ post }: PostLayoutProps) {
           )}
         </div>
 
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-neutral-900 dark:text-neutral-100 mb-4 leading-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white mb-5 leading-tight font-sans">
           {post.title}
         </h1>
 
         {post.excerpt && (
-          <p className="text-lg sm:text-xl text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6 font-normal">
+          <p className="text-lg sm:text-xl text-neutral-300 leading-relaxed mb-8 font-normal">
             {post.excerpt}
           </p>
         )}
 
-        <div className="flex items-center gap-4 text-sm text-neutral-500 dark:text-neutral-400 pt-4 border-t border-neutral-200 dark:border-neutral-800">
-          <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white font-bold text-sm">
+        <div className="flex items-center gap-4 text-sm text-neutral-400 pt-5 border-t border-white/[0.08]">
+          <div className="w-11 h-11 rounded-full bg-gradient-to-tr from-[#3671FF] to-[#66AFFF] flex items-center justify-center text-white font-extrabold text-sm shadow-md shadow-[#4E83FF]/30">
             LG
           </div>
           <div>
-            <div className="font-semibold text-neutral-900 dark:text-neutral-100">
+            <div className="font-bold text-white font-sans">
               {post.author}
             </div>
-            <div className="text-xs">
+            <div className="text-xs text-neutral-400">
               Publicado em {formattedDate}
             </div>
           </div>
@@ -84,7 +84,7 @@ export default function PostLayout({ post }: PostLayoutProps) {
 
       {/* Featured Hero Image */}
       {post.image && (
-        <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden shadow-lg mb-10 bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-800">
+        <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl mb-12 bg-neutral-900 border border-white/[0.08]">
           <Image
             src={post.image}
             alt={post.title}
@@ -97,21 +97,21 @@ export default function PostLayout({ post }: PostLayoutProps) {
       )}
 
       {/* Main Content Body */}
-      <div className="prose prose-neutral dark:prose-invert max-w-none text-neutral-800 dark:text-neutral-200">
+      <div className="prose prose-invert max-w-none text-neutral-200">
         <MarkdownRenderer content={post.content} />
       </div>
 
       {/* Tags */}
       {post.tags.length > 0 && (
-        <div className="mt-12 pt-6 border-t border-neutral-200 dark:border-neutral-800">
-          <h4 className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-3">
+        <div className="mt-14 pt-6 border-t border-white/[0.08]">
+          <h4 className="text-xs font-bold uppercase tracking-wider text-[#4E83FF] mb-3 font-sora">
             Tags Relacionadas
           </h4>
           <div className="flex flex-wrap gap-2">
             {post.tags.map((tag) => (
               <span
                 key={tag}
-                className="text-xs px-3 py-1 rounded-md bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300"
+                className="text-xs px-3 py-1 rounded-md bg-[#151515] border border-white/[0.06] text-neutral-300"
               >
                 #{tag}
               </span>
@@ -121,36 +121,39 @@ export default function PostLayout({ post }: PostLayoutProps) {
       )}
 
       {/* Bottom CTA */}
-      <section className="my-14 p-8 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white shadow-xl">
+      <section className="my-14 p-8 sm:p-10 rounded-2xl bg-gradient-to-br from-[#102454] via-[#0b1735] to-[#070707] border border-[#3671FF]/40 text-white shadow-2xl shadow-[#4E83FF]/15">
         <div className="max-w-2xl">
-          <h3 className="text-2xl font-bold mb-2">
+          <p className="text-xs font-bold uppercase tracking-widest text-[#66AFFF] mb-2 font-sora">
+            Programa de Aceleração 2026
+          </p>
+          <h3 className="text-2xl sm:text-3xl font-extrabold mb-3">
             Pronto para acelerar o marketing da sua empresa?
           </h3>
-          <p className="text-blue-100 mb-6 text-sm sm:text-base leading-relaxed">
+          <p className="text-neutral-300 mb-8 text-sm sm:text-base leading-relaxed">
             Implementamos um sistema previsível de aquisição de clientes e posicionamento estratégico nos próximos 90 dias.
           </p>
           <a
             href="https://wa.me/5511949845827?text=Ol%C3%A1%21%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20seu%20servi%C3%A7o"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white text-blue-700 font-bold text-sm shadow-md hover:bg-blue-50 transition-colors"
+            className="btn-luxo-azul"
           >
             <span>Quero me aplicar para o programa</span>
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
           </a>
         </div>
       </section>
 
       {/* Back Link */}
-      <div className="pt-6 border-t border-neutral-200 dark:border-neutral-800 flex justify-between items-center">
+      <div className="pt-6 border-t border-white/[0.08] flex justify-between items-center">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 dark:text-blue-400 hover:underline"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-[#66AFFF] hover:underline"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg>
           <span>Voltar para a página inicial</span>
         </Link>

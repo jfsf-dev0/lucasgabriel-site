@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
-import { Post, slugify } from "@/lib/content";
+import { motion } from "framer-motion";
+import { Post, slugify } from "@/lib/slugify";
 
 interface PostCardProps {
   post: Post;
@@ -14,8 +17,12 @@ export default function PostCard({ post }: PostCardProps) {
   });
 
   return (
-    <article className="group flex flex-col bg-white dark:bg-neutral-900 rounded-2xl border border-neutral-200 dark:border-neutral-800 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-      <Link href={`/${post.slug}`} className="relative w-full aspect-[16/10] overflow-hidden bg-neutral-100 dark:bg-neutral-800">
+    <motion.article
+      whileHover={{ y: -6 }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
+      className="group flex flex-col bg-[#0E0E0E] rounded-2xl border border-white/[0.08] hover:border-[#4E83FF]/40 overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-[#4E83FF]/10 transition-colors duration-300"
+    >
+      <Link href={`/${post.slug}`} className="relative w-full aspect-[16/10] overflow-hidden bg-neutral-900">
         <Image
           src={post.image || "/images/Lucas-01.jpg"}
           alt={post.title}
@@ -23,6 +30,7 @@ export default function PostCard({ post }: PostCardProps) {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover group-hover:scale-105 transition-transform duration-500"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0E0E0E] via-transparent to-transparent opacity-60" />
         {post.status === "draft" && (
           <span className="absolute top-3 right-3 bg-amber-500 text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-full shadow">
             Rascunho
@@ -36,43 +44,43 @@ export default function PostCard({ post }: PostCardProps) {
             <Link
               key={cat}
               href={`/categoria/${slugify(cat)}`}
-              className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 dark:bg-blue-950/50 dark:text-blue-300 hover:bg-blue-100 transition-colors"
+              className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-[#4E83FF]/15 text-[#66AFFF] hover:bg-[#4E83FF]/25 transition-colors font-sora"
             >
               {cat}
             </Link>
           ))}
-          <span className="text-xs text-neutral-400 dark:text-neutral-500 ml-auto">
+          <span className="text-xs text-neutral-400 ml-auto">
             {formattedDate}
           </span>
         </div>
 
-        <h3 className="text-xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-2 line-clamp-2">
+        <h3 className="text-xl font-bold tracking-tight text-white group-hover:text-[#66AFFF] transition-colors mb-2 line-clamp-2 leading-snug">
           <Link href={`/${post.slug}`}>
             {post.title}
           </Link>
         </h3>
 
         {post.excerpt && (
-          <p className="text-sm text-neutral-600 dark:text-neutral-400 line-clamp-3 mb-4 flex-1">
+          <p className="text-sm text-neutral-300 line-clamp-3 mb-4 flex-1 leading-relaxed">
             {post.excerpt}
           </p>
         )}
 
-        <div className="pt-4 border-t border-neutral-100 dark:border-neutral-800 mt-auto flex items-center justify-between">
-          <span className="text-xs font-medium text-neutral-500 dark:text-neutral-400">
+        <div className="pt-4 border-t border-white/[0.06] mt-auto flex items-center justify-between">
+          <span className="text-xs font-medium text-neutral-400">
             Por {post.author}
           </span>
           <Link
             href={`/${post.slug}`}
-            className="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 dark:text-blue-400 group-hover:translate-x-1 transition-transform"
+            className="inline-flex items-center gap-1.5 text-xs font-bold text-[#66AFFF] group-hover:translate-x-1 transition-transform font-sora"
           >
             <span>Ler mais</span>
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M9 5l7 7-7 7" />
             </svg>
           </Link>
         </div>
       </div>
-    </article>
+    </motion.article>
   );
 }
