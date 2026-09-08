@@ -21,18 +21,20 @@ export default function PostCard({ post }: PostCardProps) {
     >
       <Link
         href={`/${post.slug}`}
-        className="relative w-full aspect-[16/10] overflow-hidden bg-neutral-900"
+        className="relative w-full aspect-[800/551] overflow-hidden bg-neutral-900 block"
         aria-label={`Ver artigo: ${post.title}`}
       >
         <Image
           src={post.image || "/images/Lucas-01.jpg"}
           alt={post.title}
-          fill
+          width={800}
+          height={551}
           loading="lazy"
+          style={{ width: "100%", height: "auto" }}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover group-hover:scale-105 transition-transform duration-500"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0E0E0E] via-transparent to-transparent opacity-60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0E0E0E] via-transparent to-transparent opacity-60 pointer-events-none" />
         {post.status === "draft" && (
           <span className="absolute top-3 right-3 bg-amber-500 text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-full shadow">
             Rascunho

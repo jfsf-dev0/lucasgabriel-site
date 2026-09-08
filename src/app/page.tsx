@@ -127,10 +127,11 @@ export default function HomePage() {
           <Image
             src="/images/Lucas-Gabriel-pagina-azul_01.jpg"
             alt="Lucas Gabriel - Aceleração de Negócios e Marketing"
-            fill
+            width={1920}
+            height={749}
             priority
             quality={85}
-            className="object-cover object-top"
+            className="w-full h-full object-cover object-top"
             sizes="100vw"
           />
         </div>
@@ -139,10 +140,11 @@ export default function HomePage() {
           <Image
             src="/images/Lucas-gabriel-mobile-111.jpg"
             alt="Lucas Gabriel - Mobile"
-            fill
+            width={800}
+            height={1276}
             priority
             quality={85}
-            className="object-cover object-top"
+            className="w-full h-full object-cover object-top"
             sizes="100vw"
           />
         </div>
@@ -574,16 +576,18 @@ export default function HomePage() {
                 key={idx}
                 className="group rounded-2xl bg-[#0B0B0B] border border-white/[0.08] overflow-hidden hover:border-[#4E83FF]/50 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-[#4E83FF]/15 flex flex-col"
               >
-                <div className="relative w-full aspect-[16/11] bg-neutral-900 overflow-hidden">
+                <div className="relative w-full aspect-[800/551] bg-neutral-900 overflow-hidden">
                   <Image
                     src={item.image}
                     alt={item.title}
-                    fill
+                    width={800}
+                    height={551}
                     loading="lazy"
+                    style={{ width: "100%", height: "auto" }}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0B] via-transparent to-transparent opacity-80" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0B] via-transparent to-transparent opacity-80 pointer-events-none" />
                 </div>
                 <div className="p-5 flex flex-col flex-1">
                   <h3 className="text-[18px] font-semibold text-white mb-2 leading-snug font-sans group-hover:text-[#66AFFF] transition-colors">
@@ -679,10 +683,11 @@ export default function HomePage() {
           <Image
             src="/images/Lucas-Gabriel-pagina-azul_06.jpg"
             alt="Lucas Gabriel - Sobre"
-            fill
+            width={1920}
+            height={747}
             loading="lazy"
             quality={85}
-            className="object-cover object-top"
+            className="w-full h-full object-cover object-top"
             sizes="100vw"
           />
         </div>
@@ -691,10 +696,11 @@ export default function HomePage() {
           <Image
             src="/images/Lucas-gabriel-mobile-222.jpg"
             alt="Lucas Gabriel - Perfil Mobile"
-            fill
+            width={800}
+            height={2051}
             loading="lazy"
             quality={85}
-            className="object-cover object-top"
+            className="w-full h-full object-cover object-top"
             sizes="100vw"
           />
         </div>
