@@ -113,7 +113,7 @@ export default async function HomePage() {
       {/* =========================================================================
           SECTION 1: HERO SECTION
           ========================================================================= */}
-      <section className="relative min-h-[800px] flex items-center justify-center border-b border-white/[0.08] overflow-hidden">
+      <section className="relative min-h-[800px] flex items-center justify-start border-b border-white/[0.08] overflow-hidden">
         {/* Desktop background */}
         <div
           className="absolute inset-0 hidden md:block bg-cover bg-top bg-no-repeat pointer-events-none"
@@ -129,17 +129,17 @@ export default async function HomePage() {
           }}
         />
 
-        {/* Content Box */}
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-[380px] pb-16 md:pt-28 md:pb-28">
-          <div className="md:w-[48%] border-l-[3px] border-[#4E83FF] pl-6 md:pl-8 space-y-6">
+        {/* Content Box (Exact Elementor dimensions: 46% width desktop, min-height 800px, 350px top pad mobile) */}
+        <div className="relative max-w-[1140px] mx-auto px-4 w-full pt-[350px] pb-10 md:pt-[100px] md:pb-[60px] flex items-center">
+          <div className="w-full md:w-[46%] border-l-[3px] border-[#4E83FF] pl-7 space-y-5 text-left">
             <FadeIn direction="left" delay={0.1}>
-              <p className="text-xs sm:text-sm font-medium tracking-wide text-neutral-300">
+              <p className="text-[13px] font-normal tracking-wide text-neutral-300">
                 Serviços de implementação de Marketing
               </p>
             </FadeIn>
 
             <FadeIn direction="left" delay={0.2}>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-[1.15] text-white">
+              <h1 className="text-3xl sm:text-4xl md:text-[48px] font-semibold tracking-tight leading-[1.18] text-white">
                 Estruturação e Implementação de Marketing para{" "}
                 <em className="italic text-gradient-blue font-serif font-medium">
                   Aceleração de Negócios
@@ -152,7 +152,7 @@ export default async function HomePage() {
             </div>
 
             <FadeIn direction="left" delay={0.3}>
-              <p className="text-sm sm:text-base md:text-lg text-neutral-300 font-light leading-relaxed">
+              <p className="text-sm md:text-[16px] text-neutral-300 font-normal leading-relaxed">
                 <strong className="font-semibold text-white">
                   Transforme o potencial da sua empresa para impulsionar suas vendas
                 </strong>{" "}
@@ -178,27 +178,27 @@ export default async function HomePage() {
       </section>
 
       {/* =========================================================================
-          SECTION 2: A METODOLOGIA (#metodologia)
+          SECTION 2: A METODOLOGIA (#metodologia) - EXACT ROW-REVERSE DESKTOP
           ========================================================================= */}
       <section
         id="metodologia"
-        className="relative py-20 md:py-28 border-b border-white/[0.08] bg-cover bg-top bg-no-repeat"
+        className="relative py-16 md:py-[100px] border-b border-white/[0.08] bg-cover bg-top bg-no-repeat"
         style={{
           backgroundImage: "url('/images/Lucas-Gabriel-pagina-azul_02.jpg')",
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Left intro */}
-            <div className="lg:col-span-5 space-y-6">
+        <div className="max-w-[1140px] mx-auto px-4">
+          <div className="flex flex-col lg:flex-row-reverse items-center justify-between gap-10">
+            {/* Right block in desktop / Top in mobile (width 50%) */}
+            <div className="w-full lg:w-[50%] space-y-6 text-left">
               <FadeIn direction="right">
-                <p className="text-xs font-bold uppercase tracking-widest text-[#4E83FF] font-sora">
+                <p className="text-[14px] font-normal uppercase tracking-widest text-[#4E83FF] font-sora">
                   A METODOLOGIA
                 </p>
               </FadeIn>
 
               <FadeIn direction="left" delay={0.1}>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight leading-snug">
+                <h2 className="text-2xl sm:text-3xl md:text-[34px] font-semibold tracking-tight leading-[1.25]">
                   A metodologia utilizada para transformar marketing em um sistema previsível de{" "}
                   <em className="italic text-gradient-blue font-serif font-medium">
                     aquisição de clientes e crescimento.
@@ -211,7 +211,7 @@ export default async function HomePage() {
               </div>
 
               <FadeIn direction="down" delay={0.2}>
-                <p className="text-sm sm:text-base text-neutral-300 font-light leading-relaxed">
+                <p className="text-sm md:text-[18px] text-neutral-300 font-normal leading-relaxed">
                   Uma abordagem desenvolvida para estruturar, implementar e otimizar os pilares que{" "}
                   <strong className="font-semibold text-white">
                     impulsionam aquisição de clientes, vendas e crescimento sustentável.
@@ -224,18 +224,18 @@ export default async function HomePage() {
                   href="https://wa.me/5511949845827?text=Ol%C3%A1%21%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20seu%20servi%C3%A7o"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-luxo-azul w-full sm:w-auto"
+                  className="btn-luxo-azul w-full sm:w-auto !text-[18px]"
                 >
                   <span>Quero me aplicar para o programa de aceleração</span>
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 512 512">
+                  <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 512 512">
                     <path d="M505.1 19.1c-1.2-5.5-6.7-11-12.2-12.2C460.7 0 435.5 0 410.4 0 307.2 0 245.3 55.2 199.1 128H94.8c-16.3 0-35.6 11.9-42.9 26.5L2.5 253.3A28.4 28.4 0 000 264a24 24 0 0024 24h103.8l-22.5 22.5c-11.4 11.4-13 32.3 0 45.3l45.3 45.3c11.2 11.2 32.2 13.2 45.3 0l22.5-22.5V488a24 24 0 0024 24 28.6 28.6 0 0010.7-2.5l98.7-49.4c14.6-7.3 26.5-26.5 26.5-42.9v-104.4c72.6-46.3 128-108.4 128-211.1 0-25.2 0-50.4-7-82.6zm-121.1 148.9a40 40 0 1140-40 40 40 0 01-40 40z" />
                   </svg>
                 </a>
               </FadeIn>
             </div>
 
-            {/* Right 6 Problem Cards */}
-            <div className="lg:col-span-7">
+            {/* Left block in desktop / Bottom in mobile (width 47%) - The 6 Problem Cards */}
+            <div className="w-full lg:w-[47%]">
               <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {problemCards.map((card, i) => (
                   <StaggerItem
@@ -258,107 +258,109 @@ export default async function HomePage() {
       </section>
 
       {/* =========================================================================
-          SECTION 3: TRANSFORMAÇÃO & COMPARAÇÃO
+          SECTION 3: TRANSFORMAÇÃO & COMPARAÇÃO (EXACT 90% WIDTH CENTERED)
           ========================================================================= */}
       <section
-        className="relative py-20 md:py-28 border-b border-white/[0.08] bg-[#000000] bg-cover bg-top bg-no-repeat"
+        className="relative py-16 md:py-[100px] border-b border-white/[0.08] bg-[#000000] bg-cover bg-top bg-no-repeat"
         style={{
           backgroundImage: "url('/images/Lucas-Gabriel-pagina-azul_03.jpg')",
         }}
       >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <FadeIn direction="left">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold max-w-3xl mx-auto leading-snug">
-              Estamos vivendo uma das MAIORES transformações na{" "}
-              <em className="italic text-gradient-blue font-serif font-medium">
-                forma como empresas crescem
-              </em>
-            </h2>
-          </FadeIn>
-
-          <div className="rhombus-divider-center">
-            <div className="rhombus-dot" />
-          </div>
-
-          <FadeIn direction="down" delay={0.1}>
-            <p className="text-sm sm:text-base text-neutral-300 font-light max-w-2xl mx-auto mb-14 leading-relaxed">
-              A próxima década será liderada por empresas capazes de gerar demanda, conquistar clientes e permanecer relevantes para eles continuamente, e essa será sua vantagem competitiva.
-            </p>
-          </FadeIn>
-
-          {/* Comparison Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-            {/* Card Left: Como a maioria tenta crescer */}
-            <FadeIn direction="left" delay={0.2} className="p-8 rounded-2xl bg-[#0E0E0E] border border-white/[0.08] flex flex-col justify-between hover:border-white/20 transition-colors">
-              <div>
-                <h3 className="text-xl font-bold text-neutral-100 mb-6 font-sans flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 rounded-full bg-neutral-500" />
-                  Como a maioria tenta crescer
-                </h3>
-                <ul className="space-y-3.5 text-sm text-neutral-400 mb-8">
-                  {[
-                    "Campanhas isoladas",
-                    "Marketing sem estratégia",
-                    "Dependência de indicação",
-                    "Baixa previsibilidade comercial",
-                    "Pouca diferenciação no mercado",
-                    "Crescimento inconsistente",
-                  ].map((item, idx) => (
-                    <li key={idx} className="flex items-center gap-3">
-                      <svg className="w-4 h-4 text-neutral-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
-                      </svg>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="p-4 rounded-xl bg-neutral-900/80 border border-white/[0.04] text-xs text-neutral-300">
-                <strong className="text-white font-semibold">Resultado:</strong> Vendas imprevisíveis, crescimento lento e oportunidades perdidas.
-              </div>
+        <div className="max-w-[1140px] mx-auto px-4 text-center">
+          <div className="w-full lg:w-[90%] mx-auto">
+            <FadeIn direction="left">
+              <h2 className="text-2xl sm:text-3xl md:text-[34px] font-semibold leading-snug">
+                Estamos vivendo uma das MAIORES transformações na{" "}
+                <em className="italic text-gradient-blue font-serif font-medium">
+                  forma como empresas crescem
+                </em>
+              </h2>
             </FadeIn>
 
-            {/* Card Right: Como empresas líderes constroem crescimento */}
-            <FadeIn direction="right" delay={0.2} className="p-8 rounded-2xl bg-gradient-to-br from-[#102454]/40 via-[#070707] to-[#070707] border border-[#4E83FF]/60 flex flex-col justify-between shadow-2xl shadow-[#4E83FF]/15 hover:border-[#66AFFF] transition-all">
-              <div>
-                <h3 className="text-xl font-bold text-white mb-6 font-sans flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#4E83FF] shadow-sm shadow-[#4E83FF]" />
-                  Como empresas líderes constroem crescimento
-                </h3>
-                <ul className="space-y-3.5 text-sm text-neutral-200 mb-8">
-                  {[
-                    "Sistema de marketing integrado",
-                    "Posicionamento claro e validado",
-                    "Canais previsíveis de aquisição",
-                    "Alta previsibilidade comercial",
-                    "Diferenciação competitiva sólida",
-                    "Crescimento escalável e consistente",
-                  ].map((item, idx) => (
-                    <li key={idx} className="flex items-center gap-3">
-                      <svg className="w-4 h-4 text-[#4E83FF] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="p-4 rounded-xl bg-[#4E83FF]/15 border border-[#4E83FF]/30 text-xs text-neutral-200">
-                <strong className="text-[#66AFFF] font-semibold">Resultado:</strong> Crescimento acelerado, alta conversão e previsibilidade de receita.
-              </div>
+            <div className="rhombus-divider-center">
+              <div className="rhombus-dot" />
+            </div>
+
+            <FadeIn direction="down" delay={0.1}>
+              <p className="text-sm md:text-[18px] text-neutral-300 font-normal max-w-3xl mx-auto mb-12 leading-relaxed">
+                A próxima década será liderada por empresas capazes de gerar demanda, conquistar clientes e permanecer relevantes para eles continuamente, e essa será sua vantagem competitiva.
+              </p>
+            </FadeIn>
+
+            {/* Comparison Cards Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left mb-10">
+              {/* Card Left: Como a maioria tenta crescer */}
+              <FadeIn direction="left" delay={0.2} className="p-8 rounded-2xl bg-[#0E0E0E] border border-white/[0.08] flex flex-col justify-between hover:border-white/20 transition-colors">
+                <div>
+                  <h3 className="text-[22px] font-semibold text-neutral-100 mb-6 font-sans flex items-center gap-2.5">
+                    <span className="w-2.5 h-2.5 rounded-full bg-neutral-500" />
+                    Como a maioria tenta crescer
+                  </h3>
+                  <ul className="space-y-3.5 text-sm text-neutral-400 mb-8">
+                    {[
+                      "Campanhas isoladas",
+                      "Marketing sem estratégia",
+                      "Dependência de indicação",
+                      "Baixa previsibilidade comercial",
+                      "Pouca diferenciação no mercado",
+                      "Crescimento inconsistente",
+                    ].map((item, idx) => (
+                      <li key={idx} className="flex items-center gap-3">
+                        <svg className="w-4 h-4 text-neutral-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                        </svg>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="p-4 rounded-xl bg-neutral-900/80 border border-white/[0.04] text-[14px] text-neutral-300 text-center font-normal">
+                  <strong className="text-white font-semibold">Resultado:</strong> Vendas imprevisíveis, crescimento lento e oportunidades perdidas.
+                </div>
+              </FadeIn>
+
+              {/* Card Right: Como empresas líderes constroem crescimento */}
+              <FadeIn direction="right" delay={0.2} className="p-8 rounded-2xl bg-gradient-to-br from-[#102454]/40 via-[#070707] to-[#070707] border border-[#4E83FF]/60 flex flex-col justify-between shadow-2xl shadow-[#4E83FF]/15 hover:border-[#66AFFF] transition-all">
+                <div>
+                  <h3 className="text-[22px] font-semibold text-white mb-6 font-sans flex items-center gap-2.5">
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#4E83FF] shadow-sm shadow-[#4E83FF]" />
+                    Como empresas líderes constroem crescimento
+                  </h3>
+                  <ul className="space-y-3.5 text-sm text-neutral-200 mb-8">
+                    {[
+                      "Campanhas isoladas",
+                      "Marketing sem estratégia",
+                      "Dependência de indicação",
+                      "Baixa previsibilidade comercial",
+                      "Pouca diferenciação no mercado",
+                      "Crescimento inconsistente",
+                    ].map((item, idx) => (
+                      <li key={idx} className="flex items-center gap-3">
+                        <svg className="w-4 h-4 text-[#4E83FF] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="p-4 rounded-xl bg-[#4E83FF]/15 border border-[#4E83FF]/30 text-[15px] text-neutral-200 text-center font-normal">
+                  <strong className="text-[#66AFFF] font-semibold">Resultado:</strong> Crescimento acelerado, alta conversão e previsibilidade de receita.
+                </div>
+              </FadeIn>
+            </div>
+
+            <FadeIn direction="up" delay={0.4}>
+              <a
+                href="https://wa.me/5511949845827?text=Ol%C3%A1%21%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20seu%20servi%C3%A7o"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-luxo-azul !text-[18px]"
+              >
+                <span>Quero me aplicar para o programa de aceleração</span>
+              </a>
             </FadeIn>
           </div>
-
-          <FadeIn direction="up" delay={0.4} className="mt-12">
-            <a
-              href="https://wa.me/5511949845827?text=Ol%C3%A1%21%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20seu%20servi%C3%A7o"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-luxo-azul"
-            >
-              <span>Quero me aplicar para o programa de aceleração</span>
-            </a>
-          </FadeIn>
         </div>
       </section>
 
@@ -367,23 +369,23 @@ export default async function HomePage() {
           ========================================================================= */}
       <section
         id="solucao"
-        className="relative py-20 md:py-28 border-b border-white/[0.08] bg-cover bg-top bg-no-repeat"
+        className="relative py-16 md:py-[100px] border-b border-white/[0.08] bg-cover bg-top bg-no-repeat"
         style={{
           backgroundImage: "url('/images/Lucas-Gabriel-pagina-azul_03.jpg')",
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            {/* Left details */}
-            <div className="lg:col-span-6 space-y-6">
+        <div className="max-w-[1140px] mx-auto px-4">
+          <div className="flex flex-col lg:flex-row items-start justify-between gap-12">
+            {/* Left side: A Solução (50% width) */}
+            <div className="w-full lg:w-[48%] space-y-6 text-left">
               <FadeIn direction="left">
-                <p className="text-xs font-bold uppercase tracking-widest text-[#4E83FF] font-sora">
+                <p className="text-[14px] font-normal uppercase tracking-widest text-[#4E83FF] font-sora">
                   A SOLUÇÃO
                 </p>
               </FadeIn>
 
               <FadeIn direction="left" delay={0.1}>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight leading-snug">
+                <h2 className="text-3xl sm:text-4xl md:text-[52px] font-semibold tracking-tight leading-[1.12]">
                   Como funciona a{" "}
                   <em className="italic text-gradient-blue font-serif font-medium">
                     implementação do serviço?
@@ -396,7 +398,7 @@ export default async function HomePage() {
               </div>
 
               <FadeIn direction="down" delay={0.2}>
-                <p className="text-sm sm:text-base text-neutral-300 font-light leading-relaxed">
+                <p className="text-sm md:text-[18px] text-neutral-300 font-normal leading-relaxed">
                   Durante 90 dias, estruturamos e implementamos os principais pilares responsáveis pela aquisição de{" "}
                   <strong className="font-semibold text-white">
                     clientes, vendas e crescimento da sua empresa.
@@ -404,47 +406,47 @@ export default async function HomePage() {
                 </p>
               </FadeIn>
 
-              {/* Stat badges */}
+              {/* 2 Stat Boxes */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                <div className="p-5 rounded-xl bg-[#4E83FF]/15 border border-[#4E83FF]/40 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-[#4E83FF]/20 flex items-center justify-center text-[#66AFFF]">
+                <div className="p-5 rounded-xl bg-[#4E83FF]/20 border border-[#4E83FF] flex items-center gap-3.5">
+                  <div className="w-10 h-10 rounded-lg bg-[#4E83FF]/25 flex items-center justify-center text-[#66AFFF]">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
                     </svg>
                   </div>
                   <div>
                     <h4 className="text-sm font-bold text-white">Resultado mensurável</h4>
-                    <p className="text-xs text-neutral-400">Metas de ROI e conversão</p>
+                    <p className="text-xs text-neutral-400">Metas de ROI e escala</p>
                   </div>
                 </div>
 
-                <div className="p-5 rounded-xl bg-[#4E83FF]/15 border border-[#4E83FF]/40 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-[#4E83FF]/20 flex items-center justify-center text-[#66AFFF]">
+                <div className="p-5 rounded-xl bg-[#4E83FF]/20 border border-[#4E83FF] flex items-center gap-3.5">
+                  <div className="w-10 h-10 rounded-lg bg-[#4E83FF]/25 flex items-center justify-center text-[#66AFFF]">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
                   <div>
                     <h4 className="text-sm font-bold text-white">Dados em tempo real</h4>
-                    <p className="text-xs text-neutral-400">Dashboards e acompanhamento</p>
+                    <p className="text-xs text-neutral-400">Dashboards contínuos</p>
                   </div>
                 </div>
               </div>
 
-              <FadeIn direction="up" delay={0.3} className="pt-4">
+              <FadeIn direction="up" delay={0.3} className="pt-2">
                 <a
                   href="https://wa.me/5511949845827?text=Ol%C3%A1%21%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20seu%20servi%C3%A7o"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-luxo-azul w-full sm:w-auto"
+                  className="btn-luxo-azul w-full sm:w-auto !text-[17px]"
                 >
                   <span>Quero me aplicar para o programa de aceleração</span>
                 </a>
               </FadeIn>
             </div>
 
-            {/* Right: Flow Process Card */}
-            <div className="lg:col-span-6 p-8 sm:p-10 rounded-3xl bg-[#0E0E0E]/90 border border-white/[0.09] shadow-2xl backdrop-blur-md">
+            {/* Right side: 4-step Flow Process Card (48% width) */}
+            <div className="w-full lg:w-[48%] p-8 sm:p-10 rounded-3xl bg-[#0E0E0E]/95 border border-white/[0.09] shadow-2xl backdrop-blur-md">
               <div className="flex items-center gap-4 mb-6 pb-6 border-b border-white/[0.08]">
                 <div className="w-12 h-12 rounded-xl bg-[#4E83FF]/15 border border-[#4E83FF]/40 flex items-center justify-center text-[#66AFFF]">
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
@@ -551,20 +553,20 @@ export default async function HomePage() {
           ========================================================================= */}
       <section
         id="entrego"
-        className="relative py-20 md:py-28 border-b border-white/[0.08] bg-[#151515] bg-cover bg-top bg-no-repeat"
+        className="relative py-16 md:py-[100px] border-b border-white/[0.08] bg-[#151515] bg-cover bg-top bg-no-repeat"
         style={{
           backgroundImage: "url('/images/Lucas-Gabriel-pagina-azul_04.jpg')",
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-[1140px] mx-auto px-4 text-center">
           <FadeIn direction="down">
-            <p className="text-xs font-bold uppercase tracking-widest text-[#4E83FF] font-sora mb-2">
+            <p className="text-[14px] font-normal uppercase tracking-widest text-[#4E83FF] font-sora mb-2">
               O QUE ENTREGO
             </p>
           </FadeIn>
 
           <FadeIn direction="up" delay={0.1}>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold max-w-2xl mx-auto leading-snug">
+            <h2 className="text-2xl sm:text-3xl md:text-[40px] font-semibold max-w-3xl mx-auto leading-snug">
               Tudo que o seu negócio precisa para{" "}
               <em className="italic text-gradient-blue font-serif font-medium">
                 acelerar vendas
@@ -593,10 +595,10 @@ export default async function HomePage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0B] via-transparent to-transparent opacity-80" />
                 </div>
                 <div className="p-5 flex flex-col flex-1">
-                  <h3 className="text-base font-bold text-white mb-2 leading-snug font-sans group-hover:text-[#66AFFF] transition-colors">
+                  <h3 className="text-[18px] font-semibold text-white mb-2 leading-snug font-sans group-hover:text-[#66AFFF] transition-colors">
                     {item.title}
                   </h3>
-                  <p className="text-xs text-neutral-400 leading-relaxed flex-1">
+                  <p className="text-[13px] text-neutral-400 leading-relaxed flex-1">
                     {item.desc}
                   </p>
                 </div>
@@ -611,15 +613,15 @@ export default async function HomePage() {
           ========================================================================= */}
       <section
         id="quem"
-        className="relative py-20 md:py-28 border-b border-white/[0.08] bg-[#151515] bg-cover bg-top bg-no-repeat"
+        className="relative min-h-[676px] py-16 md:py-20 flex items-center border-b border-white/[0.08] bg-[#151515] bg-cover bg-top bg-no-repeat"
         style={{
           backgroundImage: "url('/images/Lucas-Gabriel-pagina-azul_05.jpg')",
         }}
       >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-14">
+        <div className="max-w-[1140px] mx-auto px-4 w-full">
+          <div className="text-center max-w-2xl mx-auto mb-12">
             <FadeIn direction="down">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-snug">
+              <h2 className="text-2xl sm:text-3xl md:text-[40px] font-semibold leading-snug">
                 Para quem é o{" "}
                 <em className="italic text-gradient-blue font-serif font-medium">
                   serviço
@@ -673,25 +675,38 @@ export default async function HomePage() {
       </section>
 
       {/* =========================================================================
-          SECTION 7: SOBRE O LUCAS GABRIEL (#sobre)
+          SECTION 7: SOBRE O LUCAS GABRIEL (#sobre) - EXACT ALIGN TO RIGHT (51% WIDTH)
           ========================================================================= */}
       <section
         id="sobre"
-        className="relative py-20 md:py-28 border-b border-white/[0.08] bg-cover bg-top bg-no-repeat"
-        style={{
-          backgroundImage: "url('/images/Lucas-Gabriel-pagina-azul_06.jpg')",
-        }}
+        className="relative min-h-[747px] flex items-center border-b border-white/[0.08] bg-cover bg-top bg-no-repeat overflow-hidden"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="md:w-[50%] space-y-6">
+        {/* Desktop background (Lucas is on the LEFT) */}
+        <div
+          className="absolute inset-0 hidden md:block bg-cover bg-top bg-no-repeat pointer-events-none"
+          style={{
+            backgroundImage: "url('/images/Lucas-Gabriel-pagina-azul_06.jpg')",
+          }}
+        />
+        {/* Mobile background */}
+        <div
+          className="absolute inset-0 block md:hidden bg-cover bg-top bg-no-repeat pointer-events-none"
+          style={{
+            backgroundImage: "url('/images/Lucas-gabriel-mobile-222.jpg')",
+          }}
+        />
+
+        <div className="relative max-w-[1140px] mx-auto px-4 w-full pt-[412px] pb-10 md:py-[100px] flex justify-end">
+          {/* Exactly 51% width aligned to the RIGHT side on desktop */}
+          <div className="w-full md:w-[51%] space-y-6 text-left">
             <FadeIn direction="down">
-              <p className="text-xs font-bold uppercase tracking-widest text-[#4E83FF] font-sora">
+              <p className="text-[14px] font-normal uppercase tracking-widest text-[#4E83FF] font-sora">
                 Quem faz acontecer
               </p>
             </FadeIn>
 
             <FadeIn direction="left" delay={0.1}>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-[45px] font-semibold leading-tight">
                 Sobre o{" "}
                 <em className="italic text-gradient-blue font-serif font-medium">
                   Lucas Gabriel
@@ -703,7 +718,7 @@ export default async function HomePage() {
               <div className="rhombus-dot" />
             </div>
 
-            <FadeIn direction="right" delay={0.2} className="space-y-4 text-sm sm:text-base text-neutral-300 font-light leading-relaxed">
+            <FadeIn direction="right" delay={0.2} className="space-y-4 text-sm md:text-[18px] text-neutral-300 font-normal leading-relaxed">
               <p>
                 Lucas Gabriel é especialista em{" "}
                 <strong className="font-semibold text-white">
@@ -740,7 +755,7 @@ export default async function HomePage() {
                 href="https://wa.me/5511949845827?text=Ol%C3%A1%21%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20seu%20servi%C3%A7o"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-luxo-azul"
+                className="btn-luxo-azul !text-[18px]"
               >
                 <span>Quero me aplicar para o programa de aceleração</span>
               </a>
@@ -750,14 +765,12 @@ export default async function HomePage() {
       </section>
 
       {/* =========================================================================
-          SECTION 8: CTA BANNER FINAL
+          SECTION 8: CTA BANNER FINAL (EXACT ELEMENTOR GRADIENT & ORANGE BTN-LUXO)
           ========================================================================= */}
-      <section className="relative py-20 md:py-24 bg-gradient-to-r from-[#1746b8] via-[#2358df] to-[#103bb0] border-b border-white/[0.08] text-center overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.15),transparent_70%)] pointer-events-none" />
-        
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      <section className="relative py-16 md:py-[100px] bg-gradient-to-b from-[#66AFFF] to-[#4E83FF] border-b border-[#FF5A00]/60 text-center overflow-hidden">
+        <div className="max-w-[1140px] mx-auto px-4 space-y-6">
           <FadeIn direction="left">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-[58px] font-semibold text-white leading-tight">
               Pronto para acelerar <br />
               o seu negócio?
             </h2>
@@ -768,7 +781,7 @@ export default async function HomePage() {
           </div>
 
           <FadeIn direction="right" delay={0.1}>
-            <p className="text-base sm:text-lg text-white/90 max-w-2xl mx-auto font-light leading-relaxed">
+            <p className="text-base md:text-[19px] text-white/95 max-w-2xl mx-auto font-normal leading-relaxed">
               <strong className="font-semibold text-white">Se você quer transformar marketing </strong>
               <strong className="font-semibold text-white">em crescimento, fortalecer sua </strong>
               <strong className="font-semibold text-white">presença no mercado</strong> e criar uma base sólida para escalar resultados, faça sua aplicação.
@@ -780,7 +793,7 @@ export default async function HomePage() {
               href="https://wa.me/5511949845827?text=Ol%C3%A1%21%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20seu%20servi%C3%A7o"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-luxo !text-base !py-4 !px-8"
+              className="btn-luxo !text-[23px] !py-5 !px-12"
             >
               <span>Quero me aplicar para o programa de aceleração</span>
             </a>
@@ -789,10 +802,10 @@ export default async function HomePage() {
       </section>
 
       {/* =========================================================================
-          SECTION 9: PUBLICAÇÕES & ARTIGOS MIGRADOS (MDX)
+          SECTION 9: BASE DE CONHECIMENTO (ARTIGOS & PUBLICADOS MDX)
           ========================================================================= */}
-      <section className="relative py-20 bg-[#070707]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 bg-[#070707] border-t border-white/[0.06]">
+        <div className="max-w-[1140px] mx-auto px-4">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-white/[0.08]">
             <div>
               <p className="text-xs font-bold uppercase tracking-widest text-[#4E83FF] font-sora mb-1">

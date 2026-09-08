@@ -16,8 +16,8 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 glass-nav transition-all">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[74px] flex items-center justify-between">
+    <header className="sticky top-0 z-50 glass-nav transition-all -mb-[74px]">
+      <div className="max-w-[1140px] mx-auto px-4 sm:px-6 h-[74px] flex items-center justify-between">
         {/* Brand Logo */}
         <Link href="/" className="flex items-center gap-3 group">
           <div className="w-10 h-10 rounded-lg bg-gradient-to-tr from-[#3671FF] to-[#66AFFF] flex items-center justify-center text-white font-black text-lg shadow-lg shadow-[#4E83FF]/25 group-hover:scale-105 transition-transform duration-300">
