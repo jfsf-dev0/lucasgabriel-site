@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
-import { getAllPosts, getAllCategories } from "@/lib/content";
-import PostCard from "@/components/PostCard";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/MotionWrappers";
 
 export const metadata: Metadata = {
@@ -18,10 +15,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function HomePage() {
-  const posts = await getAllPosts(false);
-  const categories = await getAllCategories();
-
+export default function HomePage() {
   const problemCards = [
     {
       title: "Falta de estrutura estratégica para crescer.",
@@ -809,51 +803,6 @@ export default async function HomePage() {
               <span>Quero me aplicar para o programa de aceleração</span>
             </a>
           </FadeIn>
-        </div>
-      </section>
-
-      {/* =========================================================================
-          SECTION 9: BASE DE CONHECIMENTO (ARTIGOS & PUBLICADOS MDX)
-          ========================================================================= */}
-      <section className="relative py-20 bg-[#070707] border-t border-white/[0.06]">
-        <div className="max-w-[1140px] mx-auto px-4">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-white/[0.08]">
-            <div>
-              <p className="text-xs font-bold uppercase tracking-widest text-[#4E83FF] font-sora mb-1">
-                Base de Conhecimento
-              </p>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
-                Artigos & Publicações
-              </h2>
-            </div>
-
-            {/* Categories */}
-            <div className="flex flex-wrap gap-2">
-              <Link
-                href="/"
-                aria-label="Ver todas as publicações na base de conhecimento"
-                className="text-xs font-semibold px-3 py-1.5 rounded-full bg-[#4E83FF] text-white shadow"
-              >
-                Todos ({posts.length})
-              </Link>
-              {categories.map((cat) => (
-                <Link
-                  key={cat.slug}
-                  href={`/categoria/${cat.slug}`}
-                  aria-label={`Ver artigos na categoria ${cat.name}`}
-                  className="text-xs font-semibold px-3 py-1.5 rounded-full bg-neutral-900 border border-white/[0.08] text-neutral-300 hover:text-white hover:border-[#4E83FF]/50 transition-colors font-sora"
-                >
-                  {cat.name} ({cat.count})
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-            {posts.map((post) => (
-              <PostCard key={post.slug} post={post} />
-            ))}
-          </div>
         </div>
       </section>
     </div>
