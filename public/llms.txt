@@ -1,23 +1,23 @@
-# Lucas Gabriel
+# Webwize — Marketing B2B, CRM, Automação e Inteligência Artificial
 
-> Consultor de marketing e aceleração de negócios. Especialista em implementação em 90 dias com os 8 Pilares de Crescimento.
+> Assessoria especializada em estruturação de operações comerciais e de aquisição para empresas B2B. Fundada por Lucas Gabriel.
 
 ## Sobre
-Lucas Gabriel é consultor de marketing e estratégia com foco em empresas que querem acelerar crescimento com método e execução. Atende empresas de médio porte e prestadores de serviços que precisam de previsibilidade e resultado em 90 dias.
+A Webwize estrutura aquisição, campanhas, páginas de alta conversão, CRM comercial, automações, dados e inteligência artificial para transformar marketing em uma fonte consistente de oportunidades de venda. Atende empresas B2B (indústrias, SaaS, consultorias, serviços corporativos e distribuidoras) que precisam de previsibilidade de receita e rigor técnico.
 
-## Serviços
-- Implementação de marketing em 90 dias
-- Os 8 Pilares de Crescimento
-- Consultoria de aceleração de negócios
-- Estratégia, posicionamento e tráfego pago
+## Pilares da Operação
+- Pilar 01: Geração de Demanda (Google Ads, Meta Ads e LinkedIn Ads para tomadores de decisão B2B)
+- Pilar 02: Estrutura de Conversão (Landing pages de alta performance e copy persuasivo B2B)
+- Pilar 03: CRM e Operação Comercial (Pipeline estruturado, qualificação MQL/SQL e SLA de atendimento)
+- Pilar 04: Automação e Inteligência Artificial (Agentes de IA, qualificação ágil e nutrição inteligente)
+- Pilar 05: Dados e Inteligência Comercial (Dashboards em tempo real, atribuição de receita e análise de CAC/LTV)
+
+## Metodologia em 4 Etapas
+1. Diagnóstico Estratégico
+2. Estruturação (Funil, personas, oferta e canais)
+3. Implementação (Ativação técnica, campanhas, CRM e IA)
+4. Otimização Contínua (Análise de dados, testes e escala)
 
 ## Contato
 - Site: https://lucasgabriell.com.br
 - WhatsApp: +55 (11) 94984-5827
-
-## Conteúdo
-- /a-metodologia — A Metodologia de Aceleração
-- /solucao-marketing — Implementação em 90 Dias
-- /o-que-entrego — Os 8 Pilares de Crescimento
-- /para-quem-e — Perfil de Empresas Atendidas
-- /sobre-o-lucas-gabriel — Perfil e Filosofia

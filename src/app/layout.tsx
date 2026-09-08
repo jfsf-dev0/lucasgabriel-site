@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { Montserrat, Sora } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ExitIntent from "@/components/ExitIntent";
+import LeadCaptureModal from "@/components/LeadCaptureModal";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -25,11 +27,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://lucasgabriell.com.br"),
   title: {
-    default: "Lucas Gabriel · Aceleração de Negócios e Marketing",
-    template: "%s · Lucas Gabriel",
+    default: "Webwize | Marketing B2B, CRM, Automação e Inteligência Artificial",
+    template: "%s | Webwize",
   },
   description:
-    "Implementação dos 8 Pilares de Crescimento para empresas que querem acelerar com método.",
+    "A Webwize estrutura aquisição, campanhas, páginas, CRM, automações, dados e inteligência artificial para transformar marketing em uma fonte consistente de oportunidades comerciais.",
   robots: {
     index: true,
     follow: true,
@@ -48,19 +50,19 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "Lucas Gabriel — Consultoria de Aceleração em 90 Dias",
+    title: "Webwize | Marketing B2B, CRM, Automação e Inteligência Artificial",
     description:
-      "Implementação dos 8 Pilares de Crescimento para empresas que querem acelerar com método.",
+      "A Webwize estrutura aquisição, campanhas, páginas, CRM, automações, dados e inteligência artificial para transformar marketing em uma fonte consistente de oportunidades comerciais.",
     url: "https://lucasgabriell.com.br",
-    siteName: "Lucas Gabriel",
+    siteName: "Webwize",
     locale: "pt_BR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lucas Gabriel — Consultoria de Aceleração",
+    title: "Webwize | Marketing B2B, CRM, Automação e Inteligência Artificial",
     description:
-      "Aceleração de negócios em 90 dias com os 8 Pilares de Crescimento.",
+      "Transformamos marketing em uma fonte consistente de oportunidades comerciais B2B.",
   },
 };
 
@@ -69,26 +71,26 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const jsonLdPerson = {
+  const jsonLdOrg = {
     "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Lucas Gabriel",
-    jobTitle: "Consultor de Marketing e Aceleração de Negócios",
+    "@type": "Organization",
+    name: "Webwize",
+    founder: {
+      "@type": "Person",
+      name: "Lucas Gabriel",
+      jobTitle: "Fundador e Estrategista B2B",
+    },
     url: "https://lucasgabriell.com.br",
-    sameAs: [],
+    description:
+      "Operação de aquisição, CRM, automações e IA para empresas B2B gerarem oportunidades de venda previsíveis.",
     knowsAbout: [
-      "Marketing Digital",
-      "Aceleração de Negócios",
-      "Estratégia Empresarial",
-      "Implementação em 90 Dias",
-      "Tráfego Pago",
-      "Posicionamento Digital"
-    ],
-    offers: {
-      "@type": "Offer",
-      name: "Consultoria de Aceleração em 90 Dias",
-      description: "Implementação completa dos 8 Pilares de Crescimento em 90 dias"
-    }
+      "Marketing B2B",
+      "CRM Comercial",
+      "Automação de Vendas",
+      "Inteligência Artificial para Negócios",
+      "Geração de Demanda",
+      "Otimização de Conversão"
+    ]
   };
 
   return (
@@ -100,7 +102,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(jsonLdPerson),
+            __html: JSON.stringify(jsonLdOrg),
           }}
         />
       </head>
@@ -108,6 +110,8 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <ExitIntent />
+        <LeadCaptureModal />
       </body>
     </html>
   );
