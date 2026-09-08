@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { Post, slugify } from "@/lib/slugify";
 
 interface PostCardProps {
@@ -17,16 +16,19 @@ export default function PostCard({ post }: PostCardProps) {
   });
 
   return (
-    <motion.article
-      whileHover={{ y: -6 }}
-      transition={{ duration: 0.3, ease: "easeOut" }}
-      className="group flex flex-col bg-[#0E0E0E] rounded-2xl border border-white/[0.08] hover:border-[#4E83FF]/40 overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-[#4E83FF]/10 transition-colors duration-300"
+    <article
+      className="group flex flex-col bg-[#0E0E0E] rounded-2xl border border-white/[0.08] hover:border-[#4E83FF]/40 overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-[#4E83FF]/10 transition-all duration-300 hover:-translate-y-1.5"
     >
-      <Link href={`/${post.slug}`} className="relative w-full aspect-[16/10] overflow-hidden bg-neutral-900">
+      <Link
+        href={`/${post.slug}`}
+        className="relative w-full aspect-[16/10] overflow-hidden bg-neutral-900"
+        aria-label={`Ver artigo: ${post.title}`}
+      >
         <Image
           src={post.image || "/images/Lucas-01.jpg"}
           alt={post.title}
           fill
+          loading="lazy"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover group-hover:scale-105 transition-transform duration-500"
         />
@@ -55,7 +57,7 @@ export default function PostCard({ post }: PostCardProps) {
         </div>
 
         <h3 className="text-xl font-bold tracking-tight text-white group-hover:text-[#66AFFF] transition-colors mb-2 line-clamp-2 leading-snug">
-          <Link href={`/${post.slug}`}>
+          <Link href={`/${post.slug}`} aria-label={`Ler o artigo completo: ${post.title}`}>
             {post.title}
           </Link>
         </h3>
@@ -72,6 +74,7 @@ export default function PostCard({ post }: PostCardProps) {
           </span>
           <Link
             href={`/${post.slug}`}
+            aria-label={`Ler mais sobre o artigo: ${post.title}`}
             className="inline-flex items-center gap-1.5 text-xs font-bold text-[#66AFFF] group-hover:translate-x-1 transition-transform font-sora"
           >
             <span>Ler mais</span>
@@ -81,6 +84,6 @@ export default function PostCard({ post }: PostCardProps) {
           </Link>
         </div>
       </div>
-    </motion.article>
+    </article>
   );
 }

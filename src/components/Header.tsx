@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -19,7 +18,11 @@ export default function Header() {
     <header className="sticky top-0 z-50 glass-nav transition-all -mb-[74px]">
       <div className="max-w-[1140px] mx-auto px-4 sm:px-6 h-[74px] flex items-center justify-between">
         {/* Brand Logo */}
-        <Link href="/" className="flex items-center gap-3 group">
+        <Link
+          href="/"
+          className="flex items-center gap-3 group"
+          aria-label="Ir para a página inicial de Lucas Gabriel"
+        >
           <div className="w-10 h-10 rounded-lg bg-gradient-to-tr from-[#3671FF] to-[#66AFFF] flex items-center justify-center text-white font-black text-lg shadow-lg shadow-[#4E83FF]/25 group-hover:scale-105 transition-transform duration-300">
             LG
           </div>
@@ -34,7 +37,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-7">
+        <nav className="hidden lg:flex items-center gap-7" aria-label="Navegação principal">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -48,13 +51,12 @@ export default function Header() {
 
         {/* CTA Button */}
         <div className="hidden sm:flex items-center">
-          <motion.a
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.98 }}
+          <a
             href="https://wa.me/5511949845827?text=Ol%C3%A1%21%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20seu%20servi%C3%A7o"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-luxo-azul !py-2.5 !px-5 !text-xs !rounded-full"
+            aria-label="Falar com Lucas Gabriel no WhatsApp via cabeçalho"
+            className="btn-luxo-azul !py-2.5 !px-5 !text-xs !rounded-full hover:scale-105 active:scale-95 transition-transform duration-200"
           >
             <span>Falar no WhatsApp</span>
             <svg
@@ -70,7 +72,7 @@ export default function Header() {
                 d="M14 5l7 7m0 0l-7 7m7-7H3"
               />
             </svg>
-          </motion.a>
+          </a>
         </div>
 
         {/* Mobile menu button */}
@@ -78,7 +80,8 @@ export default function Header() {
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           type="button"
           className="lg:hidden p-2 text-neutral-300 hover:text-white focus:outline-none"
-          aria-label="Abrir menu"
+          aria-label={mobileMenuOpen ? "Fechar menu de navegação" : "Abrir menu de navegação"}
+          aria-expanded={mobileMenuOpen}
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {mobileMenuOpen ? (
@@ -92,11 +95,8 @@ export default function Header() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-          className="lg:hidden bg-neutral-950/95 border-b border-neutral-800 px-5 py-4 space-y-3"
+        <div
+          className="lg:hidden bg-neutral-950/95 border-b border-neutral-800 px-5 py-4 space-y-3 animate-fadeIn"
         >
           {navLinks.map((link) => (
             <Link
@@ -113,12 +113,13 @@ export default function Header() {
               href="https://wa.me/5511949845827?text=Ol%C3%A1%21%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20seu%20servi%C3%A7o"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Aplicar para o programa de aceleração no WhatsApp via menu mobile"
               className="btn-luxo-azul w-full !py-3 !text-sm text-center"
             >
               Quero me aplicar
             </a>
           </div>
-        </motion.div>
+        </div>
       )}
     </header>
   );

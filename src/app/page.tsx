@@ -1,8 +1,22 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { getAllPosts, getAllCategories } from "@/lib/content";
 import PostCard from "@/components/PostCard";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/MotionWrappers";
+
+export const metadata: Metadata = {
+  title: "Lucas Gabriel · Aceleração de Negócios e Marketing",
+  description:
+    "Estruturação e Implementação de Marketing para Aceleração de Negócios. Transforme o potencial da sua empresa para impulsionar suas vendas e preparar seu negócio para o próximo nível.",
+  alternates: {
+    canonical: "https://lucasgabriell.com.br",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default async function HomePage() {
   const posts = await getAllPosts(false);
@@ -41,25 +55,25 @@ export default async function HomePage() {
       bg: "#060606",
       icon: (
         <svg className="w-5 h-5 text-[#4E83FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l18 18" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       ),
     },
     {
-      title: "Baixa consistência na geração de oportunidades.",
+      title: "Dificuldade em cobrar mais caro e fechar grandes clientes.",
       bg: "#0B0B0B",
       icon: (
         <svg className="w-5 h-5 text-[#4E83FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
         </svg>
       ),
     },
     {
-      title: "Crescimento travado por falta de posicionamento.",
+      title: "Contratação de agências que apenas postam sem gerar retorno.",
       bg: "#060606",
       icon: (
         <svg className="w-5 h-5 text-[#4E83FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
         </svg>
       ),
     },
@@ -68,66 +82,76 @@ export default async function HomePage() {
   const deliverables = [
     {
       image: "/images/Lucas-01.jpg",
-      title: "Gestão de Tráfego Pago",
-      desc: "Google Ads e Meta Ads gerenciados com estratégia, não apenas no automático.",
+      title: "Diagnóstico Completo",
+      desc: "Análise profunda de canais, funil, concorrência e posicionamento da empresa para mapear gargalos.",
     },
     {
       image: "/images/Lucas-02.jpg",
-      title: "Criação e Otimização de Campanhas",
-      desc: "Campanhas construídas para converter, com testes constantes e melhora contínua.",
+      title: "Posicionamento Estratégico",
+      desc: "Construção de uma narrativa comercial de autoridade, elevando a percepção de valor dos seus serviços.",
     },
     {
       image: "/images/Lucas-03.jpg",
-      title: "Landing Pages de Conversão",
-      desc: "Estruturação de páginas otimizadas para transformar visitantes em leads.",
+      title: "Estruturação de Oferta",
+      desc: "Refinamento e formatação de ofertas comerciais com alto apelo de compra e diferenciação de mercado.",
     },
     {
       image: "/images/Lucas-04.jpg",
-      title: "Google Business Profile",
-      desc: "Otimização do seu perfil para aparecer mais e melhor nas buscas locais.",
+      title: "Canais de Aquisição",
+      desc: "Configuração e ativação de anúncios direcionados (Meta Ads, Google Ads) focados em geração de leads.",
     },
     {
       image: "/images/Lucas-05.jpg",
-      title: "Remarketing Estratégico",
-      desc: "Recuperação de leads que visitaram mas ainda não converteram.",
+      title: "Funil de Vendas e CRM",
+      desc: "Implementação de processos de qualificação, acompanhamento de leads e organização da equipe comercial.",
     },
     {
       image: "/images/Lucas-06.jpg",
-      title: "Estratégia de Conteúdo",
-      desc: "Posicionamento digital que gera autoridade e atrai clientes organicamente.",
-    },
-    {
-      image: "/images/Lucas-08.jpg",
-      title: "Análise de Métricas",
-      desc: "Relatórios claros sobre o que está funcionando e onde estão as oportunidades.",
+      title: "Otimização de Conversão",
+      desc: "Aprimoramento de páginas de captura, pontos de contato e scripts de fechamento para máxima eficiência.",
     },
     {
       image: "/images/Lucas-07.jpg",
-      title: "Automações",
-      desc: "Automatize tarefas repetitivas, atendimento e processos para ganhar eficiência, reduzir custos e escalar seu negócio.",
+      title: "Dashboards de Métricas",
+      desc: "Painéis de indicadores em tempo real para tomada de decisões baseada em dados, CAC, LTV e ROI.",
+    },
+    {
+      image: "/images/Lucas-08.jpg",
+      title: "Acompanhamento Contínuo",
+      desc: "Alinhamentos estratégicos periódicos, refinamento tático constante e suporte executivo direto.",
     },
   ];
 
   return (
     <div className="relative overflow-hidden bg-[#070707] text-white">
       {/* =========================================================================
-          SECTION 1: HERO SECTION
+          SECTION 1: HERO SECTION (EXACT ELEMENTOR RATIOS & PRIORITY IMAGE PRELOAD)
           ========================================================================= */}
       <section className="relative min-h-[800px] flex items-center justify-start border-b border-white/[0.08] overflow-hidden">
-        {/* Desktop background */}
-        <div
-          className="absolute inset-0 hidden md:block bg-cover bg-top bg-no-repeat pointer-events-none"
-          style={{
-            backgroundImage: "url('/images/Lucas-Gabriel-pagina-azul_01.jpg')",
-          }}
-        />
-        {/* Mobile background */}
-        <div
-          className="absolute inset-0 block md:hidden bg-cover bg-top bg-no-repeat pointer-events-none"
-          style={{
-            backgroundImage: "url('/images/Lucas-gabriel-mobile-111.jpg')",
-          }}
-        />
+        {/* Desktop background with priority */}
+        <div className="absolute inset-0 hidden md:block pointer-events-none">
+          <Image
+            src="/images/Lucas-Gabriel-pagina-azul_01.jpg"
+            alt="Lucas Gabriel - Aceleração de Negócios e Marketing"
+            fill
+            priority
+            quality={85}
+            className="object-cover object-top"
+            sizes="100vw"
+          />
+        </div>
+        {/* Mobile background with priority */}
+        <div className="absolute inset-0 block md:hidden pointer-events-none">
+          <Image
+            src="/images/Lucas-gabriel-mobile-111.jpg"
+            alt="Lucas Gabriel - Mobile"
+            fill
+            priority
+            quality={85}
+            className="object-cover object-top"
+            sizes="100vw"
+          />
+        </div>
 
         {/* Content Box (Exact Elementor dimensions: 46% width desktop, min-height 800px, 350px top pad mobile) */}
         <div className="relative max-w-[1140px] mx-auto px-4 w-full pt-[350px] pb-10 md:pt-[100px] md:pb-[60px] flex items-center">
@@ -165,6 +189,7 @@ export default async function HomePage() {
                 href="https://wa.me/5511949845827?text=Ol%C3%A1%21%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20seu%20servi%C3%A7o"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Quero me aplicar para o programa de aceleração - Seção Principal"
                 className="btn-luxo-azul w-full sm:w-auto"
               >
                 <span>Quero me aplicar para o programa de aceleração</span>
@@ -178,30 +203,36 @@ export default async function HomePage() {
       </section>
 
       {/* =========================================================================
-          SECTION 2: A METODOLOGIA (#metodologia) - EXACT ROW-REVERSE DESKTOP
+          SECTION 2: METODOLOGIA / DESAFIOS (EXACT ELEMENTOR ROW-REVERSE)
+          Desktop: 50% text RIGHT, 47% cards LEFT (2 columns)
           ========================================================================= */}
       <section
         id="metodologia"
-        className="relative py-16 md:py-[100px] border-b border-white/[0.08] bg-cover bg-top bg-no-repeat"
-        style={{
-          backgroundImage: "url('/images/Lucas-Gabriel-pagina-azul_02.jpg')",
-        }}
+        className="relative py-20 md:py-28 border-b border-white/[0.08] bg-[#070707] bg-cover bg-top bg-no-repeat overflow-hidden"
       >
-        <div className="max-w-[1140px] mx-auto px-4">
-          <div className="flex flex-col lg:flex-row-reverse items-center justify-between gap-10">
-            {/* Right block in desktop / Top in mobile (width 50%) */}
-            <div className="w-full lg:w-[50%] space-y-6 text-left">
+        <div
+          className="absolute inset-0 bg-cover bg-top bg-no-repeat pointer-events-none opacity-40"
+          style={{
+            backgroundImage: "url('/images/Lucas-Gabriel-pagina-azul_02.jpg')",
+          }}
+        />
+
+        <div className="relative max-w-[1140px] mx-auto px-4">
+          <div className="flex flex-col md:flex-row-reverse items-center justify-between gap-12 lg:gap-14">
+            
+            {/* RIGHT SIDE: Text Column (50% width desktop) */}
+            <div className="w-full md:w-[50%] space-y-6 text-left">
               <FadeIn direction="right">
                 <p className="text-[14px] font-normal uppercase tracking-widest text-[#4E83FF] font-sora">
-                  A METODOLOGIA
+                  O Problema
                 </p>
               </FadeIn>
 
-              <FadeIn direction="left" delay={0.1}>
+              <FadeIn direction="right" delay={0.1}>
                 <h2 className="text-2xl sm:text-3xl md:text-[34px] font-semibold tracking-tight leading-[1.25]">
-                  A metodologia utilizada para transformar marketing em um sistema previsível de{" "}
+                  Por que a maioria das empresas{" "}
                   <em className="italic text-gradient-blue font-serif font-medium">
-                    aquisição de clientes e crescimento.
+                    não consegue escalar?
                   </em>
                 </h2>
               </FadeIn>
@@ -210,173 +241,146 @@ export default async function HomePage() {
                 <div className="rhombus-dot" />
               </div>
 
-              <FadeIn direction="down" delay={0.2}>
-                <p className="text-sm md:text-[18px] text-neutral-300 font-normal leading-relaxed">
-                  Uma abordagem desenvolvida para estruturar, implementar e otimizar os pilares que{" "}
-                  <strong className="font-semibold text-white">
-                    impulsionam aquisição de clientes, vendas e crescimento sustentável.
-                  </strong>
+              <FadeIn direction="right" delay={0.2} className="space-y-4 text-sm md:text-[18px] text-neutral-300 font-normal leading-relaxed">
+                <p>
+                  A maioria das empresas que tenta crescer no digital enfrenta o mesmo problema: criam campanhas, postam conteúdo, contratam serviços, mas{" "}
+                  <strong className="font-semibold text-white">não possuem uma estrutura integrada de marketing e vendas.</strong>
                 </p>
-              </FadeIn>
-
-              <FadeIn direction="up" delay={0.3} className="pt-2">
-                <a
-                  href="https://wa.me/5511949845827?text=Ol%C3%A1%21%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20seu%20servi%C3%A7o"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-luxo-azul w-full sm:w-auto !text-[18px]"
-                >
-                  <span>Quero me aplicar para o programa de aceleração</span>
-                  <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 512 512">
-                    <path d="M505.1 19.1c-1.2-5.5-6.7-11-12.2-12.2C460.7 0 435.5 0 410.4 0 307.2 0 245.3 55.2 199.1 128H94.8c-16.3 0-35.6 11.9-42.9 26.5L2.5 253.3A28.4 28.4 0 000 264a24 24 0 0024 24h103.8l-22.5 22.5c-11.4 11.4-13 32.3 0 45.3l45.3 45.3c11.2 11.2 32.2 13.2 45.3 0l22.5-22.5V488a24 24 0 0024 24 28.6 28.6 0 0010.7-2.5l98.7-49.4c14.6-7.3 26.5-26.5 26.5-42.9v-104.4c72.6-46.3 128-108.4 128-211.1 0-25.2 0-50.4-7-82.6zm-121.1 148.9a40 40 0 1140-40 40 40 0 01-40 40z" />
-                  </svg>
-                </a>
+                <p>
+                  O resultado é um processo de aquisição inconsistente, dependente de indicação e com baixa previsibilidade de receita.
+                </p>
               </FadeIn>
             </div>
 
-            {/* Left block in desktop / Bottom in mobile (width 47%) - The 6 Problem Cards */}
-            <div className="w-full lg:w-[47%]">
+            {/* LEFT SIDE: 6 Cards in 2 Columns (47% width desktop) */}
+            <div className="w-full md:w-[47%]">
               <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {problemCards.map((card, i) => (
+                {problemCards.map((item, idx) => (
                   <StaggerItem
-                    key={i}
-                    className="p-5 rounded-[10px] border border-white/[0.09] transition-all duration-300 hover:border-[#4E83FF]/40 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#4E83FF]/10 flex items-start gap-4"
-                    style={{ backgroundColor: card.bg }}
+                    key={idx}
+                    className="p-5 rounded-xl border border-white/[0.08] hover:border-[#4E83FF]/40 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-start text-left"
+                    style={{ backgroundColor: item.bg }}
                   >
-                    <div className="w-10 h-10 rounded-lg bg-[#4E83FF]/10 border border-[#4E83FF]/30 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      {card.icon}
+                    <div className="w-9 h-9 rounded-lg bg-[#4E83FF]/15 border border-[#4E83FF]/30 flex items-center justify-center mb-4">
+                      {item.icon}
                     </div>
                     <h3 className="text-sm font-semibold text-white leading-snug">
-                      {card.title}
+                      {item.title}
                     </h3>
                   </StaggerItem>
                 ))}
               </StaggerContainer>
             </div>
+
           </div>
         </div>
       </section>
 
       {/* =========================================================================
-          SECTION 3: TRANSFORMAÇÃO & COMPARAÇÃO (EXACT 90% WIDTH CENTERED)
+          SECTION 3: TRANSFORMAÇÃO & COMPARATIVO (90% WIDTH CENTERED)
           ========================================================================= */}
       <section
-        className="relative py-16 md:py-[100px] border-b border-white/[0.08] bg-[#000000] bg-cover bg-top bg-no-repeat"
-        style={{
-          backgroundImage: "url('/images/Lucas-Gabriel-pagina-azul_03.jpg')",
-        }}
+        className="relative py-20 md:py-28 border-b border-white/[0.08] bg-[#070707] bg-cover bg-top bg-no-repeat overflow-hidden"
       >
-        <div className="max-w-[1140px] mx-auto px-4 text-center">
-          <div className="w-full lg:w-[90%] mx-auto">
-            <FadeIn direction="left">
-              <h2 className="text-2xl sm:text-3xl md:text-[34px] font-semibold leading-snug">
-                Estamos vivendo uma das MAIORES transformações na{" "}
-                <em className="italic text-gradient-blue font-serif font-medium">
-                  forma como empresas crescem
-                </em>
-              </h2>
+        <div
+          className="absolute inset-0 bg-cover bg-top bg-no-repeat pointer-events-none opacity-30"
+          style={{
+            backgroundImage: "url('/images/Lucas-Gabriel-pagina-azul_03.jpg')",
+          }}
+        />
+
+        <div className="relative max-w-[1140px] mx-auto px-4 w-full text-center">
+          <FadeIn direction="down">
+            <h2 className="text-2xl sm:text-3xl md:text-[34px] font-semibold leading-snug">
+              Crescer não é sobre sorte.{" "}
+              <em className="italic text-gradient-blue font-serif font-medium">
+                É sobre método.
+              </em>
+            </h2>
+          </FadeIn>
+
+          <div className="rhombus-divider-center">
+            <div className="rhombus-dot" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 text-left">
+            {/* Card 1: Como a maioria cresce */}
+            <FadeIn direction="left" className="p-8 sm:p-10 rounded-2xl bg-[#0E0E0E] border border-white/[0.08] hover:border-red-500/30 transition-all duration-300">
+              <div className="inline-block px-3 py-1 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-semibold uppercase tracking-wider mb-4 font-sora">
+                Modelo Frágil
+              </div>
+              <h3 className="text-[22px] font-semibold text-neutral-100 mb-6 font-sans flex items-center gap-2.5">
+                <span>Como a maioria cresce</span>
+              </h3>
+              <ul className="space-y-4 text-sm text-neutral-300 font-light">
+                <li className="flex items-start gap-3">
+                  <span className="w-5 h-5 rounded-full bg-red-500/10 text-red-400 flex items-center justify-center flex-shrink-0 mt-0.5 text-xs">✕</span>
+                  <span>Dependência absoluta de indicações e boca a boca.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-5 h-5 rounded-full bg-red-500/10 text-red-400 flex items-center justify-center flex-shrink-0 mt-0.5 text-xs">✕</span>
+                  <span>Ações de marketing isoladas sem estratégia unificada.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-5 h-5 rounded-full bg-red-500/10 text-red-400 flex items-center justify-center flex-shrink-0 mt-0.5 text-xs">✕</span>
+                  <span>Falta de controle sobre volume e previsibilidade de vendas.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-5 h-5 rounded-full bg-red-500/10 text-red-400 flex items-center justify-center flex-shrink-0 mt-0.5 text-xs">✕</span>
+                  <span>Guerra de preços por falta de diferenciação e posicionamento.</span>
+                </li>
+              </ul>
             </FadeIn>
 
-            <div className="rhombus-divider-center">
-              <div className="rhombus-dot" />
-            </div>
-
-            <FadeIn direction="down" delay={0.1}>
-              <p className="text-sm md:text-[18px] text-neutral-300 font-normal max-w-3xl mx-auto mb-12 leading-relaxed">
-                A próxima década será liderada por empresas capazes de gerar demanda, conquistar clientes e permanecer relevantes para eles continuamente, e essa será sua vantagem competitiva.
-              </p>
-            </FadeIn>
-
-            {/* Comparison Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left mb-10">
-              {/* Card Left: Como a maioria tenta crescer */}
-              <FadeIn direction="left" delay={0.2} className="p-8 rounded-2xl bg-[#0E0E0E] border border-white/[0.08] flex flex-col justify-between hover:border-white/20 transition-colors">
-                <div>
-                  <h3 className="text-[22px] font-semibold text-neutral-100 mb-6 font-sans flex items-center gap-2.5">
-                    <span className="w-2.5 h-2.5 rounded-full bg-neutral-500" />
-                    Como a maioria tenta crescer
-                  </h3>
-                  <ul className="space-y-3.5 text-sm text-neutral-400 mb-8">
-                    {[
-                      "Campanhas isoladas",
-                      "Marketing sem estratégia",
-                      "Dependência de indicação",
-                      "Baixa previsibilidade comercial",
-                      "Pouca diferenciação no mercado",
-                      "Crescimento inconsistente",
-                    ].map((item, idx) => (
-                      <li key={idx} className="flex items-center gap-3">
-                        <svg className="w-4 h-4 text-neutral-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
-                        </svg>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="p-4 rounded-xl bg-neutral-900/80 border border-white/[0.04] text-[14px] text-neutral-300 text-center font-normal">
-                  <strong className="text-white font-semibold">Resultado:</strong> Vendas imprevisíveis, crescimento lento e oportunidades perdidas.
-                </div>
-              </FadeIn>
-
-              {/* Card Right: Como empresas líderes constroem crescimento */}
-              <FadeIn direction="right" delay={0.2} className="p-8 rounded-2xl bg-gradient-to-br from-[#102454]/40 via-[#070707] to-[#070707] border border-[#4E83FF]/60 flex flex-col justify-between shadow-2xl shadow-[#4E83FF]/15 hover:border-[#66AFFF] transition-all">
-                <div>
-                  <h3 className="text-[22px] font-semibold text-white mb-6 font-sans flex items-center gap-2.5">
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#4E83FF] shadow-sm shadow-[#4E83FF]" />
-                    Como empresas líderes constroem crescimento
-                  </h3>
-                  <ul className="space-y-3.5 text-sm text-neutral-200 mb-8">
-                    {[
-                      "Campanhas isoladas",
-                      "Marketing sem estratégia",
-                      "Dependência de indicação",
-                      "Baixa previsibilidade comercial",
-                      "Pouca diferenciação no mercado",
-                      "Crescimento inconsistente",
-                    ].map((item, idx) => (
-                      <li key={idx} className="flex items-center gap-3">
-                        <svg className="w-4 h-4 text-[#4E83FF] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                        </svg>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="p-4 rounded-xl bg-[#4E83FF]/15 border border-[#4E83FF]/30 text-[15px] text-neutral-200 text-center font-normal">
-                  <strong className="text-[#66AFFF] font-semibold">Resultado:</strong> Crescimento acelerado, alta conversão e previsibilidade de receita.
-                </div>
-              </FadeIn>
-            </div>
-
-            <FadeIn direction="up" delay={0.4}>
-              <a
-                href="https://wa.me/5511949845827?text=Ol%C3%A1%21%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20seu%20servi%C3%A7o"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-luxo-azul !text-[18px]"
-              >
-                <span>Quero me aplicar para o programa de aceleração</span>
-              </a>
+            {/* Card 2: Como empresas líderes constroem crescimento */}
+            <FadeIn direction="right" className="p-8 sm:p-10 rounded-2xl bg-[#0E0E0E] border border-[#4E83FF]/40 shadow-xl shadow-[#4E83FF]/5 hover:border-[#4E83FF] transition-all duration-300">
+              <div className="inline-block px-3 py-1 rounded-full bg-[#4E83FF]/15 border border-[#4E83FF]/40 text-[#66AFFF] text-xs font-semibold uppercase tracking-wider mb-4 font-sora">
+                Modelo Estruturado
+              </div>
+              <h3 className="text-[22px] font-semibold text-white mb-6 font-sans flex items-center gap-2.5">
+                <span>Como líderes constroem crescimento</span>
+              </h3>
+              <ul className="space-y-4 text-sm text-neutral-200 font-normal">
+                <li className="flex items-start gap-3">
+                  <span className="w-5 h-5 rounded-full bg-[#4E83FF]/20 text-[#66AFFF] flex items-center justify-center flex-shrink-0 mt-0.5 text-xs">✓</span>
+                  <span>Funil previsível com aquisição contínua e qualificada.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-5 h-5 rounded-full bg-[#4E83FF]/20 text-[#66AFFF] flex items-center justify-center flex-shrink-0 mt-0.5 text-xs">✓</span>
+                  <span>Posicionamento de autoridade que atrai os clientes certos.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-5 h-5 rounded-full bg-[#4E83FF]/20 text-[#66AFFF] flex items-center justify-center flex-shrink-0 mt-0.5 text-xs">✓</span>
+                  <span>Decisões embasadas em métricas claras e retorno sobre investimento.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-5 h-5 rounded-full bg-[#4E83FF]/20 text-[#66AFFF] flex items-center justify-center flex-shrink-0 mt-0.5 text-xs">✓</span>
+                  <span>Ofertas estruturadas que permitem cobrar mais e fechar contratos maiores.</span>
+                </li>
+              </ul>
             </FadeIn>
           </div>
         </div>
       </section>
 
       {/* =========================================================================
-          SECTION 4: A SOLUÇÃO (#solucao)
+          SECTION 4: A SOLUÇÃO / FASES 01 A 04 (EXACT 48% / 48% SPLIT)
           ========================================================================= */}
       <section
         id="solucao"
-        className="relative py-16 md:py-[100px] border-b border-white/[0.08] bg-cover bg-top bg-no-repeat"
-        style={{
-          backgroundImage: "url('/images/Lucas-Gabriel-pagina-azul_03.jpg')",
-        }}
+        className="relative py-20 md:py-28 border-b border-white/[0.08] bg-[#070707] bg-cover bg-top bg-no-repeat overflow-hidden"
       >
-        <div className="max-w-[1140px] mx-auto px-4">
-          <div className="flex flex-col lg:flex-row items-start justify-between gap-12">
-            {/* Left side: A Solução (50% width) */}
+        <div
+          className="absolute inset-0 bg-cover bg-top bg-no-repeat pointer-events-none opacity-35"
+          style={{
+            backgroundImage: "url('/images/Lucas-Gabriel-pagina-azul_04.jpg')",
+          }}
+        />
+
+        <div className="relative max-w-[1140px] mx-auto px-4 w-full">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-14">
+            
+            {/* Left side: Text & Stats (48% width) */}
             <div className="w-full lg:w-[48%] space-y-6 text-left">
               <FadeIn direction="left">
                 <p className="text-[14px] font-normal uppercase tracking-widest text-[#4E83FF] font-sora">
@@ -415,8 +419,8 @@ export default async function HomePage() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-sm font-bold text-white">Resultado mensurável</h4>
-                    <p className="text-xs text-neutral-400">Metas de ROI e escala</p>
+                    <h3 className="text-sm font-bold text-white">Resultado mensurável</h3>
+                    <p className="text-xs text-neutral-300">Metas de ROI e escala</p>
                   </div>
                 </div>
 
@@ -427,8 +431,8 @@ export default async function HomePage() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-sm font-bold text-white">Dados em tempo real</h4>
-                    <p className="text-xs text-neutral-400">Dashboards contínuos</p>
+                    <h3 className="text-sm font-bold text-white">Dados em tempo real</h3>
+                    <p className="text-xs text-neutral-300">Dashboards contínuos</p>
                   </div>
                 </div>
               </div>
@@ -438,6 +442,7 @@ export default async function HomePage() {
                   href="https://wa.me/5511949845827?text=Ol%C3%A1%21%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20seu%20servi%C3%A7o"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Quero me aplicar para o programa de aceleração - Seção Solução"
                   className="btn-luxo-azul w-full sm:w-auto !text-[17px]"
                 >
                   <span>Quero me aplicar para o programa de aceleração</span>
@@ -478,7 +483,7 @@ export default async function HomePage() {
                   <div className="flow-text">
                     <p className="flow-label">Fase 01</p>
                     <h4 className="text-base font-bold text-white font-sora">Diagnóstico Estratégico</h4>
-                    <p className="text-xs sm:text-sm text-neutral-400 mt-1 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-neutral-300 mt-1 leading-relaxed">
                       Mapeamos sua empresa, mercado e concorrência para identificar gargalos e oportunidades de crescimento.
                     </p>
                   </div>
@@ -497,7 +502,7 @@ export default async function HomePage() {
                   <div className="flow-text">
                     <p className="flow-label">Fase 02</p>
                     <h4 className="text-base font-bold text-white font-sora">Estruturação</h4>
-                    <p className="text-xs sm:text-sm text-neutral-400 mt-1 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-neutral-300 mt-1 leading-relaxed">
                       Construímos os fundamentos do crescimento: posicionamento, oferta comercial, funil e planejamento.
                     </p>
                   </div>
@@ -519,7 +524,7 @@ export default async function HomePage() {
                   <div className="flow-text">
                     <p className="flow-label">Fase 03</p>
                     <h4 className="text-base font-bold text-white font-sora">Implementação</h4>
-                    <p className="text-xs sm:text-sm text-neutral-400 mt-1 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-neutral-300 mt-1 leading-relaxed">
                       Colocamos a estratégia em prática, ativando os ativos responsáveis por gerar demanda e vendas.
                     </p>
                   </div>
@@ -537,7 +542,7 @@ export default async function HomePage() {
                   <div className="flow-text">
                     <p className="flow-label">Fase 04</p>
                     <h4 className="text-base font-bold text-white font-sora">Aceleração</h4>
-                    <p className="text-xs sm:text-sm text-neutral-400 mt-1 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-neutral-300 mt-1 leading-relaxed">
                       Maximizamos conversões e refinamos continuamente processos, equipe e estratégia para garantir crescimento consistente.
                     </p>
                   </div>
@@ -549,27 +554,18 @@ export default async function HomePage() {
       </section>
 
       {/* =========================================================================
-          SECTION 5: O QUE ENTREGO (#entrego)
+          SECTION 5: O QUE ENTREGO (8 CARDS IN 4 COLUMNS, 23% WIDTH EACH)
           ========================================================================= */}
       <section
         id="entrego"
-        className="relative py-16 md:py-[100px] border-b border-white/[0.08] bg-[#151515] bg-cover bg-top bg-no-repeat"
-        style={{
-          backgroundImage: "url('/images/Lucas-Gabriel-pagina-azul_04.jpg')",
-        }}
+        className="relative py-20 md:py-28 border-b border-white/[0.08] bg-[#151515] text-center"
       >
-        <div className="max-w-[1140px] mx-auto px-4 text-center">
+        <div className="max-w-[1140px] mx-auto px-4">
           <FadeIn direction="down">
-            <p className="text-[14px] font-normal uppercase tracking-widest text-[#4E83FF] font-sora mb-2">
-              O QUE ENTREGO
-            </p>
-          </FadeIn>
-
-          <FadeIn direction="up" delay={0.1}>
             <h2 className="text-2xl sm:text-3xl md:text-[40px] font-semibold max-w-3xl mx-auto leading-snug">
-              Tudo que o seu negócio precisa para{" "}
+              O que você recebe ao implementar o{" "}
               <em className="italic text-gradient-blue font-serif font-medium">
-                acelerar vendas
+                serviço na sua empresa?
               </em>
             </h2>
           </FadeIn>
@@ -589,6 +585,7 @@ export default async function HomePage() {
                     src={item.image}
                     alt={item.title}
                     fill
+                    loading="lazy"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -598,7 +595,7 @@ export default async function HomePage() {
                   <h3 className="text-[18px] font-semibold text-white mb-2 leading-snug font-sans group-hover:text-[#66AFFF] transition-colors">
                     {item.title}
                   </h3>
-                  <p className="text-[13px] text-neutral-400 leading-relaxed flex-1">
+                  <p className="text-[13px] text-neutral-300 leading-relaxed flex-1">
                     {item.desc}
                   </p>
                 </div>
@@ -609,16 +606,20 @@ export default async function HomePage() {
       </section>
 
       {/* =========================================================================
-          SECTION 6: PARA QUEM É (#quem)
+          SECTION 6: PARA QUEM É (2 KPS-STEP CARDS)
           ========================================================================= */}
       <section
         id="quem"
-        className="relative min-h-[676px] py-16 md:py-20 flex items-center border-b border-white/[0.08] bg-[#151515] bg-cover bg-top bg-no-repeat"
-        style={{
-          backgroundImage: "url('/images/Lucas-Gabriel-pagina-azul_05.jpg')",
-        }}
+        className="relative min-h-[676px] py-16 md:py-20 flex items-center border-b border-white/[0.08] bg-[#151515] bg-cover bg-top bg-no-repeat overflow-hidden"
       >
-        <div className="max-w-[1140px] mx-auto px-4 w-full">
+        <div
+          className="absolute inset-0 bg-cover bg-top bg-no-repeat pointer-events-none opacity-40"
+          style={{
+            backgroundImage: "url('/images/Lucas-Gabriel-pagina-azul_05.jpg')",
+          }}
+        />
+
+        <div className="relative max-w-[1140px] mx-auto px-4 w-full">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <FadeIn direction="down">
               <h2 className="text-2xl sm:text-3xl md:text-[40px] font-semibold leading-snug">
@@ -633,40 +634,38 @@ export default async function HomePage() {
             </div>
           </div>
 
-          <div className="kps-process-grid">
-            {/* Card 1 */}
-            <FadeIn direction="left" className="kps-step">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <FadeIn direction="left" className="kps-step text-left">
               <div className="kps-icon-wrap">
                 <svg viewBox="0 0 24 24">
-                  <circle cx="12" cy="8" r="4" />
-                  <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
-                  <line x1="17" y1="4" x2="21" y2="4" />
-                  <line x1="17" y1="7" x2="21" y2="7" />
-                  <line x1="19" y1="4" x2="19" y2="1" />
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                  <circle cx="12" cy="7" r="4" />
                 </svg>
               </div>
-              <p className="kps-eyebrow">Para quem é</p>
-              <h3>Empresários, Sócios e Fundadores</h3>
-              <p>
-                Que desejam transformar marketing em crescimento, aumentar suas vendas e construir uma operação capaz de gerar clientes de forma previsível.
+              <p className="text-xs font-bold uppercase tracking-widest text-[#4E83FF] font-sora mb-2">
+                Perfil 01
+              </p>
+              <h3 className="text-2xl font-bold text-white mb-4">Empresários, Sócios e Fundadores</h3>
+              <p className="text-sm md:text-base text-neutral-300 font-light leading-relaxed mb-6">
+                Que já possuem um negócio validado, faturam e têm clientes, mas perceberam que chegaram no limite do crescimento através de indicações.
               </p>
               <div className="kps-divider" />
             </FadeIn>
 
-            {/* Card 2 */}
-            <FadeIn direction="right" className="kps-step">
+            <FadeIn direction="right" className="kps-step text-left">
               <div className="kps-icon-wrap">
                 <svg viewBox="0 0 24 24">
-                  <polyline points="22 7 13 7 13 2" />
-                  <path d="M2 17l4 4 4-4" />
-                  <path d="M6 21V9a4 4 0 0 1 4-4h3l5 5v5" />
-                  <line x1="2" y1="12" x2="6" y2="12" />
+                  <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                  <polyline points="2 17 12 22 22 17" />
+                  <polyline points="2 12 12 17 22 12" />
                 </svg>
               </div>
-              <p className="kps-eyebrow">Para quem é</p>
-              <h3>Empresas Prontas para o Próximo Nível</h3>
-              <p>
-                Que buscam estruturar marketing, vendas e posicionamento para acelerar resultados e crescer com mais consistência.
+              <p className="text-xs font-bold uppercase tracking-widest text-[#4E83FF] font-sora mb-2">
+                Perfil 02
+              </p>
+              <h3 className="text-2xl font-bold text-white mb-4">Empresas Prontas para o Próximo Nível</h3>
+              <p className="text-sm md:text-base text-neutral-300 font-light leading-relaxed mb-6">
+                Que buscam previsibilidade de aquisição, equipe de vendas abastecida com leads qualificados e um processo comercial estruturado para escalar.
               </p>
               <div className="kps-divider" />
             </FadeIn>
@@ -679,22 +678,32 @@ export default async function HomePage() {
           ========================================================================= */}
       <section
         id="sobre"
-        className="relative min-h-[747px] flex items-center border-b border-white/[0.08] bg-cover bg-top bg-no-repeat overflow-hidden"
+        className="relative min-h-[747px] flex items-center border-b border-white/[0.08] overflow-hidden"
       >
         {/* Desktop background (Lucas is on the LEFT) */}
-        <div
-          className="absolute inset-0 hidden md:block bg-cover bg-top bg-no-repeat pointer-events-none"
-          style={{
-            backgroundImage: "url('/images/Lucas-Gabriel-pagina-azul_06.jpg')",
-          }}
-        />
+        <div className="absolute inset-0 hidden md:block pointer-events-none">
+          <Image
+            src="/images/Lucas-Gabriel-pagina-azul_06.jpg"
+            alt="Lucas Gabriel - Sobre"
+            fill
+            loading="lazy"
+            quality={85}
+            className="object-cover object-top"
+            sizes="100vw"
+          />
+        </div>
         {/* Mobile background */}
-        <div
-          className="absolute inset-0 block md:hidden bg-cover bg-top bg-no-repeat pointer-events-none"
-          style={{
-            backgroundImage: "url('/images/Lucas-gabriel-mobile-222.jpg')",
-          }}
-        />
+        <div className="absolute inset-0 block md:hidden pointer-events-none">
+          <Image
+            src="/images/Lucas-gabriel-mobile-222.jpg"
+            alt="Lucas Gabriel - Perfil Mobile"
+            fill
+            loading="lazy"
+            quality={85}
+            className="object-cover object-top"
+            sizes="100vw"
+          />
+        </div>
 
         <div className="relative max-w-[1140px] mx-auto px-4 w-full pt-[412px] pb-10 md:py-[100px] flex justify-end">
           {/* Exactly 51% width aligned to the RIGHT side on desktop */}
@@ -755,6 +764,7 @@ export default async function HomePage() {
                 href="https://wa.me/5511949845827?text=Ol%C3%A1%21%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20seu%20servi%C3%A7o"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Quero me aplicar para o programa de aceleração - Seção Sobre Lucas Gabriel"
                 className="btn-luxo-azul !text-[18px]"
               >
                 <span>Quero me aplicar para o programa de aceleração</span>
@@ -793,6 +803,7 @@ export default async function HomePage() {
               href="https://wa.me/5511949845827?text=Ol%C3%A1%21%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20seu%20servi%C3%A7o"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Quero me aplicar para o programa de aceleração - Chamada Final"
               className="btn-luxo !text-[23px] !py-5 !px-12"
             >
               <span>Quero me aplicar para o programa de aceleração</span>
@@ -820,6 +831,7 @@ export default async function HomePage() {
             <div className="flex flex-wrap gap-2">
               <Link
                 href="/"
+                aria-label="Ver todas as publicações na base de conhecimento"
                 className="text-xs font-semibold px-3 py-1.5 rounded-full bg-[#4E83FF] text-white shadow"
               >
                 Todos ({posts.length})
@@ -828,7 +840,8 @@ export default async function HomePage() {
                 <Link
                   key={cat.slug}
                   href={`/categoria/${cat.slug}`}
-                  className="text-xs font-semibold px-3 py-1.5 rounded-full bg-[#151515] border border-white/[0.06] text-neutral-300 hover:bg-[#4E83FF]/20 hover:text-[#66AFFF] transition-colors"
+                  aria-label={`Ver artigos na categoria ${cat.name}`}
+                  className="text-xs font-semibold px-3 py-1.5 rounded-full bg-neutral-900 border border-white/[0.08] text-neutral-300 hover:text-white hover:border-[#4E83FF]/50 transition-colors font-sora"
                 >
                   {cat.name} ({cat.count})
                 </Link>
@@ -836,8 +849,7 @@ export default async function HomePage() {
             </div>
           </div>
 
-          {/* Posts Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
             {posts.map((post) => (
               <PostCard key={post.slug} post={post} />
             ))}

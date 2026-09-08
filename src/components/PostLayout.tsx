@@ -17,7 +17,7 @@ export default function PostLayout({ post }: PostLayoutProps) {
   return (
     <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
       {/* Breadcrumb */}
-      <nav className="flex items-center gap-2 text-xs text-neutral-400 mb-8 font-sora">
+      <nav className="flex items-center gap-2 text-xs text-neutral-400 mb-8 font-sora" aria-label="Trilha de navegação">
         <Link href="/" className="hover:text-[#66AFFF] transition-colors">
           Início
         </Link>
@@ -67,7 +67,7 @@ export default function PostLayout({ post }: PostLayoutProps) {
           </p>
         )}
 
-        <div className="flex items-center gap-4 text-sm text-neutral-400 pt-5 border-t border-white/[0.08]">
+        <div className="flex items-center gap-4 text-sm text-neutral-300 pt-5 border-t border-white/[0.08]">
           <div className="w-11 h-11 rounded-full bg-gradient-to-tr from-[#3671FF] to-[#66AFFF] flex items-center justify-center text-white font-extrabold text-sm shadow-md shadow-[#4E83FF]/30">
             LG
           </div>
@@ -104,9 +104,9 @@ export default function PostLayout({ post }: PostLayoutProps) {
       {/* Tags */}
       {post.tags.length > 0 && (
         <div className="mt-14 pt-6 border-t border-white/[0.08]">
-          <h4 className="text-xs font-bold uppercase tracking-wider text-[#4E83FF] mb-3 font-sora">
+          <p className="text-xs font-bold uppercase tracking-wider text-[#4E83FF] mb-3 font-sora">
             Tags Relacionadas
-          </h4>
+          </p>
           <div className="flex flex-wrap gap-2">
             {post.tags.map((tag) => (
               <span
@@ -126,9 +126,9 @@ export default function PostLayout({ post }: PostLayoutProps) {
           <p className="text-xs font-bold uppercase tracking-widest text-[#66AFFF] mb-2 font-sora">
             Programa de Aceleração 2026
           </p>
-          <h3 className="text-2xl sm:text-3xl font-extrabold mb-3">
+          <h2 className="text-2xl sm:text-3xl font-extrabold mb-3">
             Pronto para acelerar o marketing da sua empresa?
-          </h3>
+          </h2>
           <p className="text-neutral-300 mb-8 text-sm sm:text-base leading-relaxed">
             Implementamos um sistema previsível de aquisição de clientes e posicionamento estratégico nos próximos 90 dias.
           </p>
@@ -136,6 +136,7 @@ export default function PostLayout({ post }: PostLayoutProps) {
             href="https://wa.me/5511949845827?text=Ol%C3%A1%21%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20seu%20servi%C3%A7o"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Quero me aplicar para o programa de aceleração no WhatsApp (Página de Post)"
             className="btn-luxo-azul"
           >
             <span>Quero me aplicar para o programa</span>

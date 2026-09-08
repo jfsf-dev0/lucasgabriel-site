@@ -26,10 +26,18 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return {
     title: `${post.title} · Lucas Gabriel`,
-    description: post.excerpt || `Artigo sobre ${post.title}`,
+    description: post.excerpt || `Artigo sobre ${post.title} por Lucas Gabriel`,
+    alternates: {
+      canonical: `https://lucasgabriell.com.br/${slug}`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
     openGraph: {
-      title: post.title,
+      title: `${post.title} · Lucas Gabriel`,
       description: post.excerpt,
+      url: `https://lucasgabriell.com.br/${slug}`,
       images: post.image ? [{ url: post.image }] : [],
     },
   };

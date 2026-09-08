@@ -129,6 +129,7 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
               src={src}
               alt={alt || "Imagem do post"}
               fill
+              loading="lazy"
               className="object-contain"
               sizes="(max-width: 768px) 100vw, 800px"
             />
