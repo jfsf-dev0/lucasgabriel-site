@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: "%s · Lucas Gabriel",
   },
   description:
-    "Estruturação e Implementação de Marketing para Aceleração de Negócios. Transforme o potencial da sua empresa para impulsionar suas vendas.",
+    "Implementação dos 8 Pilares de Crescimento para empresas que querem acelerar com método.",
   robots: {
     index: true,
     follow: true,
@@ -48,9 +48,9 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "Lucas Gabriel · Aceleração de Negócios e Marketing",
+    title: "Lucas Gabriel — Consultoria de Aceleração em 90 Dias",
     description:
-      "Estruturação e Implementação de Marketing para Aceleração de Negócios. Transforme o potencial da sua empresa para impulsionar suas vendas.",
+      "Implementação dos 8 Pilares de Crescimento para empresas que querem acelerar com método.",
     url: "https://lucasgabriell.com.br",
     siteName: "Lucas Gabriel",
     locale: "pt_BR",
@@ -58,9 +58,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lucas Gabriel · Aceleração de Negócios e Marketing",
+    title: "Lucas Gabriel — Consultoria de Aceleração",
     description:
-      "Estruturação e Implementação de Marketing para Aceleração de Negócios. Transforme o potencial da sua empresa para impulsionar suas vendas.",
+      "Aceleração de negócios em 90 dias com os 8 Pilares de Crescimento.",
   },
 };
 
@@ -69,11 +69,41 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const jsonLdPerson = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Lucas Gabriel",
+    jobTitle: "Consultor de Marketing e Aceleração de Negócios",
+    url: "https://lucasgabriell.com.br",
+    sameAs: [],
+    knowsAbout: [
+      "Marketing Digital",
+      "Aceleração de Negócios",
+      "Estratégia Empresarial",
+      "Implementação em 90 Dias",
+      "Tráfego Pago",
+      "Posicionamento Digital"
+    ],
+    offers: {
+      "@type": "Offer",
+      name: "Consultoria de Aceleração em 90 Dias",
+      description: "Implementação completa dos 8 Pilares de Crescimento em 90 dias"
+    }
+  };
+
   return (
     <html
       lang="pt-BR"
       className={`${montserrat.variable} ${sora.variable} h-full antialiased scroll-smooth`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLdPerson),
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-[#070707] text-white font-sans selection:bg-[#4E83FF] selection:text-white">
         <Header />
         <main className="flex-1">{children}</main>

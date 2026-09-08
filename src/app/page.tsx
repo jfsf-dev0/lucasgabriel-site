@@ -116,8 +116,59 @@ export default function HomePage() {
     },
   ];
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Quem é Lucas Gabriel?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Lucas Gabriel é consultor de marketing e aceleração de negócios, especialista em estruturar e implementar sistemas previsíveis de vendas e aquisição de clientes em 90 dias.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Como funciona o programa de aceleração em 90 dias?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Durante 90 dias, são estruturados e implementados os 4 estágios do crescimento: Diagnóstico Estratégico, Estruturação, Implementação e Aceleração, cobrindo canais de aquisição, posicionamento e processos comerciais.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Quais são os 8 Pilares de Crescimento?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Os 8 pilares são: Diagnóstico Completo, Posicionamento Estratégico, Estruturação de Oferta, Canais de Aquisição, Funil de Vendas e CRM, Otimização de Conversão, Dashboards de Métricas e Acompanhamento Contínuo.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Para quem é indicado o serviço do Lucas Gabriel?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Para empresários, sócios e fundadores de negócios com modelo validado que desejam superar a dependência exclusiva de indicações e escalar resultados.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Como se candidatar ao programa?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "A candidatura é realizada por meio de uma aplicação direta via WhatsApp para avaliar o estágio da empresa e o alinhamento com a metodologia.",
+        },
+      },
+    ],
+  };
+
   return (
     <div className="relative overflow-hidden bg-[#070707] text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* =========================================================================
           SECTION 1: HERO SECTION (EXACT ELEMENTOR RATIOS & PRIORITY IMAGE PRELOAD)
           ========================================================================= */}
