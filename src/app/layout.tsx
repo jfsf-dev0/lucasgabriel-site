@@ -100,7 +100,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col bg-[#070707] text-white font-sans selection:bg-[#4E83FF] selection:text-white w-full overflow-x-hidden">
+      <body className="min-h-full flex flex-col bg-[#070707] text-white font-sans selection:bg-orange-500 selection:text-white w-full overflow-x-hidden">
         <Header />
         <main className="flex-1 pt-[74px] w-full">{children}</main>
         <Footer />

@@ -105,8 +105,8 @@ export default function AmbientCanvas() {
           ctx1.save();
           ctx1.beginPath();
           ctx1.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-          ctx1.fillStyle = `rgba(78, 131, 255, ${alpha})`;
-          ctx1.shadowColor = "rgba(102, 175, 255, 0.5)";
+          ctx1.fillStyle = `rgba(249, 115, 22, ${alpha})`;
+          ctx1.shadowColor = "rgba(251, 146, 60, 0.5)";
           ctx1.shadowBlur = 6;
           ctx1.fill();
           ctx1.restore();

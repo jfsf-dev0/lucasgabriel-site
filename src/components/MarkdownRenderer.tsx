@@ -34,7 +34,7 @@ function renderInline(text: string): React.ReactNode[] {
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 my-4 px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold rounded-lg shadow-lg shadow-blue-500/25 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 text-sm md:text-base"
+            className="inline-flex items-center gap-2 my-4 px-6 py-3 bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-400 hover:to-amber-500 text-white font-semibold rounded-lg shadow-lg shadow-orange-500/25 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 text-sm md:text-base"
           >
             <span>{linkText}</span>
             <svg
@@ -59,7 +59,7 @@ function renderInline(text: string): React.ReactNode[] {
           <Link
             key={index}
             href={href}
-            className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
+            className="text-orange-500 dark:text-orange-400 hover:underline font-medium"
           >
             {linkText}
           </Link>
@@ -72,7 +72,7 @@ function renderInline(text: string): React.ReactNode[] {
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
+          className="text-orange-500 dark:text-orange-400 hover:underline font-medium"
         >
           {linkText}
         </a>
@@ -201,7 +201,7 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
       elements.push(
         <blockquote
           key={`quote-${keyIndex}`}
-          className="border-l-4 border-blue-500 bg-blue-50/50 dark:bg-blue-950/20 pl-4 py-3 my-6 italic text-neutral-700 dark:text-neutral-300 rounded-r-lg"
+          className="border-l-4 border-orange-500 bg-orange-50/50 dark:bg-orange-950/20 pl-4 py-3 my-6 italic text-neutral-700 dark:text-neutral-300 rounded-r-lg"
         >
           {renderInline(trimmed.replace(/^>\s*/, ""))}
         </blockquote>
@@ -220,7 +220,7 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
             .filter(Boolean)
             .map((item, i) => (
               <li key={i} className="flex items-start gap-2.5 text-neutral-700 dark:text-neutral-300">
-                <span className="inline-block w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0" />
+                <span className="inline-block w-1.5 h-1.5 rounded-full bg-orange-500 mt-2 flex-shrink-0" />
                 <span>{renderInline(item)}</span>
               </li>
             ))}

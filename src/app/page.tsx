@@ -285,9 +285,9 @@ export default function Home() {
 
         {/* Hero Content Box */}
         <div className="w-full px-[8vw] relative pt-[110px] pb-16 md:py-24 flex items-center">
-          <div className="w-full md:w-[58%] lg:w-[50%] border-l-[3px] border-[#4E83FF] pl-7 space-y-6 text-left">
+          <div className="w-full md:w-[58%] lg:w-[50%] border-l-[3px] border-orange-500 pl-7 space-y-6 text-left">
             <FadeIn direction="left" delay={0.1}>
-              <p className="text-[13px] font-semibold tracking-wider text-[#66AFFF] uppercase font-sora">
+              <p className="text-[13px] font-semibold tracking-wider text-orange-400 uppercase font-sora">
                 Operação de Aquisição B2B
               </p>
             </FadeIn>
@@ -295,7 +295,7 @@ export default function Home() {
             <FadeIn direction="left" delay={0.2}>
               <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold leading-tight tracking-tight text-white font-sans">
                 Marketing, tecnologia e vendas para{" "}
-                <em className="italic text-gradient-blue font-serif font-medium">
+                <em className="italic text-gradient-orange font-serif font-medium">
                   empresas B2B
                 </em>
               </h1>
@@ -333,7 +333,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Falar no WhatsApp"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg border border-white/[0.18] hover:border-[#4E83FF] hover:bg-white/[0.04] text-neutral-200 hover:text-white text-base font-semibold transition-all text-center"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg border border-white/[0.18] hover:border-orange-500 hover:bg-white/[0.04] text-neutral-200 hover:text-white text-base font-semibold transition-all text-center"
               >
                 <span>Falar no WhatsApp</span>
               </a>
@@ -361,7 +361,7 @@ export default function Home() {
             {/* Texto à esquerda */}
             <div className="space-y-6 text-left">
               <FadeIn direction="right">
-                <p className="text-xs sm:text-sm font-bold uppercase tracking-widest text-[#4E83FF] font-sora">
+                <p className="text-xs sm:text-sm font-bold uppercase tracking-widest text-orange-400 font-sora">
                   O Desafio Comercial
                 </p>
               </FadeIn>
@@ -369,7 +369,7 @@ export default function Home() {
               <FadeIn direction="right" delay={0.1}>
                 <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold leading-tight tracking-tight">
                   O problema raramente{" "}
-                  <em className="italic text-gradient-blue font-serif font-medium">
+                  <em className="italic text-gradient-orange font-serif font-medium">
                     é só o tráfego.
                   </em>
                 </h2>
@@ -406,10 +406,10 @@ export default function Home() {
               {problemBullets.map((item, idx) => (
                 <div
                   key={idx}
-                  className="p-5 rounded-xl border border-white/[0.08] bg-[#0E0E0E]/90 hover:border-[#4E83FF]/40 transition-all flex flex-col justify-start text-left"
+                  className="p-5 rounded-xl border border-white/[0.08] bg-[#0E0E0E]/90 hover:border-orange-500/40 transition-all flex flex-col justify-start text-left"
                 >
                   <div className="flex items-center justify-between mb-2.5">
-                    <span className="text-[11px] font-bold text-[#4E83FF] tracking-wider font-sora">
+                    <span className="text-[11px] font-bold text-orange-400 tracking-wider font-sora">
                       {item.number}
                     </span>
                     <div className="w-2 h-2 rounded-full bg-red-500/80" />
@@ -443,12 +443,12 @@ export default function Home() {
 
         <div className="w-full px-[8vw] relative text-center">
           <FadeIn direction="down">
-            <p className="text-[13px] font-semibold uppercase tracking-widest text-[#4E83FF] font-sora mb-2">
+            <p className="text-[13px] font-semibold uppercase tracking-widest text-orange-400 font-sora mb-2">
               Mudança de Paradigma
             </p>
             <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold leading-tight tracking-tight max-w-4xl mx-auto font-sans">
               A diferença entre fazer marketing e{" "}
-              <em className="italic text-gradient-blue font-serif font-medium">
+              <em className="italic text-gradient-orange font-serif font-medium">
                 construir uma operação de aquisição.
               </em>
             </h2>
@@ -478,8 +478,8 @@ export default function Home() {
             </div>
 
             {/* Coluna 2: Operação Estruturada */}
-            <div className="p-8 sm:p-10 rounded-2xl bg-[#0E0E0E] border border-[#4E83FF]/40 shadow-xl shadow-[#4E83FF]/5 hover:border-[#4E83FF] transition-all">
-              <div className="inline-block px-3.5 py-1 rounded-full bg-[#4E83FF]/15 border border-[#4E83FF]/40 text-[#66AFFF] text-xs font-semibold uppercase tracking-wider mb-5 font-sora">
+            <div className="p-8 sm:p-10 rounded-2xl bg-[#0E0E0E] border border-orange-500/40 shadow-xl shadow-orange-500/5 hover:border-orange-500 transition-all">
+              <div className="inline-block px-3.5 py-1 rounded-full bg-orange-500/15 border border-orange-500/40 text-orange-300 text-xs font-semibold uppercase tracking-wider mb-5 font-sora">
                 Operação Estruturada
               </div>
               <h3 className="text-xl font-semibold text-white mb-6 font-sans">
@@ -488,7 +488,7 @@ export default function Home() {
               <ul className="space-y-4 text-sm sm:text-base text-neutral-200 font-normal">
                 {comparisonStructured.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3.5">
-                    <span className="w-5 h-5 rounded-full bg-[#4E83FF]/20 text-[#66AFFF] flex items-center justify-center flex-shrink-0 mt-0.5 text-xs font-bold">✓</span>
+                    <span className="w-5 h-5 rounded-full bg-orange-500/20 text-orange-300 flex items-center justify-center flex-shrink-0 mt-0.5 text-xs font-bold">✓</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -518,7 +518,7 @@ export default function Home() {
         <div className="w-full px-[8vw] relative text-left">
           <div className="max-w-4xl space-y-6">
             <FadeIn direction="left">
-              <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-[#4E83FF] font-sora">
+              <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-orange-400 font-sora">
                 A SOLUÇÃO
               </p>
             </FadeIn>
@@ -526,7 +526,7 @@ export default function Home() {
             <FadeIn direction="left" delay={0.1}>
               <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold leading-tight tracking-tight">
                 Construímos a{" "}
-                <em className="italic text-gradient-blue font-serif font-medium">
+                <em className="italic text-gradient-orange font-serif font-medium">
                   infraestrutura de aquisição
                 </em>{" "}
                 da sua empresa.
@@ -543,8 +543,8 @@ export default function Home() {
 
             {/* 2 Stat Boxes */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-2">
-              <div className="p-6 rounded-xl bg-[#4E83FF]/15 border border-[#4E83FF]/40 flex items-center gap-4">
-                <div className="w-12 h-12 rounded-lg bg-[#4E83FF]/25 flex items-center justify-center text-[#66AFFF] flex-shrink-0">
+              <div className="p-6 rounded-xl bg-orange-500/15 border border-orange-500/40 flex items-center gap-4">
+                <div className="w-12 h-12 rounded-lg bg-orange-500/25 flex items-center justify-center text-orange-300 flex-shrink-0">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                   </svg>
@@ -555,8 +555,8 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="p-6 rounded-xl bg-[#4E83FF]/15 border border-[#4E83FF]/40 flex items-center gap-4">
-                <div className="w-12 h-12 rounded-lg bg-[#4E83FF]/25 flex items-center justify-center text-[#66AFFF] flex-shrink-0">
+              <div className="p-6 rounded-xl bg-orange-500/15 border border-orange-500/40 flex items-center gap-4">
+                <div className="w-12 h-12 rounded-lg bg-orange-500/25 flex items-center justify-center text-orange-300 flex-shrink-0">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
                   </svg>
@@ -581,7 +581,7 @@ export default function Home() {
 
               <a
                 href="#os-5-pilares"
-                className="inline-flex items-center justify-center gap-2 text-base font-bold text-[#66AFFF] hover:text-white transition-colors"
+                className="inline-flex items-center justify-center gap-2 text-base font-bold text-orange-400 hover:text-white transition-colors"
               >
                 <span>Ver os 5 pilares detalhados</span>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -599,11 +599,11 @@ export default function Home() {
       <section id="os-5-pilares" className="w-full min-h-screen flex flex-col justify-center px-[8vw] py-24">
         {/* Cabeçalho da seção */}
         <div className="text-center mb-16">
-          <span className="text-blue-500 text-sm font-semibold tracking-widest uppercase font-sora">
+          <span className="text-orange-400 text-sm font-semibold tracking-widest uppercase font-sora">
             Infraestrutura Completa
           </span>
           <h2 className="text-4xl xl:text-5xl font-bold text-white mt-3 font-sans">
-            Os 5 Pilares da <em className="text-blue-400 not-italic">Operação Webwize</em>
+            Os 5 Pilares da <em className="text-orange-300 not-italic">Operação Webwize</em>
           </h2>
           <p className="text-gray-400 mt-4 text-lg">
             Tudo o que sua empresa precisa para transformar marketing em receita previsível e recorrente.
@@ -615,10 +615,10 @@ export default function Home() {
           {pilares.map((pilar) => (
             <div
               key={pilar.numero}
-              className="flex flex-col gap-5 bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-blue-500/40 transition-colors"
+              className="flex flex-col gap-5 bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-orange-400/40 transition-colors"
             >
               {/* Número */}
-              <span className="text-blue-500 text-xs font-bold tracking-widest font-sora">
+              <span className="text-orange-400 text-xs font-bold tracking-widest font-sora">
                 PILAR {pilar.numero}
               </span>
 
@@ -627,8 +627,8 @@ export default function Home() {
                 {pilar.titulo}
               </h3>
 
-              {/* Subtítulo em azul */}
-              <p className="text-blue-400 text-sm font-medium leading-snug">
+              {/* Subtítulo em laranja */}
+              <p className="text-orange-300 text-sm font-medium leading-snug">
                 {pilar.subtitulo}
               </p>
 
@@ -642,7 +642,7 @@ export default function Home() {
                 {pilar.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-xs px-2 py-1 rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20"
+                    className="text-xs px-2 py-1 rounded-full bg-orange-500/10 text-orange-200 border border-orange-500/20"
                   >
                     {tag}
                   </span>
@@ -658,7 +658,7 @@ export default function Home() {
             type="button"
             data-open-lead-modal="true"
             data-lead-source="os_5_pilares"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer"
+            className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer"
           >
             Solicitar diagnóstico gratuito
           </button>
@@ -675,12 +675,12 @@ export default function Home() {
         <div className="w-full px-[8vw] relative text-left">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <FadeIn direction="down">
-              <p className="text-xs font-bold uppercase tracking-widest text-[#4E83FF] font-sora mb-2">
+              <p className="text-xs font-bold uppercase tracking-widest text-orange-400 font-sora mb-2">
                 Método de Execução
               </p>
               <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold leading-tight tracking-tight text-white font-sans">
                 Como Funciona a Execução em{" "}
-                <em className="italic text-gradient-blue font-serif font-medium">
+                <em className="italic text-gradient-orange font-serif font-medium">
                   4 Etapas
                 </em>
               </h2>
@@ -699,13 +699,13 @@ export default function Home() {
             <div className="flex flex-col gap-5 px-8 py-2">
               <span className="text-6xl font-black text-white/5 leading-none select-none">01</span>
               <h3 className="text-white text-lg font-bold -mt-4">Diagnóstico Estratégico</h3>
-              <div className="w-8 h-px bg-blue-600/50" />
+              <div className="w-8 h-px bg-orange-500/50" />
               <p className="text-gray-400 text-sm leading-relaxed">
                 Mapeamento do cenário atual, personas B2B, gargalos no funil de vendas e oportunidades imediatas de receita.
               </p>
               <div className="flex flex-wrap gap-2 mt-auto">
                 {['Auditoria de Canais', 'ICP', 'Métricas Históricas', 'Plano Tático'].map(tag => (
-                  <span key={tag} className="text-[11px] px-3 py-1 rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20">{tag}</span>
+                  <span key={tag} className="text-[11px] px-3 py-1 rounded-full bg-orange-500/10 text-orange-200 border border-orange-500/20">{tag}</span>
                 ))}
               </div>
             </div>
@@ -713,13 +713,13 @@ export default function Home() {
             <div className="flex flex-col gap-5 px-8 py-2">
               <span className="text-6xl font-black text-white/5 leading-none select-none">02</span>
               <h3 className="text-white text-lg font-bold -mt-4">Estruturação e Engenharia</h3>
-              <div className="w-8 h-px bg-blue-600/50" />
+              <div className="w-8 h-px bg-orange-500/50" />
               <p className="text-gray-400 text-sm leading-relaxed">
                 Arquitetura do funil de aquisição, mensagem de autoridade e infraestrutura técnica das páginas e CRM.
               </p>
               <div className="flex flex-wrap gap-2 mt-auto">
                 {['Landing Pages', 'Copy de Autoridade', 'CRM', 'SLAs Comerciais'].map(tag => (
-                  <span key={tag} className="text-[11px] px-3 py-1 rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20">{tag}</span>
+                  <span key={tag} className="text-[11px] px-3 py-1 rounded-full bg-orange-500/10 text-orange-200 border border-orange-500/20">{tag}</span>
                 ))}
               </div>
             </div>
@@ -727,13 +727,13 @@ export default function Home() {
             <div className="flex flex-col gap-5 px-8 py-2">
               <span className="text-6xl font-black text-white/5 leading-none select-none">03</span>
               <h3 className="text-white text-lg font-bold -mt-4">Implementação e Ativação</h3>
-              <div className="w-8 h-px bg-blue-600/50" />
+              <div className="w-8 h-px bg-orange-500/50" />
               <p className="text-gray-400 text-sm leading-relaxed">
                 Ativação de campanhas, automações de resposta, agentes de IA e entrega de oportunidades ao comercial.
               </p>
               <div className="flex flex-wrap gap-2 mt-auto">
                 {['Google Ads', 'Meta Ads', 'WhatsApp API', 'Nutrição Inteligente'].map(tag => (
-                  <span key={tag} className="text-[11px] px-3 py-1 rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20">{tag}</span>
+                  <span key={tag} className="text-[11px] px-3 py-1 rounded-full bg-orange-500/10 text-orange-200 border border-orange-500/20">{tag}</span>
                 ))}
               </div>
             </div>
@@ -741,13 +741,13 @@ export default function Home() {
             <div className="flex flex-col gap-5 px-8 py-2">
               <span className="text-6xl font-black text-white/5 leading-none select-none">04</span>
               <h3 className="text-white text-lg font-bold -mt-4">Otimização e Escala</h3>
-              <div className="w-8 h-px bg-blue-600/50" />
+              <div className="w-8 h-px bg-orange-500/50" />
               <p className="text-gray-400 text-sm leading-relaxed">
                 Análise de dados de conversão, alinhamento com o comercial e expansão orientada ao ROI real.
               </p>
               <div className="flex flex-wrap gap-2 mt-auto">
                 {['CAC & LTV', 'Testes A/B', 'Alinhamento Comercial', 'Escala Previsível'].map(tag => (
-                  <span key={tag} className="text-[11px] px-3 py-1 rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20">{tag}</span>
+                  <span key={tag} className="text-[11px] px-3 py-1 rounded-full bg-orange-500/10 text-orange-200 border border-orange-500/20">{tag}</span>
                 ))}
               </div>
             </div>
@@ -778,12 +778,12 @@ export default function Home() {
         <div className="w-full px-[8vw] relative text-left">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <FadeIn direction="down">
-              <p className="text-[13px] font-semibold uppercase tracking-widest text-[#4E83FF] font-sora mb-2">
+              <p className="text-[13px] font-semibold uppercase tracking-widest text-orange-400 font-sora mb-2">
                 Foco Exclusivo
               </p>
               <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold leading-tight tracking-tight font-sans">
                 Para empresas que{" "}
-                <em className="italic text-gradient-blue font-serif font-medium">
+                <em className="italic text-gradient-orange font-serif font-medium">
                   vendem para empresas.
                 </em>
               </h2>
@@ -805,7 +805,7 @@ export default function Home() {
                   <circle cx="12" cy="7" r="4" />
                 </svg>
               </div>
-              <p className="text-xs font-bold uppercase tracking-widest text-[#4E83FF] font-sora mb-2">
+              <p className="text-xs font-bold uppercase tracking-widest text-orange-400 font-sora mb-2">
                 Perfil 01
               </p>
               <h3 className="text-2xl font-bold text-white mb-2">Empresas com Venda Consultiva</h3>
@@ -823,7 +823,7 @@ export default function Home() {
                   <polyline points="2 12 12 17 22 12" />
                 </svg>
               </div>
-              <p className="text-xs font-bold uppercase tracking-widest text-[#4E83FF] font-sora mb-2">
+              <p className="text-xs font-bold uppercase tracking-widest text-orange-400 font-sora mb-2">
                 Perfil 02
               </p>
               <h3 className="text-2xl font-bold text-white mb-2">Líderes Prontos para Escala</h3>
@@ -843,9 +843,9 @@ export default function Home() {
               {b2bSegments.map((seg, idx) => (
                 <div
                   key={idx}
-                  className="p-6 rounded-xl bg-[#070707] border border-white/[0.08] hover:border-[#4E83FF]/40 transition-all flex flex-col justify-start"
+                  className="p-6 rounded-xl bg-[#070707] border border-white/[0.08] hover:border-orange-500/40 transition-all flex flex-col justify-start"
                 >
-                  <span className="text-xs font-bold text-[#66AFFF] mb-2 font-sora">
+                  <span className="text-xs font-bold text-orange-400 mb-2 font-sora">
                     0{idx + 1}
                   </span>
                   <h4 className="text-base font-bold text-white mb-2">{seg.title}</h4>
@@ -859,14 +859,14 @@ export default function Home() {
 
           {/* Critérios: Para quem é vs Para quem não é */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full">
-            <div className="p-8 rounded-2xl bg-[#070707] border border-[#4E83FF]/30">
-              <div className="inline-block px-3.5 py-1 rounded-full bg-[#4E83FF]/15 text-[#66AFFF] text-xs font-semibold uppercase tracking-wider mb-5 font-sora">
+            <div className="p-8 rounded-2xl bg-[#070707] border border-orange-500/30">
+              <div className="inline-block px-3.5 py-1 rounded-full bg-orange-500/15 text-orange-300 text-xs font-semibold uppercase tracking-wider mb-5 font-sora">
                 Para quem É a Webwize
               </div>
               <ul className="space-y-3.5 text-sm sm:text-base text-neutral-300 font-light">
                 {criteriaYes.map((crit, idx) => (
                   <li key={idx} className="flex items-start gap-3">
-                    <span className="text-[#4E83FF] font-bold">✓</span>
+                    <span className="text-orange-400 font-bold">✓</span>
                     <span>{crit}</span>
                   </li>
                 ))}
@@ -912,13 +912,13 @@ export default function Home() {
 
             {/* Coluna direita — texto */}
             <div className="flex flex-col gap-6 text-left">
-              <span className="text-blue-500 text-sm font-semibold tracking-widest uppercase font-sora">
+              <span className="text-orange-400 text-sm font-semibold tracking-widest uppercase font-sora">
                 Quem faz acontecer
               </span>
               <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold leading-tight tracking-tight text-white font-sans">
-                Sobre a Webwize & <em className="text-blue-400 not-italic">Lucas Gabriel</em>
+                Sobre a Webwize & <em className="text-orange-300 not-italic">Lucas Gabriel</em>
               </h2>
-              <div className="w-16 h-0.5 bg-blue-600" />
+              <div className="w-16 h-0.5 bg-orange-500" />
               <p className="text-gray-300 text-base sm:text-lg xl:text-xl leading-relaxed">
                 A Webwize nasceu para resolver o maior problema do marketing B2B: o abismo entre o que é investido em campanhas e o que de fato vira contrato fechado no time de vendas.
               </p>
@@ -934,7 +934,7 @@ export default function Home() {
                   data-open-lead-modal="true"
                   data-lead-source="sobre"
                   aria-label="Solicitar diagnóstico com Lucas Gabriel"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer text-center text-base"
+                  className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer text-center text-base"
                 >
                   <span>Solicitar diagnóstico</span>
                 </button>
@@ -957,7 +957,7 @@ export default function Home() {
           ========================================================================= */}
       <section
         id="cta-final"
-        className="w-full min-h-screen flex flex-col justify-center py-24 relative bg-gradient-to-b from-[#66AFFF] to-[#4E83FF] border-b border-[#FF5A00]/60 text-center overflow-hidden"
+        className="w-full min-h-screen flex flex-col justify-center py-24 relative bg-gradient-to-b from-orange-500 to-orange-600 border-b border-[#FF5A00]/60 text-center overflow-hidden"
       >
         <div className="w-full px-[8vw] relative space-y-8">
           <FadeIn direction="left">

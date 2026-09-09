@@ -4,14 +4,14 @@
 :root {
   --background: #070707;
   --foreground: #ffffff;
-  --accent-blue: #4E83FF;
-  --accent-blue-light: #66AFFF;
+  --accent-blue: #f97316;
+  --accent-blue-light: #fb923c;
   --accent-orange: #FF7B00;
   --accent-orange-bright: #FF9500;
   --surface-dark: #0E0E0E;
   --surface-card: #151515;
   --border-subtle: rgba(255, 255, 255, 0.09);
-  --border-blue: rgba(78, 131, 255, 0.35);
+  --border-blue: rgba(249, 115, 22, 0.35);
 }
 
 html {
@@ -103,7 +103,7 @@ h1, h2, h3, h4, h5, h6 {
   animation: floatingIcon 3s ease-in-out infinite;
 }
 
-/* Botão Luxo Azul (Principal) */
+/* Botão Luxo Azul (Principal — Atualizado para Laranja) */
 .btn-luxo-azul {
   position: relative;
   overflow: hidden;
@@ -113,14 +113,14 @@ h1, h2, h3, h4, h5, h6 {
   gap: 12px;
   padding: 18px 36px;
   border-radius: 8px;
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
-  border: 1px solid #3b82f6;
+  background: linear-gradient(135deg, #c2410c, #ea580c);
+  border: 1px solid #f97316;
   color: #fff;
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   font-weight: 600;
   text-align: center;
-  box-shadow: 0 0 18px rgba(78, 131, 255, 0.35), 0 0 40px rgba(54, 113, 255, 0.18);
+  box-shadow: 0 0 18px rgba(234, 88, 12, 0.35), 0 0 40px rgba(194, 65, 12, 0.18);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   cursor: pointer;
   text-decoration: none;
@@ -133,7 +133,7 @@ h1, h2, h3, h4, h5, h6 {
   left: -40%;
   width: 70px;
   height: 320%;
-  background: linear-gradient(90deg, transparent, rgba(180, 210, 255, 0.7), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.85), transparent);
   transform: rotate(25deg);
   animation: lightPass 3.5s linear infinite;
   opacity: 0.9;
@@ -152,8 +152,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-luxo-azul:hover {
   transform: translateY(-2px) scale(1.01);
-  border-color: #66afff;
-  box-shadow: 0 0 25px rgba(78, 131, 255, 0.55), 0 0 60px rgba(54, 113, 255, 0.28), inset 0 0 18px rgba(255, 255, 255, 0.08);
+  border-color: #fb923c;
+  box-shadow: 0 0 25px rgba(234, 88, 12, 0.55), 0 0 60px rgba(194, 65, 12, 0.28), inset 0 0 18px rgba(255, 255, 255, 0.08);
 }
 
 .btn-luxo-azul:hover::after {
@@ -222,7 +222,7 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 
 .text-gradient-blue {
-  background: -webkit-linear-gradient(-90deg, #66afff, #4e83ff);
+  background: -webkit-linear-gradient(-90deg, #ff9500, #ff5300);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -256,23 +256,23 @@ h1, h2, h3, h4, h5, h6 {
 .rhombus-divider-center::after {
   content: '';
   height: 2px;
-  background: linear-gradient(90deg, rgba(78, 131, 255, 0.4), transparent);
+  background: linear-gradient(90deg, rgba(249, 115, 22, 0.4), transparent);
   flex: 1;
   max-width: 120px;
 }
 
 .rhombus-divider::after,
 .rhombus-divider-center::after {
-  background: linear-gradient(270deg, rgba(78, 131, 255, 0.4), transparent);
+  background: linear-gradient(270deg, rgba(249, 115, 22, 0.4), transparent);
 }
 
 .rhombus-dot {
   width: 8px;
   height: 8px;
-  background-color: #4E83FF;
+  background-color: #f97316;
   transform: rotate(45deg);
   margin: 0 10px;
-  box-shadow: 0 0 8px #4E83FF;
+  box-shadow: 0 0 8px #f97316;
 }
 
 /* ==========================================================================
@@ -296,7 +296,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #4e83ff, transparent);
+  background: linear-gradient(90deg, transparent, #f97316, transparent);
   opacity: 0;
   transition: opacity 0.25s ease;
 }
@@ -307,17 +307,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .kps-step:hover {
   transform: translateY(-4px);
-  border-color: rgba(78, 131, 255, 0.18);
-  background: rgba(78, 131, 255, 0.025);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 40px rgba(78, 131, 255, 0.07);
+  border-color: rgba(249, 115, 22, 0.18);
+  background: rgba(249, 115, 22, 0.025);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 40px rgba(249, 115, 22, 0.07);
 }
 
 .kps-icon-wrap {
   width: 54px;
   height: 54px;
   border-radius: 50%;
-  background: rgba(78, 131, 255, 0.1);
-  border: 1.5px solid rgba(78, 131, 255, 0.35);
+  background: rgba(249, 115, 22, 0.1);
+  border: 1.5px solid rgba(249, 115, 22, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -328,7 +328,7 @@ h1, h2, h3, h4, h5, h6 {
 .kps-icon-wrap svg {
   width: 22px;
   height: 22px;
-  stroke: #4e83ff;
+  stroke: #f97316;
   fill: none;
   stroke-width: 1.7;
   stroke-linecap: round;
@@ -337,14 +337,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .kps-step:hover .kps-icon-wrap {
   transform: scale(1.05);
-  background: rgba(78, 131, 255, 0.16);
-  box-shadow: 0 0 24px rgba(78, 131, 255, 0.2);
+  background: rgba(249, 115, 22, 0.16);
+  box-shadow: 0 0 24px rgba(249, 115, 22, 0.2);
 }
 
 .kps-divider {
   width: 36px;
   height: 2px;
-  background: #4e83ff;
+  background: #f97316;
   border-radius: 2px;
   margin: 20px 0 0;
   opacity: 0.4;
@@ -391,19 +391,19 @@ h1, h2, h3, h4, h5, h6 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: rgba(78, 131, 255, 0.1);
-  border: 2px solid #4e83ff;
+  background: rgba(249, 115, 22, 0.1);
+  border: 2px solid #f97316;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 18px rgba(78, 131, 255, 0.25);
+  box-shadow: 0 0 18px rgba(249, 115, 22, 0.25);
   transition: all 0.25s ease;
 }
 
 .flow-dot svg {
   width: 18px;
   height: 18px;
-  stroke: #4e83ff;
+  stroke: #f97316;
   fill: none;
   stroke-width: 1.8;
   stroke-linecap: round;
@@ -411,8 +411,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .flow-item:hover .flow-dot {
-  background: rgba(78, 131, 255, 0.25);
-  box-shadow: 0 0 25px rgba(78, 131, 255, 0.5);
+  background: rgba(249, 115, 22, 0.25);
+  box-shadow: 0 0 25px rgba(249, 115, 22, 0.5);
   transform: scale(1.05);
 }
 
@@ -420,7 +420,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 2px;
   flex: 1;
   min-height: 40px;
-  background: linear-gradient(to bottom, #4e83ff, transparent);
+  background: linear-gradient(to bottom, #f97316, transparent);
   margin-top: 6px;
 }
 
@@ -433,7 +433,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.12em;
-  color: #4e83ff;
+  color: #f97316;
   text-transform: uppercase;
   margin: 0 0 4px;
   opacity: 0.85;

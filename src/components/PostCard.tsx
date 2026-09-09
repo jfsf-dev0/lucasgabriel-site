@@ -17,7 +17,7 @@ export default function PostCard({ post }: PostCardProps) {
 
   return (
     <article
-      className="group flex flex-col bg-[#0E0E0E] rounded-2xl border border-white/[0.08] hover:border-[#4E83FF]/40 overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-[#4E83FF]/10 transition-all duration-300 hover:-translate-y-1.5"
+      className="group flex flex-col bg-[#0E0E0E] rounded-2xl border border-white/[0.08] hover:border-orange-500/40 overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-300 hover:-translate-y-1.5"
     >
       <Link
         href={`/${post.slug}`}
@@ -48,7 +48,7 @@ export default function PostCard({ post }: PostCardProps) {
             <Link
               key={cat}
               href={`/categoria/${slugify(cat)}`}
-              className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-[#4E83FF]/15 text-[#66AFFF] hover:bg-[#4E83FF]/25 transition-colors font-sora"
+              className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-orange-500/15 text-orange-300 hover:bg-orange-500/25 transition-colors font-sora"
             >
               {cat}
             </Link>
@@ -58,7 +58,7 @@ export default function PostCard({ post }: PostCardProps) {
           </span>
         </div>
 
-        <h3 className="text-xl font-bold tracking-tight text-white group-hover:text-[#66AFFF] transition-colors mb-2 line-clamp-2 leading-snug">
+        <h3 className="text-xl font-bold tracking-tight text-white group-hover:text-orange-400 transition-colors mb-2 line-clamp-2 leading-snug">
           <Link href={`/${post.slug}`} aria-label={`Ler o artigo completo: ${post.title}`}>
             {post.title}
           </Link>
@@ -77,7 +77,7 @@ export default function PostCard({ post }: PostCardProps) {
           <Link
             href={`/${post.slug}`}
             aria-label={`Ler mais sobre o artigo: ${post.title}`}
-            className="inline-flex items-center gap-1.5 text-xs font-bold text-[#66AFFF] group-hover:translate-x-1 transition-transform font-sora"
+            className="inline-flex items-center gap-1.5 text-xs font-bold text-orange-400 group-hover:translate-x-1 transition-transform font-sora"
           >
             <span>Ler mais</span>
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

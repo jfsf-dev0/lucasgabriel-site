@@ -61,7 +61,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     <div className="max-w-6xl mx-auto px-6 py-12">
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-xs text-neutral-400 mb-6 font-sora" aria-label="Trilha de navegação">
-        <Link href="/" className="hover:text-[#66AFFF] transition-colors">
+        <Link href="/" className="hover:text-orange-400 transition-colors">
           Início
         </Link>
         <span>/</span>
@@ -74,7 +74,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
       {/* Category Header */}
       <div className="pb-8 border-b border-white/[0.08]">
-        <div className="inline-block px-3 py-1 rounded-full bg-[#4E83FF]/15 border border-[#4E83FF]/30 text-[#66AFFF] text-xs font-semibold uppercase tracking-wider mb-3 font-sora">
+        <div className="inline-block px-3 py-1 rounded-full bg-orange-500/15 border border-orange-500/30 text-orange-300 text-xs font-semibold uppercase tracking-wider mb-3 font-sora">
           Categoria
         </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white font-sans">
@@ -89,7 +89,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           <Link
             href="/"
             aria-label="Ver todas as categorias"
-            className="text-xs font-medium px-3.5 py-1.5 rounded-full bg-neutral-900 border border-white/[0.08] text-neutral-300 hover:text-white hover:border-[#4E83FF]/50 transition-colors font-sora"
+            className="text-xs font-medium px-3.5 py-1.5 rounded-full bg-neutral-900 border border-white/[0.08] text-neutral-300 hover:text-white hover:border-orange-500/50 transition-colors font-sora"
           >
             ← Ver todos
           </Link>
@@ -100,8 +100,8 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
               aria-label={`Filtrar por categoria ${c.name}`}
               className={`text-xs font-medium px-3.5 py-1.5 rounded-full transition-colors font-sora ${
                 c.slug === slug
-                  ? "bg-[#4E83FF] text-white shadow-md shadow-[#4E83FF]/30"
-                  : "bg-neutral-900 border border-white/[0.08] text-neutral-300 hover:text-white hover:border-[#4E83FF]/50"
+                  ? "bg-orange-500 text-white shadow-md shadow-orange-500/30"
+                  : "bg-neutral-900 border border-white/[0.08] text-neutral-300 hover:text-white hover:border-orange-500/50"
               }`}
             >
               {c.name} ({c.count})
@@ -124,7 +124,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           </p>
           <Link
             href="/"
-            className="inline-block mt-4 text-sm font-semibold text-[#66AFFF] hover:underline"
+            className="inline-block mt-4 text-sm font-semibold text-orange-400 hover:underline"
           >
             Voltar para a página inicial
           </Link>

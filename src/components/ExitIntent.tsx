@@ -36,7 +36,7 @@ export default function ExitIntent() {
         }
       }}
     >
-      <div className="relative w-full max-w-lg bg-[#0E0E0E] border border-[#4E83FF]/40 rounded-2xl p-6 sm:p-8 shadow-2xl shadow-[#4E83FF]/20 text-white max-h-[92vh] overflow-y-auto">
+      <div className="relative w-full max-w-lg bg-[#0E0E0E] border border-orange-500/40 rounded-2xl p-6 sm:p-8 shadow-2xl shadow-orange-500/20 text-white max-h-[92vh] overflow-y-auto">
         {/* Botão X para fechar */}
         <button
           type="button"

@@ -18,7 +18,7 @@ export default function PostLayout({ post }: PostLayoutProps) {
     <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-xs text-neutral-400 mb-8 font-sora" aria-label="Trilha de navegação">
-        <Link href="/" className="hover:text-[#66AFFF] transition-colors">
+        <Link href="/" className="hover:text-orange-400 transition-colors">
           Início
         </Link>
         <span>/</span>
@@ -26,7 +26,7 @@ export default function PostLayout({ post }: PostLayoutProps) {
           <>
             <Link
               href={`/categoria/${slugify(post.categories[0])}`}
-              className="hover:text-[#66AFFF] transition-colors"
+              className="hover:text-orange-400 transition-colors"
             >
               {post.categories[0]}
             </Link>
@@ -45,7 +45,7 @@ export default function PostLayout({ post }: PostLayoutProps) {
             <Link
               key={cat}
               href={`/categoria/${slugify(cat)}`}
-              className="text-xs font-semibold px-3 py-1 rounded-full bg-[#4E83FF]/15 text-[#66AFFF] border border-[#4E83FF]/30 hover:bg-[#4E83FF]/25 transition-colors font-sora"
+              className="text-xs font-semibold px-3 py-1 rounded-full bg-orange-500/15 text-orange-300 border border-orange-500/30 hover:bg-orange-500/25 transition-colors font-sora"
             >
               {cat}
             </Link>
@@ -68,7 +68,7 @@ export default function PostLayout({ post }: PostLayoutProps) {
         )}
 
         <div className="flex items-center gap-4 text-sm text-neutral-300 pt-5 border-t border-white/[0.08]">
-          <div className="w-11 h-11 rounded-full bg-gradient-to-tr from-[#3671FF] to-[#66AFFF] flex items-center justify-center text-white font-extrabold text-sm shadow-md shadow-[#4E83FF]/30">
+          <div className="w-11 h-11 rounded-full bg-gradient-to-tr from-orange-600 to-orange-400 flex items-center justify-center text-white font-extrabold text-sm shadow-md shadow-orange-500/30">
             LG
           </div>
           <div>
@@ -104,7 +104,7 @@ export default function PostLayout({ post }: PostLayoutProps) {
       {/* Tags */}
       {post.tags.length > 0 && (
         <div className="mt-14 pt-6 border-t border-white/[0.08]">
-          <p className="text-xs font-bold uppercase tracking-wider text-[#4E83FF] mb-3 font-sora">
+          <p className="text-xs font-bold uppercase tracking-wider text-orange-400 mb-3 font-sora">
             Tags Relacionadas
           </p>
           <div className="flex flex-wrap gap-2">
@@ -121,9 +121,9 @@ export default function PostLayout({ post }: PostLayoutProps) {
       )}
 
       {/* Bottom CTA */}
-      <section className="my-14 p-8 sm:p-10 rounded-2xl bg-gradient-to-br from-[#102454] via-[#0b1735] to-[#070707] border border-[#3671FF]/40 text-white shadow-2xl shadow-[#4E83FF]/15">
+      <section className="my-14 p-8 sm:p-10 rounded-2xl bg-gradient-to-br from-[#3a1300] via-[#1a0800] to-[#070707] border border-orange-500/40 text-white shadow-2xl shadow-orange-500/15">
         <div className="max-w-2xl">
-          <p className="text-xs font-bold uppercase tracking-widest text-[#66AFFF] mb-2 font-sora">
+          <p className="text-xs font-bold uppercase tracking-widest text-orange-400 mb-2 font-sora">
             Programa de Aceleração 2026
           </p>
           <h2 className="text-2xl sm:text-3xl font-extrabold mb-3">
@@ -151,7 +151,7 @@ export default function PostLayout({ post }: PostLayoutProps) {
       <div className="pt-6 border-t border-white/[0.08] flex justify-between items-center">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-sm font-semibold text-[#66AFFF] hover:underline"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-orange-400 hover:underline"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />

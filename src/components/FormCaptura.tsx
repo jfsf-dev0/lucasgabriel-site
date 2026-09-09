@@ -96,7 +96,7 @@ export default function FormCaptura({
     <div className="w-full">
       {status === "success" ? (
         <div className="py-8 px-4 text-center space-y-4 animate-fade-in">
-          <div className="w-16 h-16 rounded-full bg-[#4E83FF]/20 border border-[#4E83FF] text-[#66AFFF] mx-auto flex items-center justify-center">
+          <div className="w-16 h-16 rounded-full bg-orange-500/20 border border-orange-500 text-orange-400 mx-auto flex items-center justify-center">
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
             </svg>
@@ -147,7 +147,7 @@ export default function FormCaptura({
               onChange={(e) => setNome(e.target.value)}
               placeholder="Ex: João da Silva"
               disabled={loading}
-              className="w-full px-4 py-3 rounded-lg bg-[#070707] border border-white/[0.12] text-white text-sm placeholder-neutral-500 focus:outline-none focus:border-[#4E83FF] focus:ring-1 focus:ring-[#4E83FF] transition-all disabled:opacity-50"
+              className="w-full px-4 py-3 rounded-lg bg-[#070707] border border-white/[0.12] text-white text-sm placeholder-neutral-500 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-all disabled:opacity-50"
             />
           </div>
 
@@ -163,7 +163,7 @@ export default function FormCaptura({
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Ex: joao@empresa.com.br"
               disabled={loading}
-              className="w-full px-4 py-3 rounded-lg bg-[#070707] border border-white/[0.12] text-white text-sm placeholder-neutral-500 focus:outline-none focus:border-[#4E83FF] focus:ring-1 focus:ring-[#4E83FF] transition-all disabled:opacity-50"
+              className="w-full px-4 py-3 rounded-lg bg-[#070707] border border-white/[0.12] text-white text-sm placeholder-neutral-500 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-all disabled:opacity-50"
             />
           </div>
 
@@ -180,7 +180,7 @@ export default function FormCaptura({
                 onChange={(e) => setWhatsapp(e.target.value)}
                 placeholder="Ex: (11) 99999-9999"
                 disabled={loading}
-                className="w-full px-4 py-3 rounded-lg bg-[#070707] border border-white/[0.12] text-white text-sm placeholder-neutral-500 focus:outline-none focus:border-[#4E83FF] focus:ring-1 focus:ring-[#4E83FF] transition-all disabled:opacity-50"
+                className="w-full px-4 py-3 rounded-lg bg-[#070707] border border-white/[0.12] text-white text-sm placeholder-neutral-500 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-all disabled:opacity-50"
               />
             </div>
 
@@ -196,7 +196,7 @@ export default function FormCaptura({
                 onChange={(e) => setEmpresa(e.target.value)}
                 placeholder="Ex: Minha Empresa B2B"
                 disabled={loading}
-                className="w-full px-4 py-3 rounded-lg bg-[#070707] border border-white/[0.12] text-white text-sm placeholder-neutral-500 focus:outline-none focus:border-[#4E83FF] focus:ring-1 focus:ring-[#4E83FF] transition-all disabled:opacity-50"
+                className="w-full px-4 py-3 rounded-lg bg-[#070707] border border-white/[0.12] text-white text-sm placeholder-neutral-500 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-all disabled:opacity-50"
               />
             </div>
           </div>
@@ -249,7 +249,7 @@ export default function FormCaptura({
         }
       }}
     >
-      <div className="relative w-full max-w-lg bg-[#0E0E0E] border border-white/[0.12] rounded-2xl p-6 sm:p-8 shadow-2xl shadow-blue-500/10 text-white">
+      <div className="relative w-full max-w-lg bg-[#0E0E0E] border border-white/[0.12] rounded-2xl p-6 sm:p-8 shadow-2xl shadow-orange-500/10 text-white">
         {/* Botão Fechar X */}
         {onClose && (
           <button
@@ -265,7 +265,7 @@ export default function FormCaptura({
         )}
 
         <div className="mb-6 text-left">
-          <div className="inline-block px-3 py-1 rounded-full bg-[#4E83FF]/15 border border-[#4E83FF]/30 text-[#66AFFF] text-[11px] font-semibold uppercase tracking-wider mb-2 font-sora">
+          <div className="inline-block px-3 py-1 rounded-full bg-orange-500/15 border border-orange-500/30 text-orange-300 text-[11px] font-semibold uppercase tracking-wider mb-2 font-sora">
             Diagnóstico B2B
           </div>
           <h2 className="text-xl sm:text-2xl font-bold text-white font-sans leading-tight">

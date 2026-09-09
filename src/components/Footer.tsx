@@ -12,7 +12,7 @@ export default function Footer() {
               aria-label="Ir para o topo da página através do rodapé"
             >
               <span className="font-extrabold text-2xl text-white font-sans tracking-tight">
-                Web<span className="text-[#4E83FF]">wize</span>
+                Web<span className="text-orange-500">wize</span>
               </span>
             </Link>
             <p className="text-sm text-neutral-300 leading-relaxed font-normal">
@@ -21,42 +21,42 @@ export default function Footer() {
           </div>
 
           <div className="text-left">
-            <p className="text-xs font-bold uppercase tracking-wider text-[#4E83FF] mb-3 font-sora">
+            <p className="text-xs font-bold uppercase tracking-wider text-orange-500 mb-3 font-sora">
               Navegação
             </p>
             <ul className="space-y-2 text-sm text-neutral-300">
               <li>
-                <a href="#hero" className="hover:text-[#66AFFF] transition-colors">
+                <a href="#hero" className="hover:text-orange-400 transition-colors">
                   Início
                 </a>
               </li>
               <li>
-                <a href="#o-problema" className="hover:text-[#66AFFF] transition-colors">
+                <a href="#o-problema" className="hover:text-orange-400 transition-colors">
                   O Problema
                 </a>
               </li>
               <li>
-                <a href="#a-solucao" className="hover:text-[#66AFFF] transition-colors">
+                <a href="#a-solucao" className="hover:text-orange-400 transition-colors">
                   A Solução
                 </a>
               </li>
               <li>
-                <a href="#os-5-pilares" className="hover:text-[#66AFFF] transition-colors">
+                <a href="#os-5-pilares" className="hover:text-orange-400 transition-colors">
                   Os 5 Pilares
                 </a>
               </li>
               <li>
-                <a href="#como-funciona" className="hover:text-[#66AFFF] transition-colors">
+                <a href="#como-funciona" className="hover:text-orange-400 transition-colors">
                   Como Funciona
                 </a>
               </li>
               <li>
-                <a href="#para-quem" className="hover:text-[#66AFFF] transition-colors">
+                <a href="#para-quem" className="hover:text-orange-400 transition-colors">
                   Para Quem É
                 </a>
               </li>
               <li>
-                <a href="#sobre" className="hover:text-[#66AFFF] transition-colors">
+                <a href="#sobre" className="hover:text-orange-400 transition-colors">
                   Sobre a Webwize
                 </a>
               </li>
