@@ -1,33 +1,42 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const navLinks = [
-    { href: "/o-problema", label: "O Problema" },
-    { href: "/a-solucao", label: "A Solução" },
-    { href: "/os-5-pilares", label: "Os 5 Pilares" },
-    { href: "/como-funciona", label: "Como Funciona" },
-    { href: "/para-quem-e", label: "Para Quem É" },
-    { href: "/sobre", label: "Sobre" },
+  const links = [
+    { label: "O Problema", href: "#o-problema" },
+    { label: "A Solução", href: "#a-solucao" },
+    { label: "Os 5 Pilares", href: "#os-5-pilares" },
+    { label: "Como Funciona", href: "#como-funciona" },
+    { label: "Para Quem É", href: "#para-quem" },
+    { label: "Sobre", href: "#sobre" },
   ];
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setMobileMenuOpen(false);
+    const target = document.querySelector(href);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 w-full glass-nav transition-all">
       <div className="max-w-6xl mx-auto px-6 h-[74px] flex items-center justify-between w-full">
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-7" aria-label="Navegação principal">
-          {navLinks.map((link) => (
-            <Link
+          {links.map((link) => (
+            <a
               key={link.href}
               href={link.href}
-              className="text-[13px] font-medium text-neutral-300 hover:text-[#66AFFF] transition-colors duration-200 tracking-wide"
+              onClick={(e) => handleClick(e, link.href)}
+              className="text-[13px] font-medium text-neutral-300 hover:text-[#66AFFF] transition-colors duration-200 tracking-wide cursor-pointer"
             >
               {link.label}
-            </Link>
+            </a>
           ))}
         </nav>
 
@@ -77,18 +86,16 @@ export default function Header() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div
-          className="lg:hidden bg-neutral-950/95 border-b border-neutral-800 px-6 py-4 space-y-3 animate-fade-in"
-        >
-          {navLinks.map((link) => (
-            <Link
+        <div className="lg:hidden bg-neutral-950/95 border-b border-neutral-800 px-6 py-4 space-y-3 animate-fade-in">
+          {links.map((link) => (
+            <a
               key={link.href}
               href={link.href}
-              onClick={() => setMobileMenuOpen(false)}
-              className="block text-sm font-medium text-neutral-200 hover:text-[#4E83FF] py-2 border-b border-neutral-900"
+              onClick={(e) => handleClick(e, link.href)}
+              className="block text-sm font-medium text-neutral-200 hover:text-[#4E83FF] py-2 border-b border-neutral-900 cursor-pointer"
             >
               {link.label}
-            </Link>
+            </a>
           ))}
           <div className="pt-2">
             <a
@@ -98,7 +105,7 @@ export default function Header() {
               aria-label="Falar no WhatsApp via menu mobile"
               className="btn-luxo-azul w-full !py-3 !text-sm text-center"
             >
-              Falar no WhatsApp
+              <span>Falar no WhatsApp</span>
             </a>
           </div>
         </div>

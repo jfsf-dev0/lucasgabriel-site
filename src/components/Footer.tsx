@@ -9,7 +9,7 @@ export default function Footer() {
             <Link
               href="/"
               className="inline-flex items-center gap-2.5"
-              aria-label="Ir para a página inicial através do rodapé"
+              aria-label="Ir para o topo da página através do rodapé"
             >
               <span className="font-extrabold text-2xl text-white font-sans tracking-tight">
                 Web<span className="text-[#4E83FF]">wize</span>
@@ -26,34 +26,34 @@ export default function Footer() {
             </p>
             <ul className="space-y-2 text-sm text-neutral-300">
               <li>
-                <Link href="/o-problema" className="hover:text-[#66AFFF] transition-colors">
+                <a href="#o-problema" className="hover:text-[#66AFFF] transition-colors">
                   O Problema
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="/a-solucao" className="hover:text-[#66AFFF] transition-colors">
+                <a href="#a-solucao" className="hover:text-[#66AFFF] transition-colors">
                   A Solução
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="/os-5-pilares" className="hover:text-[#66AFFF] transition-colors">
+                <a href="#os-5-pilares" className="hover:text-[#66AFFF] transition-colors">
                   Os 5 Pilares
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="/como-funciona" className="hover:text-[#66AFFF] transition-colors">
+                <a href="#como-funciona" className="hover:text-[#66AFFF] transition-colors">
                   Como Funciona
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="/para-quem-e" className="hover:text-[#66AFFF] transition-colors">
+                <a href="#para-quem" className="hover:text-[#66AFFF] transition-colors">
                   Para Quem É
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="/sobre" className="hover:text-[#66AFFF] transition-colors">
+                <a href="#sobre" className="hover:text-[#66AFFF] transition-colors">
                   Sobre a Webwize
-                </Link>
+                </a>
               </li>
             </ul>
           </div>

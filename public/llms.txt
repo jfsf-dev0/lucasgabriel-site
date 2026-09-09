@@ -2,12 +2,12 @@
 
 > Consultoria de marketing, tecnologia e vendas para empresas B2B.
 
-## Páginas
+## Seções
 
-- [Home](https://lucasgabriel-site.vercel.app/): Visão geral da Webwize
-- [O Problema](https://lucasgabriel-site.vercel.app/o-problema): Por que marketing isolado não funciona
-- [A Solução](https://lucasgabriel-site.vercel.app/a-solucao): Infraestrutura de aquisição B2B
-- [Os 5 Pilares](https://lucasgabriel-site.vercel.app/os-5-pilares): Geração de Demanda, Conversão, CRM, Automação e Dados
-- [Como Funciona](https://lucasgabriel-site.vercel.app/como-funciona): 4 etapas — Diagnóstico, Estruturação, Implementação, Otimização
-- [Para Quem É](https://lucasgabriel-site.vercel.app/para-quem-e): Empresas B2B com venda consultiva
-- [Sobre](https://lucasgabriel-site.vercel.app/sobre): Lucas Gabriel e a Webwize
+- [Home](https://lucasgabriel-site.vercel.app/)
+- [O Problema](https://lucasgabriel-site.vercel.app/#o-problema)
+- [A Solução](https://lucasgabriel-site.vercel.app/#a-solucao)
+- [Os 5 Pilares](https://lucasgabriel-site.vercel.app/#os-5-pilares)
+- [Como Funciona](https://lucasgabriel-site.vercel.app/#como-funciona)
+- [Para Quem É](https://lucasgabriel-site.vercel.app/#para-quem)
+- [Sobre](https://lucasgabriel-site.vercel.app/#sobre)

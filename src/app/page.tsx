@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
-import { FadeIn, StaggerContainer, StaggerItem } from "@/components/MotionWrappers";
+import { FadeIn } from "@/components/MotionWrappers";
 
 export const metadata: Metadata = {
   title: "Webwize | Marketing B2B, CRM, Automação e Inteligência Artificial",
@@ -16,37 +15,47 @@ export const metadata: Metadata = {
   },
 };
 
-export default function HomePage() {
+export default function Home() {
   const problemBullets = [
     {
       number: "01",
       title: "Leads desqualificados",
-      desc: "Contatos fora do perfil que custam tempo precioso e desgastam a equipe comercial.",
+      desc: "Contatos fora do perfil de cliente ideal (ICP) que custam tempo precioso e desgastam a equipe comercial.",
     },
     {
       number: "02",
       title: "Páginas sem conversão",
-      desc: "Tráfego pago sem páginas e mensagens desenhadas para converter tomadores de decisão.",
+      desc: "Tráfego pago sem páginas e mensagens desenhadas para converter tomadores de decisão corporativos.",
     },
     {
       number: "03",
       title: "Vendas e marketing desconectados",
-      desc: "Equipes desalinhadas trabalhando em silos e culpando um ao outro pela falta de vendas.",
+      desc: "Equipes desalinhadas trabalhando em silos e culpando uma à outra pela falta de reuniões fechadas.",
     },
     {
       number: "04",
       title: "CRM mal estruturado",
-      desc: "Pipeline abandonado, sem processos padronizados e sem acompanhamento diário da equipe.",
+      desc: "Pipeline abandonado, sem processos padronizados de qualificação e sem acompanhamento diário da equipe.",
     },
     {
       number: "05",
       title: "Follow-ups lentos ou inexistentes",
-      desc: "Oportunidades quentes esfriam e se perdem por falta de agilidade e automação de contato.",
+      desc: "Oportunidades quentes esfriam e se perdem por falta de agilidade no primeiro contato e ausência de automação.",
     },
     {
       number: "06",
       title: "Falta de clareza sobre canais",
-      desc: "Incerteza total sobre qual fonte de tráfego realmente gera reuniões e faturamento real.",
+      desc: "Incerteza total sobre qual fonte de tráfego realmente gera reuniões de fechamento e faturamento real.",
+    },
+    {
+      number: "07",
+      title: "Decisões no escuro",
+      desc: "Estratégias guiadas por intuição sem dados confiáveis de atribuição, CAC (Custo de Aquisição) e LTV.",
+    },
+    {
+      number: "08",
+      title: "Operação fragmentada",
+      desc: "Múltiplos fornecedores isolados que não conversam entre si e não assumem responsabilidade pelo resultado comercial.",
     },
   ];
 
@@ -76,32 +85,67 @@ export default function HomePage() {
     {
       number: "01",
       title: "Geração de Demanda",
-      desc: "Google Ads, Meta Ads e LinkedIn Ads desenhados para capturar a atenção de tomadores de decisão e empresas no momento certo de compra.",
-      tags: ["Google Ads", "LinkedIn Ads", "ICP B2B"],
+      subtitle: "Mídia paga precisa e prospecção corporativa",
+      desc: "Google Ads (capturando clientes na intenção máxima de busca), Meta Ads e LinkedIn Ads mirando tomadores de decisão específicos (C-Level, Diretores e Gerentes). Tráfego qualificado com intenção real de compra.",
+      deliverables: [
+        "Google Search de alta intenção e intenção comercial",
+        "LinkedIn Ads focado em empresas-alvo e cargos de decisão",
+        "Remarketing omnichannel para contas em consideração",
+        "Negativação contínua de termos e filtros rigorosos de ICP",
+      ],
+      tags: ["Google Ads", "LinkedIn Ads", "ICP B2B", "Remarketing"],
     },
     {
       number: "02",
       title: "Estrutura de Conversão",
-      desc: "Landing pages de altíssima velocidade e copy persuasivo orientadas ao ciclo consultivo B2B, transmitindo autoridade e clareza de proposta.",
-      tags: ["Landing Pages", "Copywriting B2B", "Velocidade"],
+      subtitle: "Landing pages de altíssimo impacto e velocidade",
+      desc: "Páginas com carregamento em milissegundos, design que transmite autoridade imediata e copywriting focado nas dores reais do cliente B2B, conduzindo o visitante ao agendamento com vendas.",
+      deliverables: [
+        "Landing Pages de altíssima velocidade (Next.js & Pure CSS)",
+        "Copywriting estratégico focado no ciclo consultivo",
+        "Formulários inteligentes com validação e enriquecimento",
+        "Testes contínuos de títulos, provas sociais e conversão",
+      ],
+      tags: ["Landing Pages", "Copywriting B2B", "Velocidade", "Conversão"],
     },
     {
       number: "03",
       title: "CRM e Operação Comercial",
-      desc: "Pipeline estruturado, regras claras de qualificação (MQL para SQL), SLA de resposta rápida e integração completa entre marketing e vendas.",
-      tags: ["Pipeline", "Qualificação SQL", "SLA Comercial"],
+      subtitle: "Processo de vendas padronizado e visibilidade total",
+      desc: "Implementação e configuração do CRM de ponta a ponta. Criamos pipelines estruturados, critérios objetivos de qualificação (MQL para SQL), definição de SLA de resposta e cadência operacional.",
+      deliverables: [
+        "Estruturação de pipeline por etapas do ciclo de decisão",
+        "Definição de regras de qualificação (ICP, orçamento, urgência)",
+        "SLA comercial de atendimento rápido a novos leads",
+        "Treinamento e cadência operacional para os vendedores",
+      ],
+      tags: ["Pipeline", "Qualificação SQL", "SLA Comercial", "CRM"],
     },
     {
       number: "04",
       title: "Automação e IA",
-      desc: "Resposta imediata a novas oportunidades, agentes de inteligência artificial para pré-qualificação, nutrição inteligente e follow-up contínuo.",
-      tags: ["Agentes de IA", "Nutrição", "WhatsApp API"],
+      subtitle: "Agilidade operacional e qualificação 24/7",
+      desc: "Utilizamos inteligência artificial e automações avançadas para acelerar o tempo de resposta aos novos contatos, triagem inicial via agentes inteligentes e nutrição contínua no WhatsApp.",
+      deliverables: [
+        "Agentes de IA para pré-qualificação imediata via WhatsApp",
+        "Cadências automáticas de nutrição e reengajamento comercial",
+        "Distribuição inteligente e automática de oportunidades",
+        "Integração de APIs de mensageria, CRM e formulários",
+      ],
+      tags: ["Agentes de IA", "Nutrição", "WhatsApp API", "Automações"],
     },
     {
       number: "05",
       title: "Dados e Inteligência Comercial",
-      desc: "Painéis em tempo real com atribuição clara de receita por canal, custo por oportunidade qualificada, ciclo médio de fechamento e ROI real.",
-      tags: ["Dashboards", "Atribuição", "CAC & LTV"],
+      subtitle: "Clareza absoluta sobre CAC, ROI e retorno real",
+      desc: "Dashboards em tempo real com atribuição clara de receita por canal, custo por oportunidade qualificada (SQL), ciclo médio de fechamento e retorno sobre o investimento.",
+      deliverables: [
+        "Dashboards de aquisição e performance comercial em tempo real",
+        "Atribuição precisa de receita por anúncio e canal de entrada",
+        "Acompanhamento rigoroso de CAC, LTV e taxa de conversão",
+        "Reuniões periódicas de alinhamento tático orientadas a dados",
+      ],
+      tags: ["Dashboards", "Atribuição", "CAC & LTV", "Business Intelligence"],
     },
   ];
 
@@ -109,42 +153,86 @@ export default function HomePage() {
     {
       number: "01",
       title: "Diagnóstico Estratégico",
-      desc: "Mapeamento profundo do cenário atual da empresa, personas B2B, gargalos no funil de vendas e oportunidades de receita.",
+      timeframe: "Semanas 01 e 02",
+      desc: "Mapeamento profundo do cenário atual da empresa, personas B2B, gargalos no funil de vendas e oportunidades imediatas de receita.",
+      points: [
+        "Auditoria completa de canais anteriores e métricas históricas",
+        "Entrevistas com liderança e equipe comercial",
+        "Definição do Perfil de Cliente Ideal (ICP) e critérios de qualificação",
+        "Mapeamento do plano tático de implementação",
+      ],
     },
     {
       number: "02",
-      title: "Estruturação",
-      desc: "Desenho do funil de aquisição, posicionamento da oferta comercial, seleção de canais e arquitetura técnica das páginas.",
+      title: "Estruturação e Engenharia",
+      timeframe: "Semanas 03 e 04",
+      desc: "Desenho da arquitetura do funil de aquisição, mensagem central de autoridade e infraestrutura técnica das páginas e CRM.",
+      points: [
+        "Criação das Landing Pages de alta conversão (Next.js)",
+        "Desenvolvimento do copy de autoridade e proposta de valor",
+        "Configuração e modelagem do funil no CRM",
+        "Definição de SLAs e regras de passagem de bastão comercial",
+      ],
     },
     {
       number: "03",
-      title: "Implementação",
-      desc: "Configuração e ativação prática de campanhas de tráfego, landing pages de alta conversão, CRM comercial e automações.",
+      title: "Implementação e Ativação",
+      timeframe: "Semanas 05 e 06",
+      desc: "Ativação prática de campanhas de tráfego, automações de resposta instantânea, agentes de IA e entrega de oportunidades ao time comercial.",
+      points: [
+        "Ativação de mídia paga no Google, Meta e LinkedIn",
+        "Integração de APIs de WhatsApp, formulários e CRM",
+        "Ativação de fluxos de nutrição e triagem inteligente",
+        "Alinhamento operacional com os vendedores sobre o fluxo de entrada",
+      ],
     },
     {
       number: "04",
-      title: "Otimização Contínua",
-      desc: "Análise rigorosa de dados de conversão, reuniões periódicas de alinhamento com a equipe comercial e escala sustentável.",
+      title: "Otimização e Escala",
+      timeframe: "Contínuo",
+      desc: "Análise rigorosa de dados de conversão, reuniões periódicas de alinhamento com a equipe comercial e expansão orientada ao ROI real.",
+      points: [
+        "Análise contínua de CAC, LTV e conversão por canal",
+        "Testes contínuos de criativos, copys e páginas",
+        "Reuniões periódicas de alinhamento com equipe de vendas",
+        "Escala previsível de investimento e faturamento",
+      ],
     },
   ];
 
   const b2bSegments = [
     {
       title: "Indústrias & Manufatura",
-      desc: "Empresas com ticket elevado, catálogo técnico e necessidade de gerar cotações qualificadas com compradores e diretores.",
+      desc: "Empresas com ticket elevado, catálogo técnico e necessidade de gerar cotações qualificadas com compradores e diretores industriais.",
     },
     {
       title: "SaaS & Empresas de Tecnologia",
-      desc: "Softwares corporativos e plataformas que buscam volume previsível de demonstrações e reuniões com decisores.",
+      desc: "Softwares corporativos e plataformas que buscam volume previsível de demonstrações e reuniões qualificadas com tomadores de decisão.",
     },
     {
       title: "Serviços B2B & Consultorias",
-      desc: "Consultorias empresariais, escritórios jurídicos, engenharia e logística que vendem contratos consultivos de alto valor.",
+      desc: "Consultorias empresariais, escritórios jurídicos, engenharia e logística que vendem contratos consultivos de alto valor agregado.",
     },
     {
       title: "Distribuidoras & Atacadistas",
-      desc: "Operações comerciais que precisam expandir a carteira de revendedores, lojistas e clientes corporativos ativamente.",
+      desc: "Operações comerciais que precisam expandir a carteira de revendedores, lojistas e clientes corporativos de forma ativa e digital.",
     },
+  ];
+
+  const criteriaYes = [
+    "Sua empresa vende produtos ou serviços para outras empresas (B2B)",
+    "Possui produto ou serviço validado com clientes ativos e satisfeitos",
+    "Ticket médio estruturado e ciclo de venda consultivo",
+    "Equipe comercial (ou sócio) dedicada ao fechamento de reuniões",
+    "Capacidade operacional para absorver novas demandas comerciais",
+    "Busca por previsibilidade e rigor técnico, não por métricas de vaidade",
+  ];
+
+  const criteriaNo = [
+    "Empresas B2C (venda direta para consumidor final ou e-commerce tradicional)",
+    "Negócios sem modelo validado ou em fase de ideação inicial",
+    "Quem busca apenas 'postagens em redes sociais' sem métrica de negócio",
+    "Quem não possui equipe ou processo para realizar follow-up comercial",
   ];
 
   const faqSchema = {
@@ -175,6 +263,14 @@ export default function HomePage() {
           text: "Os 5 pilares são: 1. Geração de Demanda, 2. Estrutura de Conversão, 3. CRM e Operação Comercial, 4. Automação e Inteligência Artificial, 5. Dados e Inteligência Comercial.",
         },
       },
+      {
+        "@type": "Question",
+        name: "Como a Webwize atua na prática?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Atuamos em 4 etapas estruturadas: Diagnóstico Estratégico, Estruturação e Engenharia, Implementação e Ativação, e Otimização e Escala Contínua.",
+        },
+      },
     ],
   };
 
@@ -186,9 +282,12 @@ export default function HomePage() {
       />
 
       {/* =========================================================================
-          SECTION 1: HERO SECTION
+          SECTION 1: HERO (#hero)
           ========================================================================= */}
-      <section className="w-full relative min-h-[750px] flex items-center justify-start border-b border-white/[0.08] overflow-hidden">
+      <section
+        id="hero"
+        className="w-full relative min-h-[750px] flex items-center justify-start border-b border-white/[0.08] overflow-hidden"
+      >
         {/* Desktop background image with priority */}
         <div className="absolute inset-0 hidden md:block pointer-events-none">
           <Image
@@ -216,7 +315,7 @@ export default function HomePage() {
 
         {/* Hero Content Box */}
         <div className="relative max-w-5xl mx-auto px-6 md:px-12 lg:px-16 w-full pt-[280px] pb-12 md:py-24 flex items-center">
-          <div className="w-full md:w-[50%] border-l-[3px] border-[#4E83FF] pl-7 space-y-5 text-left">
+          <div className="w-full md:w-[52%] border-l-[3px] border-[#4E83FF] pl-7 space-y-5 text-left">
             <FadeIn direction="left" delay={0.1}>
               <p className="text-[13px] font-semibold tracking-wider text-[#66AFFF] uppercase font-sora">
                 Operação de Aquisição B2B
@@ -274,10 +373,10 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================================
-          SECTION 2: O PROBLEMA (#problema)
+          SECTION 2: O PROBLEMA (#o-problema)
           ========================================================================= */}
       <section
-        id="problema"
+        id="o-problema"
         className="w-full relative py-20 border-b border-white/[0.08] bg-[#070707] bg-cover bg-top bg-no-repeat overflow-hidden"
       >
         <div
@@ -319,20 +418,20 @@ export default function HomePage() {
                 </p>
               </FadeIn>
 
-              <div className="pt-2 flex items-center gap-4">
-                <Link
-                  href="/o-problema"
-                  className="inline-flex items-center gap-2 text-sm font-bold text-[#66AFFF] hover:text-white transition-colors"
+              <div className="pt-2">
+                <button
+                  type="button"
+                  data-open-lead-modal="true"
+                  data-lead-source="o_problema"
+                  aria-label="Diagnosticar gargalos da minha empresa"
+                  className="btn-luxo-azul !py-3 !px-6 !text-sm cursor-pointer"
                 >
-                  <span>Conhecer todos os 8 gargalos</span>
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </Link>
+                  <span>Diagnosticar meus gargalos</span>
+                </button>
               </div>
             </div>
 
-            {/* Cards Column */}
+            {/* Cards Column: 8 Gargalos */}
             <div className="w-full md:w-[50%]">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 {problemBullets.map((item, idx) => (
@@ -364,6 +463,7 @@ export default function HomePage() {
           SECTION 3: COMPARAÇÃO (MARKETING ISOLADO VS OPERAÇÃO ESTRUTURADA)
           ========================================================================= */}
       <section
+        id="comparacao"
         className="w-full relative py-20 border-b border-white/[0.08] bg-[#070707] bg-cover bg-top bg-no-repeat overflow-hidden"
       >
         <div
@@ -431,16 +531,16 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================================
-          SECTION 4: A SOLUÇÃO (#solucao)
+          SECTION 4: A SOLUÇÃO (#a-solucao)
           ========================================================================= */}
       <section
-        id="solucao"
+        id="a-solucao"
         className="w-full relative py-20 border-b border-white/[0.08] bg-[#070707] bg-cover bg-top bg-no-repeat overflow-hidden"
       >
         <div className="absolute inset-0 pointer-events-none opacity-35">
           <Image
             src="/images/Lucas-Gabriel-pagina-azul_04.webp"
-            alt="Lucas Gabriel"
+            alt="Lucas Gabriel - Webwize"
             fill
             priority
             style={{ objectFit: "cover", objectPosition: "top" }}
@@ -511,83 +611,25 @@ export default function HomePage() {
                 <span>Solicitar diagnóstico</span>
               </button>
 
-              <Link
-                href="/a-solucao"
+              <a
+                href="#os-5-pilares"
                 className="inline-flex items-center justify-center gap-2 text-sm font-bold text-[#66AFFF] hover:text-white transition-colors"
               >
-                <span>Detalhes da infraestrutura completa</span>
+                <span>Ver os 5 pilares detalhados</span>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       {/* =========================================================================
-          SECTION: COMO FUNCIONA (#como-funciona)
-          ========================================================================= */}
-      <section id="como-funciona" className="w-full relative py-20 border-b border-white/[0.08] bg-[#070707] overflow-hidden">
-        <div className="max-w-5xl mx-auto px-6 md:px-12 lg:px-16 text-left">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <FadeIn direction="down">
-              <p className="text-xs font-bold uppercase tracking-widest text-[#4E83FF] font-sora mb-2">
-                Método de Execução
-              </p>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight font-sans">
-                Como Funciona a Execução em{" "}
-                <em className="italic text-gradient-blue font-serif font-medium">
-                  4 Etapas
-                </em>
-              </h2>
-              <p className="text-sm sm:text-base text-neutral-300 mt-3 font-light">
-                Do diagnóstico inicial até a máquina rodando com dados e otimização contínua.
-              </p>
-            </FadeIn>
-            <div className="rhombus-divider-center">
-              <div className="rhombus-dot" />
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {steps.map((st, idx) => (
-              <div
-                key={idx}
-                className="p-6 rounded-2xl bg-[#0E0E0E] border border-white/[0.08] hover:border-[#4E83FF]/40 transition-all flex flex-col justify-start"
-              >
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-9 h-9 rounded-lg bg-[#4E83FF]/15 border border-[#4E83FF]/30 text-[#66AFFF] flex items-center justify-center font-bold text-sm font-sora">
-                    {st.number}
-                  </div>
-                  <h3 className="text-base font-bold text-white font-sans">{st.title}</h3>
-                </div>
-                <p className="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed">
-                  {st.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-10 text-center">
-            <Link
-              href="/como-funciona"
-              className="inline-flex items-center gap-2 text-sm font-bold text-[#66AFFF] hover:text-white transition-colors"
-            >
-              <span>Ver cronograma detalhado de cada etapa</span>
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* =========================================================================
-          SECTION 5: OS 5 PILARES DA OPERAÇÃO WEBWIZE (#pilares)
+          SECTION 5: OS 5 PILARES DA OPERAÇÃO WEBWIZE (#os-5-pilares)
           ========================================================================= */}
       <section
-        id="pilares"
+        id="os-5-pilares"
         className="w-full relative py-20 border-b border-white/[0.08] bg-[#121212] text-center"
       >
         <div className="max-w-5xl mx-auto px-6 md:px-12 lg:px-16">
@@ -602,7 +644,7 @@ export default function HomePage() {
               </em>
             </h2>
             <p className="text-sm md:text-base text-neutral-300 max-w-2xl mx-auto mt-3 font-normal">
-              Tudo o que sua empresa precisa para transformar marketing em receita previsível.
+              Tudo o que sua empresa precisa para transformar marketing em receita previsível e recorrente.
             </p>
           </FadeIn>
 
@@ -628,16 +670,34 @@ export default function HomePage() {
                     </div>
                   </div>
 
-                  <h3 className="text-lg font-bold text-white mb-2 font-sans group-hover:text-[#66AFFF] transition-colors">
+                  <h3 className="text-lg font-bold text-white mb-1 font-sans group-hover:text-[#66AFFF] transition-colors">
                     {item.title}
                   </h3>
+                  <p className="text-xs font-semibold text-[#66AFFF] mb-3">
+                    {item.subtitle}
+                  </p>
 
-                  <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed font-light">
+                  <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed font-light mb-4">
                     {item.desc}
                   </p>
+
+                  {/* Entregáveis */}
+                  <div className="space-y-2 mb-4 pt-3 border-t border-white/[0.06]">
+                    <p className="text-[11px] font-bold text-neutral-300 uppercase tracking-wider font-sora">
+                      Entregas principais:
+                    </p>
+                    <ul className="space-y-1.5 text-xs text-neutral-300">
+                      {item.deliverables.map((del, dIdx) => (
+                        <li key={dIdx} className="flex items-start gap-2">
+                          <span className="text-[#4E83FF] mt-0.5">•</span>
+                          <span>{del}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
 
-                <div className="pt-4 mt-4 border-t border-white/[0.06] flex flex-wrap gap-1.5">
+                <div className="pt-4 mt-2 border-t border-white/[0.06] flex flex-wrap gap-1.5">
                   {item.tags.map((tag, tIdx) => (
                     <span
                       key={tIdx}
@@ -650,27 +710,30 @@ export default function HomePage() {
               </div>
             ))}
 
-            {/* 6th Card: Link para página física dos 5 Pilares */}
+            {/* 6th Card: Diagnóstico Comercial */}
             <div className="rounded-2xl bg-gradient-to-br from-[#1d4ed8]/30 via-[#0B0B0B] to-[#0B0B0B] border border-[#4E83FF]/40 p-6 flex flex-col justify-between text-left">
               <div>
                 <span className="text-xs font-bold uppercase tracking-wider text-[#66AFFF] font-sora">
-                  Conheça a Fundo
+                  Próximo Passo
                 </span>
                 <h3 className="text-lg font-bold text-white mt-2 mb-2 font-sans">
-                  Entregas detalhadas de cada pilar
+                  Implemente os 5 Pilares na sua empresa
                 </h3>
                 <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed font-light">
-                  Acesse a documentação completa dos 5 pilares com todos os processos, ferramentas e SLAs.
+                  Solicite um diagnóstico gratuito para avaliar quais pilares precisam de implementação imediata no seu modelo comercial.
                 </p>
               </div>
 
               <div className="pt-6">
-                <Link
-                  href="/os-5-pilares"
-                  className="btn-luxo-azul w-full !py-2.5 !text-xs text-center block"
+                <button
+                  type="button"
+                  data-open-lead-modal="true"
+                  data-lead-source="os_5_pilares"
+                  aria-label="Solicitar diagnóstico dos 5 pilares"
+                  className="btn-luxo-azul w-full !py-3 !text-xs text-center cursor-pointer block"
                 >
-                  <span>Explorar os 5 Pilares</span>
-                </Link>
+                  <span>Solicitar diagnóstico dos 5 pilares</span>
+                </button>
               </div>
             </div>
           </div>
@@ -678,7 +741,85 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================================
-          SECTION 6: PARA QUEM É (#para-quem)
+          SECTION 6: COMO FUNCIONA (#como-funciona)
+          ========================================================================= */}
+      <section
+        id="como-funciona"
+        className="w-full relative py-20 border-b border-white/[0.08] bg-[#070707] overflow-hidden"
+      >
+        <div className="max-w-5xl mx-auto px-6 md:px-12 lg:px-16 text-left">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <FadeIn direction="down">
+              <p className="text-xs font-bold uppercase tracking-widest text-[#4E83FF] font-sora mb-2">
+                Método de Execução
+              </p>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight font-sans">
+                Como Funciona a Execução em{" "}
+                <em className="italic text-gradient-blue font-serif font-medium">
+                  4 Etapas
+                </em>
+              </h2>
+              <p className="text-sm sm:text-base text-neutral-300 mt-3 font-light">
+                Do diagnóstico inicial até a máquina rodando com dados e otimização contínua.
+              </p>
+            </FadeIn>
+            <div className="rhombus-divider-center">
+              <div className="rhombus-dot" />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {steps.map((st, idx) => (
+              <div
+                key={idx}
+                className="p-6 rounded-2xl bg-[#0E0E0E] border border-white/[0.08] hover:border-[#4E83FF]/40 transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-3">
+                      <div className="w-9 h-9 rounded-lg bg-[#4E83FF]/15 border border-[#4E83FF]/30 text-[#66AFFF] flex items-center justify-center font-bold text-sm font-sora">
+                        {st.number}
+                      </div>
+                      <h3 className="text-base font-bold text-white font-sans">{st.title}</h3>
+                    </div>
+                    <span className="text-[11px] font-semibold text-neutral-400 bg-white/[0.04] px-2.5 py-1 rounded-full border border-white/[0.05]">
+                      {st.timeframe}
+                    </span>
+                  </div>
+
+                  <p className="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed mb-4">
+                    {st.desc}
+                  </p>
+
+                  <ul className="space-y-1.5 text-xs text-neutral-300 pt-3 border-t border-white/[0.06]">
+                    {st.points.map((pt, pIdx) => (
+                      <li key={pIdx} className="flex items-start gap-2">
+                        <span className="text-[#4E83FF] mt-0.5">✓</span>
+                        <span>{pt}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10 text-center">
+            <button
+              type="button"
+              data-open-lead-modal="true"
+              data-lead-source="como_funciona"
+              aria-label="Agendar diagnóstico da metodologia"
+              className="btn-luxo-azul !py-3 !px-8 !text-sm cursor-pointer"
+            >
+              <span>Agendar diagnóstico da metodologia</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================================
+          SECTION 7: PARA QUEM É (#para-quem)
           ========================================================================= */}
       <section
         id="para-quem"
@@ -705,7 +846,8 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* 2 Perfis Principais */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             <div className="kps-step text-left">
               <div className="kps-icon-wrap">
                 <svg viewBox="0 0 24 24">
@@ -718,7 +860,7 @@ export default function HomePage() {
               </p>
               <h3 className="text-xl font-bold text-white mb-2">Empresas com Venda Consultiva</h3>
               <p className="text-sm text-neutral-300 font-light leading-relaxed mb-4">
-                Negócios com produto validado que perceberam que chegaram no limite do crescimento dependente de indicações.
+                Negócios com produto ou serviço validado que chegaram no limite do crescimento dependente de indicações e networking casual.
               </p>
               <div className="kps-divider" />
             </div>
@@ -736,28 +878,70 @@ export default function HomePage() {
               </p>
               <h3 className="text-xl font-bold text-white mb-2">Líderes Prontos para Escala</h3>
               <p className="text-sm text-neutral-300 font-light leading-relaxed mb-4">
-                Organizações prontas para abastecer o time de vendas diariamente com leads qualificados e processos padronizados.
+                Organizações prontas para abastecer o time de vendas diariamente com leads qualificados, CRM ativo e processos previsíveis.
               </p>
               <div className="kps-divider" />
             </div>
           </div>
 
-          <div className="mt-8 text-center">
-            <Link
-              href="/para-quem-e"
-              className="inline-flex items-center gap-2 text-sm font-bold text-[#66AFFF] hover:text-white transition-colors"
-            >
-              <span>Ver critérios de qualificação e segmentos</span>
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
+          {/* Segmentos B2B */}
+          <div className="mb-12">
+            <h3 className="text-lg font-bold text-white mb-6 text-center font-sans">
+              Segmentos B2B com alta aderência
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {b2bSegments.map((seg, idx) => (
+                <div
+                  key={idx}
+                  className="p-5 rounded-xl bg-[#070707] border border-white/[0.08] hover:border-[#4E83FF]/40 transition-all flex flex-col justify-start"
+                >
+                  <span className="text-xs font-bold text-[#66AFFF] mb-2 font-sora">
+                    0{idx + 1}
+                  </span>
+                  <h4 className="text-sm font-bold text-white mb-2">{seg.title}</h4>
+                  <p className="text-xs text-neutral-400 font-light leading-relaxed">
+                    {seg.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Critérios: Para quem é vs Para quem não é */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="p-7 rounded-2xl bg-[#070707] border border-[#4E83FF]/30">
+              <div className="inline-block px-3 py-1 rounded-full bg-[#4E83FF]/15 text-[#66AFFF] text-xs font-semibold uppercase tracking-wider mb-4 font-sora">
+                Para quem É a Webwize
+              </div>
+              <ul className="space-y-3 text-sm text-neutral-300 font-light">
+                {criteriaYes.map((crit, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <span className="text-[#4E83FF] font-bold">✓</span>
+                    <span>{crit}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="p-7 rounded-2xl bg-[#070707] border border-red-500/20">
+              <div className="inline-block px-3 py-1 rounded-full bg-red-500/10 text-red-400 text-xs font-semibold uppercase tracking-wider mb-4 font-sora">
+                Para quem NÃO é
+              </div>
+              <ul className="space-y-3 text-sm text-neutral-400 font-light">
+                {criteriaNo.map((crit, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <span className="text-red-400 font-bold">✕</span>
+                    <span>{crit}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
       {/* =========================================================================
-          SECTION 7: SOBRE A WEBWIZE & LUCAS GABRIEL (#sobre)
+          SECTION 8: SOBRE A WEBWIZE & LUCAS GABRIEL (#sobre)
           ========================================================================= */}
       <section
         id="sobre"
@@ -802,7 +986,10 @@ export default function HomePage() {
                   A <strong className="font-semibold text-white">Webwize</strong> nasceu para resolver o maior problema do marketing B2B: o abismo entre o que é investido em campanhas e o que de fato vira contrato fechado no time de vendas.
                 </p>
                 <p>
-                  Fundada por <strong className="font-semibold text-white">Lucas Gabriel</strong>, estrategista com sólida trajetória em geração de demanda, estruturação de CRM, automação comercial e inteligência artificial, a operação é orientada a resultados comerciais mensuráveis.
+                  Fundada por <strong className="font-semibold text-white">Lucas Gabriel</strong>, estrategista com sólida trajetória em geração de demanda, estruturação de CRM, automação comercial e inteligência artificial, a operação é orientada a resultados comerciais mensuráveis, sem métricas de vaidade.
+                </p>
+                <p>
+                  Atuamos como um braço estratégico e técnico integrado à sua equipe, garantindo que cada real investido em aquisição gere dados claros de CAC, ciclo de venda e retorno financeiro previsível.
                 </p>
               </div>
 
@@ -816,15 +1003,14 @@ export default function HomePage() {
                 >
                   <span>Solicitar diagnóstico</span>
                 </button>
-                <Link
-                  href="/sobre"
-                  className="inline-flex items-center justify-center gap-2 text-sm font-bold text-[#66AFFF] hover:text-white transition-colors"
+                <a
+                  href="https://wa.me/5511949845827?text=Ol%C3%A1%21%20Gostaria%20de%20conversar%20sobre%20a%20Webwize"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border border-white/[0.18] hover:border-[#4E83FF] hover:bg-white/[0.04] text-neutral-200 hover:text-white text-sm font-semibold transition-all text-center"
                 >
-                  <span>Conhecer a história completa</span>
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </Link>
+                  <span>Conversar diretamente</span>
+                </a>
               </div>
             </div>
           </div>
@@ -832,9 +1018,12 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================================
-          SECTION 8: CTA BANNER FINAL
+          SECTION 9: CTA BANNER FINAL (#cta-final)
           ========================================================================= */}
-      <section className="w-full relative py-20 bg-gradient-to-b from-[#66AFFF] to-[#4E83FF] border-b border-[#FF5A00]/60 text-center overflow-hidden">
+      <section
+        id="cta-final"
+        className="w-full relative py-20 bg-gradient-to-b from-[#66AFFF] to-[#4E83FF] border-b border-[#FF5A00]/60 text-center overflow-hidden"
+      >
         <div className="max-w-5xl mx-auto px-6 md:px-12 lg:px-16 space-y-6">
           <FadeIn direction="left">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white leading-tight font-sans">
