@@ -81,71 +81,41 @@ export default function Home() {
     "Máquina de aquisição previsível, escalável e mensurável",
   ];
 
-  const pillars = [
+  const pilares = [
     {
-      number: "01",
-      title: "Geração de Demanda",
-      subtitle: "Mídia paga precisa e prospecção corporativa",
-      desc: "Google Ads (capturando clientes na intenção máxima de busca), Meta Ads e LinkedIn Ads mirando tomadores de decisão específicos (C-Level, Diretores e Gerentes). Tráfego qualificado com intenção real de compra.",
-      deliverables: [
-        "Google Search de alta intenção e intenção comercial",
-        "LinkedIn Ads focado em empresas-alvo e cargos de decisão",
-        "Remarketing omnichannel para contas em consideração",
-        "Negativação contínua de termos e filtros rigorosos de ICP",
-      ],
-      tags: ["Google Ads", "LinkedIn Ads", "ICP B2B", "Remarketing"],
+      numero: '01',
+      titulo: 'Geração de Demanda',
+      subtitulo: 'Mídia paga precisa e prospecção corporativa',
+      descricao: 'Google, Meta e LinkedIn Ads mirando tomadores de decisão com intenção real de compra.',
+      tags: ['Google Ads', 'LinkedIn Ads', 'ICP B2B', 'Remarketing'],
     },
     {
-      number: "02",
-      title: "Estrutura de Conversão",
-      subtitle: "Landing pages de altíssimo impacto e velocidade",
-      desc: "Páginas com carregamento em milissegundos, design que transmite autoridade imediata e copywriting focado nas dores reais do cliente B2B, conduzindo o visitante ao agendamento com vendas.",
-      deliverables: [
-        "Landing Pages de altíssima velocidade (Next.js & Pure CSS)",
-        "Copywriting estratégico focado no ciclo consultivo",
-        "Formulários inteligentes com validação e enriquecimento",
-        "Testes contínuos de títulos, provas sociais e conversão",
-      ],
-      tags: ["Landing Pages", "Copywriting B2B", "Velocidade", "Conversão"],
+      numero: '02',
+      titulo: 'Estrutura de Conversão',
+      subtitulo: 'Landing pages de altíssimo impacto e velocidade',
+      descricao: 'Páginas rápidas com copywriting focado nas dores B2B, conduzindo ao agendamento com vendas.',
+      tags: ['Landing Pages', 'Copywriting B2B', 'Velocidade', 'Conversão'],
     },
     {
-      number: "03",
-      title: "CRM e Operação Comercial",
-      subtitle: "Processo de vendas padronizado e visibilidade total",
-      desc: "Implementação e configuração do CRM de ponta a ponta. Criamos pipelines estruturados, critérios objetivos de qualificação (MQL para SQL), definição de SLA de resposta e cadência operacional.",
-      deliverables: [
-        "Estruturação de pipeline por etapas do ciclo de decisão",
-        "Definição de regras de qualificação (ICP, orçamento, urgência)",
-        "SLA comercial de atendimento rápido a novos leads",
-        "Treinamento e cadência operacional para os vendedores",
-      ],
-      tags: ["Pipeline", "Qualificação SQL", "SLA Comercial", "CRM"],
+      numero: '03',
+      titulo: 'CRM e Operação Comercial',
+      subtitulo: 'Processo de vendas padronizado e visibilidade total',
+      descricao: 'Pipelines estruturados, qualificação MQL→SQL, SLA de resposta e cadência operacional.',
+      tags: ['Pipeline', 'Qualificação SQL', 'SLA Comercial', 'CRM'],
     },
     {
-      number: "04",
-      title: "Automação e IA",
-      subtitle: "Agilidade operacional e qualificação 24/7",
-      desc: "Utilizamos inteligência artificial e automações avançadas para acelerar o tempo de resposta aos novos contatos, triagem inicial via agentes inteligentes e nutrição contínua no WhatsApp.",
-      deliverables: [
-        "Agentes de IA para pré-qualificação imediata via WhatsApp",
-        "Cadências automáticas de nutrição e reengajamento comercial",
-        "Distribuição inteligente e automática de oportunidades",
-        "Integração de APIs de mensageria, CRM e formulários",
-      ],
-      tags: ["Agentes de IA", "Nutrição", "WhatsApp API", "Automações"],
+      numero: '04',
+      titulo: 'Automação e IA',
+      subtitulo: 'Agilidade operacional e qualificação 24/7',
+      descricao: 'Agentes de IA para pré-qualificação via WhatsApp, nutrição automática e distribuição de oportunidades.',
+      tags: ['Agentes de IA', 'WhatsApp API', 'Nutrição', 'Automações'],
     },
     {
-      number: "05",
-      title: "Dados e Inteligência Comercial",
-      subtitle: "Clareza absoluta sobre CAC, ROI e retorno real",
-      desc: "Dashboards em tempo real com atribuição clara de receita por canal, custo por oportunidade qualificada (SQL), ciclo médio de fechamento e retorno sobre o investimento.",
-      deliverables: [
-        "Dashboards de aquisição e performance comercial em tempo real",
-        "Atribuição precisa de receita por anúncio e canal de entrada",
-        "Acompanhamento rigoroso de CAC, LTV e taxa de conversão",
-        "Reuniões periódicas de alinhamento tático orientadas a dados",
-      ],
-      tags: ["Dashboards", "Atribuição", "CAC & LTV", "Business Intelligence"],
+      numero: '05',
+      titulo: 'Dados e Inteligência Comercial',
+      subtitulo: 'Clareza absoluta sobre CAC, ROI e retorno real',
+      descricao: 'Dashboards em tempo real com atribuição de receita por canal, CAC, LTV e conversão.',
+      tags: ['Dashboards', 'Atribuição', 'CAC & LTV', 'Business Intelligence'],
     },
   ];
 
@@ -626,115 +596,72 @@ export default function Home() {
       {/* =========================================================================
           SECTION 5: OS 5 PILARES DA OPERAÇÃO WEBWIZE (#os-5-pilares)
           ========================================================================= */}
-      <section
-        id="os-5-pilares"
-        className="w-full min-h-screen flex flex-col justify-center py-24 relative border-b border-white/[0.08] bg-[#121212] text-center"
-      >
-        <div className="w-full px-[8vw] relative">
-          <FadeIn direction="down">
-            <p className="text-[13px] font-semibold uppercase tracking-widest text-[#4E83FF] font-sora mb-2">
-              Infraestrutura Completa
-            </p>
-            <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold leading-tight tracking-tight max-w-4xl mx-auto font-sans">
-              Os 5 Pilares da{" "}
-              <em className="italic text-gradient-blue font-serif font-medium">
-                Operação Webwize
-              </em>
-            </h2>
-            <p className="text-sm md:text-base text-neutral-300 max-w-2xl mx-auto mt-3 font-normal">
-              Tudo o que sua empresa precisa para transformar marketing em receita previsível e recorrente.
-            </p>
-          </FadeIn>
+      <section id="os-5-pilares" className="w-full min-h-screen flex flex-col justify-center px-[8vw] py-24">
+        {/* Cabeçalho da seção */}
+        <div className="text-center mb-16">
+          <span className="text-blue-500 text-sm font-semibold tracking-widest uppercase font-sora">
+            Infraestrutura Completa
+          </span>
+          <h2 className="text-4xl xl:text-5xl font-bold text-white mt-3 font-sans">
+            Os 5 Pilares da <em className="text-blue-400 not-italic">Operação Webwize</em>
+          </h2>
+          <p className="text-gray-400 mt-4 text-lg">
+            Tudo o que sua empresa precisa para transformar marketing em receita previsível e recorrente.
+          </p>
+        </div>
 
-          <div className="rhombus-divider-center">
-            <div className="rhombus-dot" />
-          </div>
+        {/* 5 colunas */}
+        <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-5 w-full">
+          {pilares.map((pilar) => (
+            <div
+              key={pilar.numero}
+              className="flex flex-col gap-5 bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-blue-500/40 transition-colors"
+            >
+              {/* Número */}
+              <span className="text-blue-500 text-xs font-bold tracking-widest font-sora">
+                PILAR {pilar.numero}
+              </span>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 w-full mt-12 text-left">
-            {pillars.map((item, idx) => (
-              <div
-                key={idx}
-                className="group rounded-2xl bg-[#0B0B0B] border border-white/[0.08] p-7 hover:border-[#4E83FF]/50 transition-all flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs font-bold uppercase tracking-wider text-[#4E83FF] font-sora">
-                      Pilar {item.number}
-                    </span>
-                    <div className="w-7 h-7 rounded-lg bg-[#4E83FF]/15 border border-[#4E83FF]/30 flex items-center justify-center text-[#66AFFF]">
-                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                  </div>
+              {/* Título */}
+              <h3 className="text-white text-xl font-bold leading-snug font-sans">
+                {pilar.titulo}
+              </h3>
 
-                  <h3 className="text-xl font-bold text-white mb-1 font-sans group-hover:text-[#66AFFF] transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-xs font-semibold text-[#66AFFF] mb-3">
-                    {item.subtitle}
-                  </p>
+              {/* Subtítulo em azul */}
+              <p className="text-blue-400 text-sm font-medium leading-snug">
+                {pilar.subtitulo}
+              </p>
 
-                  <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed font-light mb-4">
-                    {item.desc}
-                  </p>
+              {/* Descrição curta — máximo 2 linhas */}
+              <p className="text-gray-400 text-sm leading-relaxed flex-1">
+                {pilar.descricao}
+              </p>
 
-                  {/* Entregáveis */}
-                  <div className="space-y-2 mb-4 pt-3 border-t border-white/[0.06]">
-                    <p className="text-[11px] font-bold text-neutral-300 uppercase tracking-wider font-sora">
-                      Entregas principais:
-                    </p>
-                    <ul className="space-y-1.5 text-xs text-neutral-300">
-                      {item.deliverables.map((del, dIdx) => (
-                        <li key={dIdx} className="flex items-start gap-2">
-                          <span className="text-[#4E83FF] mt-0.5">•</span>
-                          <span>{del}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="pt-4 mt-2 border-t border-white/[0.06] flex flex-wrap gap-1.5">
-                  {item.tags.map((tag, tIdx) => (
-                    <span
-                      key={tIdx}
-                      className="text-[10px] font-medium px-2 py-0.5 rounded-md bg-white/[0.04] text-neutral-300 border border-white/[0.05]"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-
-            {/* 6th Card: Diagnóstico Comercial */}
-            <div className="rounded-2xl bg-gradient-to-br from-[#1d4ed8]/30 via-[#0B0B0B] to-[#0B0B0B] border border-[#4E83FF]/40 p-7 flex flex-col justify-between text-left">
-              <div>
-                <span className="text-xs font-bold uppercase tracking-wider text-[#66AFFF] font-sora">
-                  Próximo Passo
-                </span>
-                <h3 className="text-xl font-bold text-white mt-2 mb-2 font-sans">
-                  Implemente os 5 Pilares na sua empresa
-                </h3>
-                <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed font-light">
-                  Solicite um diagnóstico gratuito para avaliar quais pilares precisam de estruturação imediata no seu modelo comercial.
-                </p>
-              </div>
-
-              <div className="pt-6">
-                <button
-                  type="button"
-                  data-open-lead-modal="true"
-                  data-lead-source="os_5_pilares"
-                  aria-label="Solicitar diagnóstico dos 5 pilares"
-                  className="btn-luxo-azul w-full !py-3.5 !text-sm text-center cursor-pointer block"
-                >
-                  <span>Solicitar diagnóstico dos 5 pilares</span>
-                </button>
+              {/* Tags — substituem os bullets */}
+              <div className="flex flex-wrap gap-2 mt-auto">
+                {pilar.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-xs px-2 py-1 rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20"
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
             </div>
-          </div>
+          ))}
+        </div>
+
+        {/* CTA */}
+        <div className="text-center mt-16">
+          <button
+            type="button"
+            data-open-lead-modal="true"
+            data-lead-source="os_5_pilares"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer"
+          >
+            Solicitar diagnóstico gratuito
+          </button>
         </div>
       </section>
 
