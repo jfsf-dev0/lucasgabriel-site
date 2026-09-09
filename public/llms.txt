@@ -1,24 +1,13 @@
 # Lucas Gabriel — Webwize
 
-> Consultoria de marketing, tecnologia e vendas para empresas B2B. A Webwize estrutura aquisição, CRM, automações e inteligência artificial para transformar marketing em fonte consistente de oportunidades comerciais.
+> Consultoria de marketing, tecnologia e vendas para empresas B2B.
 
-## Páginas principais
+## Páginas
 
-- [Solução](/solucao-marketing): Implementação da infraestrutura de aquisição em 90 dias
-- [A Metodologia](/a-metodologia): Os 5 Pilares de Crescimento — Geração de Demanda, Conversão, CRM, Automação e Dados
-- [O que entrego](/o-que-entrego): Entregas concretas por pilar
-- [Para quem é](/para-quem-e): Empresas B2B com venda consultiva e ticket relevante
-- [Sobre Lucas Gabriel](/sobre-o-lucas-gabriel): Estrategista de aquisição e fundador da Webwize
-
-## Serviços
-
-- Geração de Demanda: Google Ads, Meta Ads, remarketing e posicionamento de ofertas
-- Estrutura de Conversão: Landing pages, formulários, fluxos de WhatsApp e copy
-- CRM e Operação Comercial: Pipelines, distribuição de leads, follow ups e integrações
-- Automação e IA: Agentes de IA, qualificação automática e automação de processos
-- Dados e Inteligência Comercial: Dashboards, indicadores e performance por campanha e vendedor
-
-## Contato
-
-- Site: https://lucasgabriell.com.br
-- CTA: Quero estruturar minha operação de aquisição
+- [Home](https://lucasgabriel-site.vercel.app/): Visão geral da Webwize
+- [O Problema](https://lucasgabriel-site.vercel.app/o-problema): Por que marketing isolado não funciona
+- [A Solução](https://lucasgabriel-site.vercel.app/a-solucao): Infraestrutura de aquisição B2B
+- [Os 5 Pilares](https://lucasgabriel-site.vercel.app/os-5-pilares): Geração de Demanda, Conversão, CRM, Automação e Dados
+- [Como Funciona](https://lucasgabriel-site.vercel.app/como-funciona): 4 etapas — Diagnóstico, Estruturação, Implementação, Otimização
+- [Para Quem É](https://lucasgabriel-site.vercel.app/para-quem-e): Empresas B2B com venda consultiva
+- [Sobre](https://lucasgabriel-site.vercel.app/sobre): Lucas Gabriel e a Webwize

@@ -7,12 +7,12 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: "/#problema", label: "O Problema" },
-    { href: "/#solucao", label: "A Solução" },
-    { href: "/#pilares", label: "Os 5 Pilares" },
-    { href: "/#como-funciona", label: "Como Funciona" },
-    { href: "/#para-quem", label: "Para Quem É" },
-    { href: "/#sobre", label: "Sobre" },
+    { href: "/o-problema", label: "O Problema" },
+    { href: "/a-solucao", label: "A Solução" },
+    { href: "/os-5-pilares", label: "Os 5 Pilares" },
+    { href: "/como-funciona", label: "Como Funciona" },
+    { href: "/para-quem-e", label: "Para Quem É" },
+    { href: "/sobre", label: "Sobre" },
   ];
 
   return (

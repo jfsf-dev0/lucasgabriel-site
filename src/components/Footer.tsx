@@ -26,32 +26,32 @@ export default function Footer() {
             </p>
             <ul className="space-y-2 text-sm text-neutral-300">
               <li>
-                <Link href="/#problema" className="hover:text-[#66AFFF] transition-colors">
+                <Link href="/o-problema" className="hover:text-[#66AFFF] transition-colors">
                   O Problema
                 </Link>
               </li>
               <li>
-                <Link href="/#solucao" className="hover:text-[#66AFFF] transition-colors">
+                <Link href="/a-solucao" className="hover:text-[#66AFFF] transition-colors">
                   A Solução
                 </Link>
               </li>
               <li>
-                <Link href="/#pilares" className="hover:text-[#66AFFF] transition-colors">
+                <Link href="/os-5-pilares" className="hover:text-[#66AFFF] transition-colors">
                   Os 5 Pilares
                 </Link>
               </li>
               <li>
-                <Link href="/#como-funciona" className="hover:text-[#66AFFF] transition-colors">
+                <Link href="/como-funciona" className="hover:text-[#66AFFF] transition-colors">
                   Como Funciona
                 </Link>
               </li>
               <li>
-                <Link href="/#para-quem" className="hover:text-[#66AFFF] transition-colors">
+                <Link href="/para-quem-e" className="hover:text-[#66AFFF] transition-colors">
                   Para Quem É
                 </Link>
               </li>
               <li>
-                <Link href="/#sobre" className="hover:text-[#66AFFF] transition-colors">
+                <Link href="/sobre" className="hover:text-[#66AFFF] transition-colors">
                   Sobre a Webwize
                 </Link>
               </li>
