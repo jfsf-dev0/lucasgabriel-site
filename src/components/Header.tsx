@@ -6,6 +6,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const links = [
+    { label: "Início", href: "#hero" },
     { label: "O Problema", href: "#o-problema" },
     { label: "A Solução", href: "#a-solucao" },
     { label: "Os 5 Pilares", href: "#os-5-pilares" },
@@ -25,7 +26,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 w-full glass-nav transition-all">
-      <div className="max-w-6xl mx-auto px-6 h-[74px] flex items-center justify-between w-full">
+      <div className="w-full px-[8vw] h-[74px] flex items-center justify-between">
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-7" aria-label="Navegação principal">
           {links.map((link) => (
@@ -86,7 +87,7 @@ export default function Header() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-neutral-950/95 border-b border-neutral-800 px-6 py-4 space-y-3 animate-fade-in">
+        <div className="lg:hidden bg-neutral-950/95 border-b border-neutral-800 px-[8vw] py-4 space-y-3 animate-fade-in">
           {links.map((link) => (
             <a
               key={link.href}

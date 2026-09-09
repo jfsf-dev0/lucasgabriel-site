@@ -286,7 +286,7 @@ export default function Home() {
           ========================================================================= */}
       <section
         id="hero"
-        className="w-full relative min-h-[750px] flex items-center justify-start border-b border-white/[0.08] overflow-hidden"
+        className="w-full min-h-screen flex flex-col justify-center relative border-b border-white/[0.08] overflow-hidden"
       >
         {/* Desktop background image with priority */}
         <div className="absolute inset-0 hidden md:block pointer-events-none">
@@ -314,8 +314,8 @@ export default function Home() {
         </div>
 
         {/* Hero Content Box */}
-        <div className="relative max-w-6xl mx-auto px-8 md:px-16 lg:px-24 w-full pt-[280px] pb-12 md:py-24 flex items-center">
-          <div className="w-full md:w-[52%] border-l-[3px] border-[#4E83FF] pl-7 space-y-5 text-left">
+        <div className="w-full px-[8vw] relative pt-[110px] pb-16 md:py-24 flex items-center">
+          <div className="w-full md:w-[58%] lg:w-[50%] border-l-[3px] border-[#4E83FF] pl-7 space-y-6 text-left">
             <FadeIn direction="left" delay={0.1}>
               <p className="text-[13px] font-semibold tracking-wider text-[#66AFFF] uppercase font-sora">
                 Operação de Aquisição B2B
@@ -323,7 +323,7 @@ export default function Home() {
             </FadeIn>
 
             <FadeIn direction="left" delay={0.2}>
-              <h1 className="text-3xl sm:text-4xl md:text-[44px] font-semibold tracking-tight leading-[1.16] text-white font-sans">
+              <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold leading-tight tracking-tight text-white font-sans">
                 Marketing, tecnologia e vendas para{" "}
                 <em className="italic text-gradient-blue font-serif font-medium">
                   empresas B2B
@@ -335,22 +335,22 @@ export default function Home() {
               <div className="rhombus-dot" />
             </div>
 
-            <FadeIn direction="left" delay={0.3} className="space-y-3">
-              <p className="text-base sm:text-lg font-medium text-white leading-snug">
+            <FadeIn direction="left" delay={0.3} className="space-y-4">
+              <p className="text-base sm:text-lg md:text-xl font-medium text-white leading-snug">
                 Sua empresa não precisa de mais marketing. Precisa de uma operação que gere oportunidades de venda.
               </p>
-              <p className="text-sm md:text-[15px] text-neutral-300 font-normal leading-relaxed">
+              <p className="text-sm md:text-base text-neutral-300 font-normal leading-relaxed">
                 A Webwize estrutura aquisição, campanhas, páginas, CRM, automações, dados e inteligência artificial para transformar marketing em uma fonte consistente de oportunidades comerciais.
               </p>
             </FadeIn>
 
-            <FadeIn direction="up" delay={0.4} className="pt-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+            <FadeIn direction="up" delay={0.4} className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
               <button
                 type="button"
                 data-open-lead-modal="true"
                 data-lead-source="hero"
                 aria-label="Solicitar diagnóstico de aquisição B2B"
-                className="btn-luxo-azul w-full sm:w-auto cursor-pointer"
+                className="btn-luxo-azul w-full sm:w-auto cursor-pointer !py-4 !px-8 text-base"
               >
                 <span>Solicitar diagnóstico</span>
                 <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -363,7 +363,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Falar no WhatsApp"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg border border-white/[0.18] hover:border-[#4E83FF] hover:bg-white/[0.04] text-neutral-200 hover:text-white text-sm font-semibold transition-all text-center"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg border border-white/[0.18] hover:border-[#4E83FF] hover:bg-white/[0.04] text-neutral-200 hover:text-white text-base font-semibold transition-all text-center"
               >
                 <span>Falar no WhatsApp</span>
               </a>
@@ -377,7 +377,7 @@ export default function Home() {
           ========================================================================= */}
       <section
         id="o-problema"
-        className="w-full py-24 relative border-b border-white/[0.08] bg-[#070707] bg-cover bg-top bg-no-repeat overflow-hidden"
+        className="w-full min-h-screen flex flex-col justify-center py-24 relative border-b border-white/[0.08] bg-[#070707] bg-cover bg-top bg-no-repeat overflow-hidden"
       >
         <div
           className="absolute inset-0 bg-cover bg-top bg-no-repeat pointer-events-none opacity-40"
@@ -386,25 +386,25 @@ export default function Home() {
           }}
         />
 
-        <div className="relative max-w-6xl mx-auto px-8 md:px-16 lg:px-24 text-left">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="w-full px-[8vw] relative text-left">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 w-full items-center">
             {/* Cards à esquerda — grid 2x4 */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {problemBullets.map((item, idx) => (
                 <div
                   key={idx}
-                  className="p-4 rounded-xl border border-white/[0.08] bg-[#0E0E0E]/90 hover:border-[#4E83FF]/40 transition-all flex flex-col justify-start text-left"
+                  className="p-5 rounded-xl border border-white/[0.08] bg-[#0E0E0E]/90 hover:border-[#4E83FF]/40 transition-all flex flex-col justify-start text-left"
                 >
-                  <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center justify-between mb-2.5">
                     <span className="text-[11px] font-bold text-[#4E83FF] tracking-wider font-sora">
                       {item.number}
                     </span>
                     <div className="w-2 h-2 rounded-full bg-red-500/80" />
                   </div>
-                  <h3 className="text-sm font-semibold text-white leading-snug mb-1">
+                  <h3 className="text-sm sm:text-base font-semibold text-white leading-snug mb-1.5 font-sans">
                     {item.title}
                   </h3>
-                  <p className="text-xs text-neutral-400 leading-relaxed font-light">
+                  <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed font-light">
                     {item.desc}
                   </p>
                 </div>
@@ -420,7 +420,7 @@ export default function Home() {
               </FadeIn>
 
               <FadeIn direction="right" delay={0.1}>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-[1.2]">
+                <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold leading-tight tracking-tight">
                   O problema raramente{" "}
                   <em className="italic text-gradient-blue font-serif font-medium">
                     é só o tráfego.
@@ -432,7 +432,7 @@ export default function Home() {
                 <div className="rhombus-dot" />
               </div>
 
-              <FadeIn direction="right" delay={0.2} className="space-y-4 text-sm sm:text-base text-neutral-300 font-normal leading-relaxed">
+              <FadeIn direction="right" delay={0.2} className="space-y-4 text-sm sm:text-base md:text-lg text-neutral-300 font-normal leading-relaxed">
                 <p>
                   A maioria das empresas que tenta crescer no B2B enfrenta o mesmo gargalo: contratam agências de anúncios, disparam e-mails e postam conteúdos, mas nada disso está conectado com o time de vendas.
                 </p>
@@ -447,7 +447,7 @@ export default function Home() {
                   data-open-lead-modal="true"
                   data-lead-source="o_problema"
                   aria-label="Diagnosticar gargalos da minha empresa"
-                  className="btn-luxo-azul !py-3 !px-6 !text-sm cursor-pointer"
+                  className="btn-luxo-azul !py-3.5 !px-8 !text-sm cursor-pointer"
                 >
                   <span>Diagnosticar meus gargalos</span>
                 </button>
@@ -462,7 +462,7 @@ export default function Home() {
           ========================================================================= */}
       <section
         id="comparacao"
-        className="w-full py-24 relative border-b border-white/[0.08] bg-[#070707] bg-cover bg-top bg-no-repeat overflow-hidden"
+        className="w-full min-h-screen flex flex-col justify-center py-24 relative border-b border-white/[0.08] bg-[#070707] bg-cover bg-top bg-no-repeat overflow-hidden"
       >
         <div
           className="absolute inset-0 bg-cover bg-top bg-no-repeat pointer-events-none opacity-30"
@@ -471,12 +471,12 @@ export default function Home() {
           }}
         />
 
-        <div className="relative max-w-6xl mx-auto px-8 md:px-16 lg:px-24 w-full text-center">
+        <div className="w-full px-[8vw] relative text-center">
           <FadeIn direction="down">
             <p className="text-[13px] font-semibold uppercase tracking-widest text-[#4E83FF] font-sora mb-2">
               Mudança de Paradigma
             </p>
-            <h2 className="text-2xl sm:text-3xl md:text-[36px] font-semibold leading-snug max-w-3xl mx-auto font-sans">
+            <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold leading-tight tracking-tight max-w-4xl mx-auto font-sans">
               A diferença entre fazer marketing e{" "}
               <em className="italic text-gradient-blue font-serif font-medium">
                 construir uma operação de aquisição.
@@ -488,19 +488,19 @@ export default function Home() {
             <div className="rhombus-dot" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 text-left">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12 text-left w-full">
             {/* Coluna 1: Marketing Isolado */}
-            <div className="p-7 sm:p-9 rounded-2xl bg-[#0E0E0E] border border-white/[0.08] hover:border-red-500/30 transition-all">
-              <div className="inline-block px-3 py-1 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-semibold uppercase tracking-wider mb-4 font-sora">
+            <div className="p-8 sm:p-10 rounded-2xl bg-[#0E0E0E] border border-white/[0.08] hover:border-red-500/30 transition-all">
+              <div className="inline-block px-3.5 py-1 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-semibold uppercase tracking-wider mb-5 font-sora">
                 Marketing Isolado
               </div>
-              <h3 className="text-lg font-semibold text-neutral-100 mb-6 font-sans">
+              <h3 className="text-xl font-semibold text-neutral-100 mb-6 font-sans">
                 O modelo fragmentado comum
               </h3>
-              <ul className="space-y-3.5 text-sm text-neutral-300 font-light">
+              <ul className="space-y-4 text-sm sm:text-base text-neutral-300 font-light">
                 {comparisonIsolated.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <span className="w-5 h-5 rounded-full bg-red-500/10 text-red-400 flex items-center justify-center flex-shrink-0 mt-0.5 text-xs">✕</span>
+                  <li key={idx} className="flex items-start gap-3.5">
+                    <span className="w-5 h-5 rounded-full bg-red-500/10 text-red-400 flex items-center justify-center flex-shrink-0 mt-0.5 text-xs font-bold">✕</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -508,17 +508,17 @@ export default function Home() {
             </div>
 
             {/* Coluna 2: Operação Estruturada */}
-            <div className="p-7 sm:p-9 rounded-2xl bg-[#0E0E0E] border border-[#4E83FF]/40 shadow-xl shadow-[#4E83FF]/5 hover:border-[#4E83FF] transition-all">
-              <div className="inline-block px-3 py-1 rounded-full bg-[#4E83FF]/15 border border-[#4E83FF]/40 text-[#66AFFF] text-xs font-semibold uppercase tracking-wider mb-4 font-sora">
+            <div className="p-8 sm:p-10 rounded-2xl bg-[#0E0E0E] border border-[#4E83FF]/40 shadow-xl shadow-[#4E83FF]/5 hover:border-[#4E83FF] transition-all">
+              <div className="inline-block px-3.5 py-1 rounded-full bg-[#4E83FF]/15 border border-[#4E83FF]/40 text-[#66AFFF] text-xs font-semibold uppercase tracking-wider mb-5 font-sora">
                 Operação Estruturada
               </div>
-              <h3 className="text-lg font-semibold text-white mb-6 font-sans">
+              <h3 className="text-xl font-semibold text-white mb-6 font-sans">
                 A abordagem Webwize
               </h3>
-              <ul className="space-y-3.5 text-sm text-neutral-200 font-normal">
+              <ul className="space-y-4 text-sm sm:text-base text-neutral-200 font-normal">
                 {comparisonStructured.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <span className="w-5 h-5 rounded-full bg-[#4E83FF]/20 text-[#66AFFF] flex items-center justify-center flex-shrink-0 mt-0.5 text-xs">✓</span>
+                  <li key={idx} className="flex items-start gap-3.5">
+                    <span className="w-5 h-5 rounded-full bg-[#4E83FF]/20 text-[#66AFFF] flex items-center justify-center flex-shrink-0 mt-0.5 text-xs font-bold">✓</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -533,7 +533,7 @@ export default function Home() {
           ========================================================================= */}
       <section
         id="a-solucao"
-        className="w-full py-24 relative border-b border-white/[0.08] bg-[#070707] bg-cover bg-top bg-no-repeat overflow-hidden"
+        className="w-full min-h-screen flex flex-col justify-center py-24 relative border-b border-white/[0.08] bg-[#070707] bg-cover bg-top bg-no-repeat overflow-hidden"
       >
         <div className="absolute inset-0 pointer-events-none opacity-35">
           <Image
@@ -545,8 +545,8 @@ export default function Home() {
           />
         </div>
 
-        <div className="relative max-w-6xl mx-auto px-8 md:px-16 lg:px-24 w-full text-left">
-          <div className="max-w-3xl space-y-6">
+        <div className="w-full px-[8vw] relative text-left">
+          <div className="max-w-4xl space-y-6">
             <FadeIn direction="left">
               <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-[#4E83FF] font-sora">
                 A SOLUÇÃO
@@ -554,7 +554,7 @@ export default function Home() {
             </FadeIn>
 
             <FadeIn direction="left" delay={0.1}>
-              <h2 className="text-3xl sm:text-4xl md:text-[46px] font-semibold tracking-tight leading-[1.14]">
+              <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold leading-tight tracking-tight">
                 Construímos a{" "}
                 <em className="italic text-gradient-blue font-serif font-medium">
                   infraestrutura de aquisição
@@ -567,33 +567,33 @@ export default function Home() {
               <div className="rhombus-dot" />
             </div>
 
-            <p className="text-sm md:text-base text-neutral-300 font-normal leading-relaxed">
+            <p className="text-base sm:text-lg text-neutral-300 font-normal leading-relaxed">
               A Webwize não entrega apenas anúncios soltos ou relatórios que não dizem nada. Criamos uma verdadeira máquina que une geração de demanda, páginas de alta conversão, CRM ativo, automações inteligentes e IA para abastecer seu time de vendas com reuniões qualificadas.
             </p>
 
             {/* 2 Stat Boxes */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-              <div className="p-5 rounded-xl bg-[#4E83FF]/15 border border-[#4E83FF]/40 flex items-center gap-3.5">
-                <div className="w-10 h-10 rounded-lg bg-[#4E83FF]/25 flex items-center justify-center text-[#66AFFF] flex-shrink-0">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-2">
+              <div className="p-6 rounded-xl bg-[#4E83FF]/15 border border-[#4E83FF]/40 flex items-center gap-4">
+                <div className="w-12 h-12 rounded-lg bg-[#4E83FF]/25 flex items-center justify-center text-[#66AFFF] flex-shrink-0">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-sm font-bold text-white">Pipeline Previsível</h3>
-                  <p className="text-xs text-neutral-300">Oportunidades com SLA</p>
+                  <h3 className="text-base font-bold text-white">Pipeline Previsível</h3>
+                  <p className="text-xs sm:text-sm text-neutral-300">Oportunidades com SLA comercial</p>
                 </div>
               </div>
 
-              <div className="p-5 rounded-xl bg-[#4E83FF]/15 border border-[#4E83FF]/40 flex items-center gap-3.5">
-                <div className="w-10 h-10 rounded-lg bg-[#4E83FF]/25 flex items-center justify-center text-[#66AFFF] flex-shrink-0">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="p-6 rounded-xl bg-[#4E83FF]/15 border border-[#4E83FF]/40 flex items-center gap-4">
+                <div className="w-12 h-12 rounded-lg bg-[#4E83FF]/25 flex items-center justify-center text-[#66AFFF] flex-shrink-0">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-sm font-bold text-white">Automação & IA</h3>
-                  <p className="text-xs text-neutral-300">Agilidade comercial</p>
+                  <h3 className="text-base font-bold text-white">Automação & IA</h3>
+                  <p className="text-xs sm:text-sm text-neutral-300">Agilidade e triagem contínua</p>
                 </div>
               </div>
             </div>
@@ -604,14 +604,14 @@ export default function Home() {
                 data-open-lead-modal="true"
                 data-lead-source="solucao"
                 aria-label="Solicitar diagnóstico da minha empresa"
-                className="btn-luxo-azul !py-3.5 !px-8 !text-sm cursor-pointer"
+                className="btn-luxo-azul !py-4 !px-8 !text-base cursor-pointer"
               >
                 <span>Solicitar diagnóstico</span>
               </button>
 
               <a
                 href="#os-5-pilares"
-                className="inline-flex items-center justify-center gap-2 text-sm font-bold text-[#66AFFF] hover:text-white transition-colors"
+                className="inline-flex items-center justify-center gap-2 text-base font-bold text-[#66AFFF] hover:text-white transition-colors"
               >
                 <span>Ver os 5 pilares detalhados</span>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -628,14 +628,14 @@ export default function Home() {
           ========================================================================= */}
       <section
         id="os-5-pilares"
-        className="w-full py-32 relative border-b border-white/[0.08] bg-[#121212] text-center"
+        className="w-full min-h-screen flex flex-col justify-center py-24 relative border-b border-white/[0.08] bg-[#121212] text-center"
       >
-        <div className="max-w-6xl mx-auto px-8 md:px-16 lg:px-24">
+        <div className="w-full px-[8vw] relative">
           <FadeIn direction="down">
             <p className="text-[13px] font-semibold uppercase tracking-widest text-[#4E83FF] font-sora mb-2">
               Infraestrutura Completa
             </p>
-            <h2 className="text-2xl sm:text-3xl md:text-[40px] font-semibold max-w-3xl mx-auto leading-snug font-sans">
+            <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold leading-tight tracking-tight max-w-4xl mx-auto font-sans">
               Os 5 Pilares da{" "}
               <em className="italic text-gradient-blue font-serif font-medium">
                 Operação Webwize
@@ -650,11 +650,11 @@ export default function Home() {
             <div className="rhombus-dot" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 text-left">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 w-full mt-12 text-left">
             {pillars.map((item, idx) => (
               <div
                 key={idx}
-                className="group rounded-2xl bg-[#0B0B0B] border border-white/[0.08] p-6 hover:border-[#4E83FF]/50 transition-all flex flex-col justify-between"
+                className="group rounded-2xl bg-[#0B0B0B] border border-white/[0.08] p-7 hover:border-[#4E83FF]/50 transition-all flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
@@ -668,7 +668,7 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <h3 className="text-lg font-bold text-white mb-1 font-sans group-hover:text-[#66AFFF] transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-1 font-sans group-hover:text-[#66AFFF] transition-colors">
                     {item.title}
                   </h3>
                   <p className="text-xs font-semibold text-[#66AFFF] mb-3">
@@ -709,16 +709,16 @@ export default function Home() {
             ))}
 
             {/* 6th Card: Diagnóstico Comercial */}
-            <div className="rounded-2xl bg-gradient-to-br from-[#1d4ed8]/30 via-[#0B0B0B] to-[#0B0B0B] border border-[#4E83FF]/40 p-6 flex flex-col justify-between text-left">
+            <div className="rounded-2xl bg-gradient-to-br from-[#1d4ed8]/30 via-[#0B0B0B] to-[#0B0B0B] border border-[#4E83FF]/40 p-7 flex flex-col justify-between text-left">
               <div>
                 <span className="text-xs font-bold uppercase tracking-wider text-[#66AFFF] font-sora">
                   Próximo Passo
                 </span>
-                <h3 className="text-lg font-bold text-white mt-2 mb-2 font-sans">
+                <h3 className="text-xl font-bold text-white mt-2 mb-2 font-sans">
                   Implemente os 5 Pilares na sua empresa
                 </h3>
                 <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed font-light">
-                  Solicite um diagnóstico gratuito para avaliar quais pilares precisam de implementação imediata no seu modelo comercial.
+                  Solicite um diagnóstico gratuito para avaliar quais pilares precisam de estruturação imediata no seu modelo comercial.
                 </p>
               </div>
 
@@ -728,7 +728,7 @@ export default function Home() {
                   data-open-lead-modal="true"
                   data-lead-source="os_5_pilares"
                   aria-label="Solicitar diagnóstico dos 5 pilares"
-                  className="btn-luxo-azul w-full !py-3 !text-xs text-center cursor-pointer block"
+                  className="btn-luxo-azul w-full !py-3.5 !text-sm text-center cursor-pointer block"
                 >
                   <span>Solicitar diagnóstico dos 5 pilares</span>
                 </button>
@@ -743,15 +743,15 @@ export default function Home() {
           ========================================================================= */}
       <section
         id="como-funciona"
-        className="w-full py-32 relative border-b border-white/[0.08] bg-[#070707] overflow-hidden"
+        className="w-full min-h-screen flex flex-col justify-center py-24 relative border-b border-white/[0.08] bg-[#070707] overflow-hidden"
       >
-        <div className="max-w-6xl mx-auto px-8 md:px-16 lg:px-24 text-left">
+        <div className="w-full px-[8vw] relative text-left">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <FadeIn direction="down">
               <p className="text-xs font-bold uppercase tracking-widest text-[#4E83FF] font-sora mb-2">
                 Método de Execução
               </p>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight font-sans">
+              <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold leading-tight tracking-tight text-white font-sans">
                 Como Funciona a Execução em{" "}
                 <em className="italic text-gradient-blue font-serif font-medium">
                   4 Etapas
@@ -766,32 +766,32 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full mt-12">
             {steps.map((st, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-[#0E0E0E] border border-white/[0.08] hover:border-[#4E83FF]/40 transition-all flex flex-col justify-between"
+                className="p-7 rounded-2xl bg-[#0E0E0E] border border-white/[0.08] hover:border-[#4E83FF]/40 transition-all flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-lg bg-[#4E83FF]/15 border border-[#4E83FF]/30 text-[#66AFFF] flex items-center justify-center font-bold text-sm font-sora">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-3.5">
+                      <div className="w-10 h-10 rounded-lg bg-[#4E83FF]/15 border border-[#4E83FF]/30 text-[#66AFFF] flex items-center justify-center font-bold text-base font-sora">
                         {st.number}
                       </div>
-                      <h3 className="text-base font-bold text-white font-sans">{st.title}</h3>
+                      <h3 className="text-lg font-bold text-white font-sans">{st.title}</h3>
                     </div>
-                    <span className="text-[11px] font-semibold text-neutral-400 bg-white/[0.04] px-2.5 py-1 rounded-full border border-white/[0.05]">
+                    <span className="text-xs font-semibold text-neutral-400 bg-white/[0.04] px-3 py-1 rounded-full border border-white/[0.05]">
                       {st.timeframe}
                     </span>
                   </div>
 
-                  <p className="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed mb-4">
+                  <p className="text-sm text-neutral-300 font-light leading-relaxed mb-4">
                     {st.desc}
                   </p>
 
-                  <ul className="space-y-1.5 text-xs text-neutral-300 pt-3 border-t border-white/[0.06]">
+                  <ul className="space-y-2 text-xs sm:text-sm text-neutral-300 pt-4 border-t border-white/[0.06]">
                     {st.points.map((pt, pIdx) => (
-                      <li key={pIdx} className="flex items-start gap-2">
+                      <li key={pIdx} className="flex items-start gap-2.5">
                         <span className="text-[#4E83FF] mt-0.5">✓</span>
                         <span>{pt}</span>
                       </li>
@@ -802,13 +802,13 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-10 text-center">
+          <div className="mt-12 text-center">
             <button
               type="button"
               data-open-lead-modal="true"
               data-lead-source="como_funciona"
               aria-label="Agendar diagnóstico da metodologia"
-              className="btn-luxo-azul !py-3 !px-8 !text-sm cursor-pointer"
+              className="btn-luxo-azul !py-4 !px-10 !text-base cursor-pointer"
             >
               <span>Agendar diagnóstico da metodologia</span>
             </button>
@@ -821,15 +821,15 @@ export default function Home() {
           ========================================================================= */}
       <section
         id="para-quem"
-        className="w-full py-24 relative border-b border-white/[0.08] bg-[#0E0E0E] overflow-hidden"
+        className="w-full min-h-screen flex flex-col justify-center py-24 relative border-b border-white/[0.08] bg-[#0E0E0E] overflow-hidden"
       >
-        <div className="max-w-6xl mx-auto px-8 md:px-16 lg:px-24 text-left">
+        <div className="w-full px-[8vw] relative text-left">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <FadeIn direction="down">
               <p className="text-[13px] font-semibold uppercase tracking-widest text-[#4E83FF] font-sora mb-2">
                 Foco Exclusivo
               </p>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold leading-snug font-sans">
+              <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold leading-tight tracking-tight font-sans">
                 Para empresas que{" "}
                 <em className="italic text-gradient-blue font-serif font-medium">
                   vendem para empresas.
@@ -845,7 +845,7 @@ export default function Home() {
           </div>
 
           {/* 2 Perfis Principais */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 w-full">
             <div className="kps-step text-left">
               <div className="kps-icon-wrap">
                 <svg viewBox="0 0 24 24">
@@ -856,8 +856,8 @@ export default function Home() {
               <p className="text-xs font-bold uppercase tracking-widest text-[#4E83FF] font-sora mb-2">
                 Perfil 01
               </p>
-              <h3 className="text-xl font-bold text-white mb-2">Empresas com Venda Consultiva</h3>
-              <p className="text-sm text-neutral-300 font-light leading-relaxed mb-4">
+              <h3 className="text-2xl font-bold text-white mb-2">Empresas com Venda Consultiva</h3>
+              <p className="text-sm sm:text-base text-neutral-300 font-light leading-relaxed mb-4">
                 Negócios com produto ou serviço validado que chegaram no limite do crescimento dependente de indicações e networking casual.
               </p>
               <div className="kps-divider" />
@@ -874,8 +874,8 @@ export default function Home() {
               <p className="text-xs font-bold uppercase tracking-widest text-[#4E83FF] font-sora mb-2">
                 Perfil 02
               </p>
-              <h3 className="text-xl font-bold text-white mb-2">Líderes Prontos para Escala</h3>
-              <p className="text-sm text-neutral-300 font-light leading-relaxed mb-4">
+              <h3 className="text-2xl font-bold text-white mb-2">Líderes Prontos para Escala</h3>
+              <p className="text-sm sm:text-base text-neutral-300 font-light leading-relaxed mb-4">
                 Organizações prontas para abastecer o time de vendas diariamente com leads qualificados, CRM ativo e processos previsíveis.
               </p>
               <div className="kps-divider" />
@@ -884,20 +884,20 @@ export default function Home() {
 
           {/* Segmentos B2B */}
           <div className="mb-12">
-            <h3 className="text-lg font-bold text-white mb-6 text-center font-sans">
+            <h3 className="text-xl font-bold text-white mb-6 text-center font-sans">
               Segmentos B2B com alta aderência
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 w-full">
               {b2bSegments.map((seg, idx) => (
                 <div
                   key={idx}
-                  className="p-5 rounded-xl bg-[#070707] border border-white/[0.08] hover:border-[#4E83FF]/40 transition-all flex flex-col justify-start"
+                  className="p-6 rounded-xl bg-[#070707] border border-white/[0.08] hover:border-[#4E83FF]/40 transition-all flex flex-col justify-start"
                 >
                   <span className="text-xs font-bold text-[#66AFFF] mb-2 font-sora">
                     0{idx + 1}
                   </span>
-                  <h4 className="text-sm font-bold text-white mb-2">{seg.title}</h4>
-                  <p className="text-xs text-neutral-400 font-light leading-relaxed">
+                  <h4 className="text-base font-bold text-white mb-2">{seg.title}</h4>
+                  <p className="text-xs sm:text-sm text-neutral-400 font-light leading-relaxed">
                     {seg.desc}
                   </p>
                 </div>
@@ -906,12 +906,12 @@ export default function Home() {
           </div>
 
           {/* Critérios: Para quem é vs Para quem não é */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="p-7 rounded-2xl bg-[#070707] border border-[#4E83FF]/30">
-              <div className="inline-block px-3 py-1 rounded-full bg-[#4E83FF]/15 text-[#66AFFF] text-xs font-semibold uppercase tracking-wider mb-4 font-sora">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full">
+            <div className="p-8 rounded-2xl bg-[#070707] border border-[#4E83FF]/30">
+              <div className="inline-block px-3.5 py-1 rounded-full bg-[#4E83FF]/15 text-[#66AFFF] text-xs font-semibold uppercase tracking-wider mb-5 font-sora">
                 Para quem É a Webwize
               </div>
-              <ul className="space-y-3 text-sm text-neutral-300 font-light">
+              <ul className="space-y-3.5 text-sm sm:text-base text-neutral-300 font-light">
                 {criteriaYes.map((crit, idx) => (
                   <li key={idx} className="flex items-start gap-3">
                     <span className="text-[#4E83FF] font-bold">✓</span>
@@ -921,11 +921,11 @@ export default function Home() {
               </ul>
             </div>
 
-            <div className="p-7 rounded-2xl bg-[#070707] border border-red-500/20">
-              <div className="inline-block px-3 py-1 rounded-full bg-red-500/10 text-red-400 text-xs font-semibold uppercase tracking-wider mb-4 font-sora">
+            <div className="p-8 rounded-2xl bg-[#070707] border border-red-500/20">
+              <div className="inline-block px-3.5 py-1 rounded-full bg-red-500/10 text-red-400 text-xs font-semibold uppercase tracking-wider mb-5 font-sora">
                 Para quem NÃO é
               </div>
-              <ul className="space-y-3 text-sm text-neutral-400 font-light">
+              <ul className="space-y-3.5 text-sm sm:text-base text-neutral-400 font-light">
                 {criteriaNo.map((crit, idx) => (
                   <li key={idx} className="flex items-start gap-3">
                     <span className="text-red-400 font-bold">✕</span>
@@ -943,18 +943,18 @@ export default function Home() {
           ========================================================================= */}
       <section
         id="sobre"
-        className="w-full py-24 relative border-b border-white/[0.08] bg-[#070707] overflow-hidden"
+        className="w-full min-h-screen flex flex-col justify-center py-24 relative border-b border-white/[0.08] bg-[#070707] overflow-hidden"
       >
-        <div className="max-w-6xl mx-auto px-8 md:px-16 lg:px-24">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="w-full px-[8vw] relative">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full">
             {/* Coluna esquerda — foto */}
-            <div className="relative">
+            <div className="relative flex justify-center lg:justify-start">
               <Image
                 src="/images/lucas-sobre.webp"
                 alt="Lucas Gabriel"
                 width={520}
                 height={620}
-                className="rounded-2xl object-cover object-top w-full"
+                className="rounded-2xl object-cover object-top w-full max-w-[520px]"
               />
             </div>
 
@@ -963,17 +963,17 @@ export default function Home() {
               <span className="text-blue-500 text-sm font-semibold tracking-widest uppercase font-sora">
                 Quem faz acontecer
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight font-sans">
+              <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold leading-tight tracking-tight text-white font-sans">
                 Sobre a Webwize & <em className="text-blue-400 not-italic">Lucas Gabriel</em>
               </h2>
               <div className="w-16 h-0.5 bg-blue-600" />
-              <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
+              <p className="text-gray-300 text-base sm:text-lg xl:text-xl leading-relaxed">
                 A Webwize nasceu para resolver o maior problema do marketing B2B: o abismo entre o que é investido em campanhas e o que de fato vira contrato fechado no time de vendas.
               </p>
-              <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
+              <p className="text-gray-300 text-base sm:text-lg xl:text-xl leading-relaxed">
                 Fundada por <strong className="text-white font-semibold">Lucas Gabriel</strong>, estrategista com sólida trajetória em geração de demanda, estruturação de CRM, automação comercial e inteligência artificial, a operação é orientada a resultados comerciais mensuráveis, sem métricas de vaidade.
               </p>
-              <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
+              <p className="text-gray-300 text-base sm:text-lg xl:text-xl leading-relaxed">
                 Atuamos como um braço estratégico e técnico integrado à sua equipe, garantindo que cada real investido em aquisição gere dados claros de CAC, ciclo de venda e retorno financeiro previsível.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mt-4">
@@ -982,7 +982,7 @@ export default function Home() {
                   data-open-lead-modal="true"
                   data-lead-source="sobre"
                   aria-label="Solicitar diagnóstico com Lucas Gabriel"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3.5 rounded-lg font-semibold transition-colors cursor-pointer text-center"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer text-center text-base"
                 >
                   <span>Solicitar diagnóstico</span>
                 </button>
@@ -990,7 +990,7 @@ export default function Home() {
                   href="https://wa.me/5511949845827?text=Ol%C3%A1%21%20Gostaria%20de%20conversar%20sobre%20a%20Webwize"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border border-gray-600 hover:border-gray-400 text-white px-6 py-3.5 rounded-lg font-semibold transition-colors text-center"
+                  className="border border-gray-600 hover:border-gray-400 text-white px-8 py-4 rounded-lg font-semibold transition-colors text-center text-base"
                 >
                   <span>Conversar diretamente</span>
                 </a>
@@ -1005,11 +1005,11 @@ export default function Home() {
           ========================================================================= */}
       <section
         id="cta-final"
-        className="w-full py-24 relative bg-gradient-to-b from-[#66AFFF] to-[#4E83FF] border-b border-[#FF5A00]/60 text-center overflow-hidden"
+        className="w-full min-h-screen flex flex-col justify-center py-24 relative bg-gradient-to-b from-[#66AFFF] to-[#4E83FF] border-b border-[#FF5A00]/60 text-center overflow-hidden"
       >
-        <div className="max-w-6xl mx-auto px-8 md:px-16 lg:px-24 space-y-6">
+        <div className="w-full px-[8vw] relative space-y-8">
           <FadeIn direction="left">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white leading-tight font-sans">
+            <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold leading-tight tracking-tight text-white font-sans">
               Quanto da sua próxima receita <br className="hidden sm:inline" />
               já está sendo construída hoje?
             </h2>
@@ -1020,7 +1020,7 @@ export default function Home() {
           </div>
 
           <FadeIn direction="right" delay={0.1}>
-            <p className="text-base md:text-lg text-white/95 max-w-2xl mx-auto font-normal leading-relaxed">
+            <p className="text-base md:text-xl text-white/95 max-w-3xl mx-auto font-normal leading-relaxed">
               Se você quer transformar marketing em uma fonte consistente de oportunidades de venda, parar de depender da sorte e criar uma máquina de aquisição previsível para sua empresa B2B, faça sua solicitação agora.
             </p>
           </FadeIn>

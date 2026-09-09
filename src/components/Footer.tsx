@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="w-full border-t border-white/[0.08] bg-[#070707] transition-colors relative z-10">
-      <div className="max-w-6xl mx-auto px-6 py-12">
+      <div className="w-full px-[8vw] py-12">
         <div className="flex flex-col md:flex-row items-start justify-between gap-8">
           <div className="max-w-md space-y-4 text-left">
             <Link
@@ -25,6 +25,11 @@ export default function Footer() {
               Navegação
             </p>
             <ul className="space-y-2 text-sm text-neutral-300">
+              <li>
+                <a href="#hero" className="hover:text-[#66AFFF] transition-colors">
+                  Início
+                </a>
+              </li>
               <li>
                 <a href="#o-problema" className="hover:text-[#66AFFF] transition-colors">
                   O Problema
