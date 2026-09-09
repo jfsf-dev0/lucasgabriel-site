@@ -186,26 +186,24 @@ export default function HomePage() {
         {/* Desktop background image with priority */}
         <div className="absolute inset-0 hidden md:block pointer-events-none">
           <Image
-            src="/images/Lucas-Gabriel-pagina-azul_01.jpg"
+            src="/images/Lucas-Gabriel-pagina-azul_01.webp"
             alt="Webwize - Marketing, tecnologia e vendas para empresas B2B"
-            width={1920}
-            height={749}
+            fill
             priority
-            quality={85}
-            className="w-full h-full object-cover object-top"
+            quality={80}
+            style={{ objectFit: "cover", objectPosition: "top" }}
             sizes="100vw"
           />
         </div>
         {/* Mobile background image with priority */}
         <div className="absolute inset-0 block md:hidden pointer-events-none">
           <Image
-            src="/images/Lucas-gabriel-mobile-111.jpg"
+            src="/images/Lucas-gabriel-mobile-111.webp"
             alt="Webwize - Mobile"
-            width={800}
-            height={1276}
+            fill
             priority
-            quality={85}
-            className="w-full h-full object-cover object-top"
+            quality={80}
+            style={{ objectFit: "cover", objectPosition: "top" }}
             sizes="100vw"
           />
         </div>
@@ -280,7 +278,7 @@ export default function HomePage() {
         <div
           className="absolute inset-0 bg-cover bg-top bg-no-repeat pointer-events-none opacity-40"
           style={{
-            backgroundImage: "url('/images/Lucas-Gabriel-pagina-azul_02.jpg')",
+            backgroundImage: "url('/images/Lucas-Gabriel-pagina-azul_02.webp')",
           }}
         />
 
@@ -370,7 +368,7 @@ export default function HomePage() {
         <div
           className="absolute inset-0 bg-cover bg-top bg-no-repeat pointer-events-none opacity-30"
           style={{
-            backgroundImage: "url('/images/Lucas-Gabriel-pagina-azul_03.jpg')",
+            backgroundImage: "url('/images/Lucas-Gabriel-pagina-azul_03.webp')",
           }}
         />
 
@@ -438,12 +436,15 @@ export default function HomePage() {
         id="solucao"
         className="relative py-20 md:py-28 border-b border-white/[0.08] bg-[#070707] bg-cover bg-top bg-no-repeat overflow-hidden"
       >
-        <div
-          className="absolute inset-0 bg-cover bg-top bg-no-repeat pointer-events-none opacity-35"
-          style={{
-            backgroundImage: "url('/images/Lucas-Gabriel-pagina-azul_04.jpg')",
-          }}
-        />
+        <div className="absolute inset-0 pointer-events-none opacity-35">
+          <Image
+            src="/images/Lucas-Gabriel-pagina-azul_04.webp"
+            alt="Lucas Gabriel"
+            fill
+            priority
+            style={{ objectFit: "cover", objectPosition: "top" }}
+          />
+        </div>
 
         <div className="relative max-w-[1140px] mx-auto px-4 w-full">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-14">
@@ -729,7 +730,7 @@ export default function HomePage() {
         <div
           className="absolute inset-0 bg-cover bg-top bg-no-repeat pointer-events-none opacity-40"
           style={{
-            backgroundImage: "url('/images/Lucas-Gabriel-pagina-azul_05.jpg')",
+            backgroundImage: "url('/images/Lucas-Gabriel-pagina-azul_05.webp')",
           }}
         />
 
@@ -821,26 +822,24 @@ export default function HomePage() {
         {/* Desktop background */}
         <div className="absolute inset-0 hidden md:block pointer-events-none">
           <Image
-            src="/images/Lucas-Gabriel-pagina-azul_06.jpg"
+            src="/images/Lucas-Gabriel-pagina-azul_06.webp"
             alt="Sobre a Webwize e Lucas Gabriel"
-            width={1920}
-            height={747}
+            fill
             loading="lazy"
-            quality={85}
-            className="w-full h-full object-cover object-top"
+            quality={80}
+            style={{ objectFit: "cover", objectPosition: "top" }}
             sizes="100vw"
           />
         </div>
         {/* Mobile background */}
         <div className="absolute inset-0 block md:hidden pointer-events-none">
           <Image
-            src="/images/Lucas-gabriel-mobile-222.jpg"
+            src="/images/Lucas-gabriel-mobile-222.webp"
             alt="Lucas Gabriel - Webwize Mobile"
-            width={800}
-            height={2051}
+            fill
             loading="lazy"
-            quality={85}
-            className="w-full h-full object-cover object-top"
+            quality={80}
+            style={{ objectFit: "cover", objectPosition: "top" }}
             sizes="100vw"
           />
         </div>

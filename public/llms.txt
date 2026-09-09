@@ -1,23 +1,24 @@
-# Webwize — Marketing B2B, CRM, Automação e Inteligência Artificial
+# Lucas Gabriel — Webwize
 
-> Assessoria especializada em estruturação de operações comerciais e de aquisição para empresas B2B. Fundada por Lucas Gabriel.
+> Consultoria de marketing, tecnologia e vendas para empresas B2B. A Webwize estrutura aquisição, CRM, automações e inteligência artificial para transformar marketing em fonte consistente de oportunidades comerciais.
 
-## Sobre
-A Webwize estrutura aquisição, campanhas, páginas de alta conversão, CRM comercial, automações, dados e inteligência artificial para transformar marketing em uma fonte consistente de oportunidades de venda. Atende empresas B2B (indústrias, SaaS, consultorias, serviços corporativos e distribuidoras) que precisam de previsibilidade de receita e rigor técnico.
+## Páginas principais
 
-## Pilares da Operação
-- Pilar 01: Geração de Demanda (Google Ads, Meta Ads e LinkedIn Ads para tomadores de decisão B2B)
-- Pilar 02: Estrutura de Conversão (Landing pages de alta performance e copy persuasivo B2B)
-- Pilar 03: CRM e Operação Comercial (Pipeline estruturado, qualificação MQL/SQL e SLA de atendimento)
-- Pilar 04: Automação e Inteligência Artificial (Agentes de IA, qualificação ágil e nutrição inteligente)
-- Pilar 05: Dados e Inteligência Comercial (Dashboards em tempo real, atribuição de receita e análise de CAC/LTV)
+- [Solução](/solucao-marketing): Implementação da infraestrutura de aquisição em 90 dias
+- [A Metodologia](/a-metodologia): Os 5 Pilares de Crescimento — Geração de Demanda, Conversão, CRM, Automação e Dados
+- [O que entrego](/o-que-entrego): Entregas concretas por pilar
+- [Para quem é](/para-quem-e): Empresas B2B com venda consultiva e ticket relevante
+- [Sobre Lucas Gabriel](/sobre-o-lucas-gabriel): Estrategista de aquisição e fundador da Webwize
 
-## Metodologia em 4 Etapas
-1. Diagnóstico Estratégico
-2. Estruturação (Funil, personas, oferta e canais)
-3. Implementação (Ativação técnica, campanhas, CRM e IA)
-4. Otimização Contínua (Análise de dados, testes e escala)
+## Serviços
+
+- Geração de Demanda: Google Ads, Meta Ads, remarketing e posicionamento de ofertas
+- Estrutura de Conversão: Landing pages, formulários, fluxos de WhatsApp e copy
+- CRM e Operação Comercial: Pipelines, distribuição de leads, follow ups e integrações
+- Automação e IA: Agentes de IA, qualificação automática e automação de processos
+- Dados e Inteligência Comercial: Dashboards, indicadores e performance por campanha e vendedor
 
 ## Contato
+
 - Site: https://lucasgabriell.com.br
-- WhatsApp: +55 (11) 94984-5827
+- CTA: Quero estruturar minha operação de aquisição

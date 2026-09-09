@@ -11,23 +11,31 @@ export default function ExitIntent() {
     if (typeof window === "undefined") return;
     if (hasTriggeredRef.current) return;
 
-    const alreadyShown = sessionStorage.getItem("exit_intent_shown");
-    if (alreadyShown) return;
+    try {
+      const alreadyShown = sessionStorage.getItem("exit_intent_shown");
+      if (alreadyShown) return;
 
-    hasTriggeredRef.current = true;
-    sessionStorage.setItem("exit_intent_shown", "true");
-    setIsOpen(true);
+      hasTriggeredRef.current = true;
+      sessionStorage.setItem("exit_intent_shown", "true");
+      setIsOpen(true);
+    } catch {
+      // safe fallback if storage unavailable
+    }
   }, []);
 
-  const handleClose = () => {
+  const handleClose = useCallback(() => {
     setIsOpen(false);
-  };
+  }, []);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    if (sessionStorage.getItem("exit_intent_shown")) return;
+    try {
+      if (sessionStorage.getItem("exit_intent_shown")) return;
+    } catch {
+      return;
+    }
 
-    // 1. Desktop: mouseleave no topo da página
+    // 1. Desktop: evento puro de mouseleave sem medir o DOM
     const handleMouseLeave = (e: MouseEvent) => {
       if (e.clientY <= 0) {
         triggerModal();
@@ -35,41 +43,14 @@ export default function ExitIntent() {
     };
     document.addEventListener("mouseleave", handleMouseLeave);
 
-    // 2. Mobile: 30 segundos de inatividade
-    let inactivityTimer: NodeJS.Timeout;
-    const resetTimer = () => {
-      clearTimeout(inactivityTimer);
-      inactivityTimer = setTimeout(() => {
-        triggerModal();
-      }, 30000);
-    };
-
-    resetTimer();
-    const interactionEvents = ["mousemove", "keydown", "scroll", "touchstart", "click"];
-    interactionEvents.forEach((ev) => window.addEventListener(ev, resetTimer, { passive: true }));
-
-    // 3. Mobile / Navegador: popstate (tentativa de voltar na navegação)
-    // Adiciona uma entrada no histórico para interceptar o botão voltar uma vez
-    try {
-      window.history.pushState({ modalGuard: true }, "");
-    } catch {
-      // safe fallback
-    }
-
-    const handlePopState = (e: PopStateEvent) => {
-      const alreadyShown = sessionStorage.getItem("exit_intent_shown");
-      if (!alreadyShown && !hasTriggeredRef.current) {
-        e.preventDefault?.();
-        triggerModal();
-      }
-    };
-    window.addEventListener("popstate", handlePopState);
+    // 2. Mobile: timer leve de inatividade de 30 segundos (sem event listeners contínuos)
+    const mobileTimer = setTimeout(() => {
+      triggerModal();
+    }, 30000);
 
     return () => {
       document.removeEventListener("mouseleave", handleMouseLeave);
-      clearTimeout(inactivityTimer);
-      interactionEvents.forEach((ev) => window.removeEventListener(ev, resetTimer));
-      window.removeEventListener("popstate", handlePopState);
+      clearTimeout(mobileTimer);
     };
   }, [triggerModal]);
 

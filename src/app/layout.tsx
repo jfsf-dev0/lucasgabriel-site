@@ -1,21 +1,15 @@
 import type { Metadata, Viewport } from "next";
-import { Montserrat, Sora } from "next/font/google";
+import { Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ExitIntent from "@/components/ExitIntent";
 import LeadCaptureModal from "@/components/LeadCaptureModal";
 import "./globals.css";
 
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
+const inter = Inter({
   subsets: ["latin"],
   display: "swap",
-});
-
-const sora = Sora({
-  variable: "--font-sora",
-  subsets: ["latin"],
-  display: "swap",
+  preload: true,
 });
 
 export const viewport: Viewport = {
@@ -96,7 +90,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${montserrat.variable} ${sora.variable} h-full antialiased scroll-smooth`}
+      className={`${inter.className} h-full antialiased scroll-smooth`}
     >
       <head>
         <script
