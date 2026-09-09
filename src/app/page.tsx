@@ -358,30 +358,7 @@ export default function Home() {
 
         <div className="w-full px-[8vw] relative text-left">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 w-full items-center">
-            {/* Cards à esquerda — grid 2x4 */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {problemBullets.map((item, idx) => (
-                <div
-                  key={idx}
-                  className="p-5 rounded-xl border border-white/[0.08] bg-[#0E0E0E]/90 hover:border-[#4E83FF]/40 transition-all flex flex-col justify-start text-left"
-                >
-                  <div className="flex items-center justify-between mb-2.5">
-                    <span className="text-[11px] font-bold text-[#4E83FF] tracking-wider font-sora">
-                      {item.number}
-                    </span>
-                    <div className="w-2 h-2 rounded-full bg-red-500/80" />
-                  </div>
-                  <h3 className="text-sm sm:text-base font-semibold text-white leading-snug mb-1.5 font-sans">
-                    {item.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed font-light">
-                    {item.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            {/* Texto à direita */}
+            {/* Texto à esquerda */}
             <div className="space-y-6 text-left">
               <FadeIn direction="right">
                 <p className="text-xs sm:text-sm font-bold uppercase tracking-widest text-[#4E83FF] font-sora">
@@ -422,6 +399,29 @@ export default function Home() {
                   <span>Diagnosticar meus gargalos</span>
                 </button>
               </div>
+            </div>
+
+            {/* Cards à direita — grid 2x4 */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {problemBullets.map((item, idx) => (
+                <div
+                  key={idx}
+                  className="p-5 rounded-xl border border-white/[0.08] bg-[#0E0E0E]/90 hover:border-[#4E83FF]/40 transition-all flex flex-col justify-start text-left"
+                >
+                  <div className="flex items-center justify-between mb-2.5">
+                    <span className="text-[11px] font-bold text-[#4E83FF] tracking-wider font-sora">
+                      {item.number}
+                    </span>
+                    <div className="w-2 h-2 rounded-full bg-red-500/80" />
+                  </div>
+                  <h3 className="text-sm sm:text-base font-semibold text-white leading-snug mb-1.5 font-sans">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed font-light">
+                    {item.desc}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
