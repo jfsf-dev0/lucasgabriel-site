@@ -314,7 +314,7 @@ export default function Home() {
         </div>
 
         {/* Hero Content Box */}
-        <div className="relative max-w-5xl mx-auto px-6 md:px-12 lg:px-16 w-full pt-[280px] pb-12 md:py-24 flex items-center">
+        <div className="relative max-w-6xl mx-auto px-8 md:px-16 lg:px-24 w-full pt-[280px] pb-12 md:py-24 flex items-center">
           <div className="w-full md:w-[52%] border-l-[3px] border-[#4E83FF] pl-7 space-y-5 text-left">
             <FadeIn direction="left" delay={0.1}>
               <p className="text-[13px] font-semibold tracking-wider text-[#66AFFF] uppercase font-sora">
@@ -377,7 +377,7 @@ export default function Home() {
           ========================================================================= */}
       <section
         id="o-problema"
-        className="w-full relative py-20 border-b border-white/[0.08] bg-[#070707] bg-cover bg-top bg-no-repeat overflow-hidden"
+        className="w-full py-24 relative border-b border-white/[0.08] bg-[#070707] bg-cover bg-top bg-no-repeat overflow-hidden"
       >
         <div
           className="absolute inset-0 bg-cover bg-top bg-no-repeat pointer-events-none opacity-40"
@@ -386,10 +386,33 @@ export default function Home() {
           }}
         />
 
-        <div className="relative max-w-5xl mx-auto px-6 md:px-12 lg:px-16 text-left">
-          <div className="flex flex-col md:flex-row-reverse items-center justify-between gap-12">
-            {/* Text Column */}
-            <div className="w-full md:w-[50%] space-y-6 text-left">
+        <div className="relative max-w-6xl mx-auto px-8 md:px-16 lg:px-24 text-left">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            {/* Cards à esquerda — grid 2x4 */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {problemBullets.map((item, idx) => (
+                <div
+                  key={idx}
+                  className="p-4 rounded-xl border border-white/[0.08] bg-[#0E0E0E]/90 hover:border-[#4E83FF]/40 transition-all flex flex-col justify-start text-left"
+                >
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-[11px] font-bold text-[#4E83FF] tracking-wider font-sora">
+                      {item.number}
+                    </span>
+                    <div className="w-2 h-2 rounded-full bg-red-500/80" />
+                  </div>
+                  <h3 className="text-sm font-semibold text-white leading-snug mb-1">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs text-neutral-400 leading-relaxed font-light">
+                    {item.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* Texto à direita */}
+            <div className="space-y-6 text-left">
               <FadeIn direction="right">
                 <p className="text-xs sm:text-sm font-bold uppercase tracking-widest text-[#4E83FF] font-sora">
                   O Desafio Comercial
@@ -430,31 +453,6 @@ export default function Home() {
                 </button>
               </div>
             </div>
-
-            {/* Cards Column: 8 Gargalos */}
-            <div className="w-full md:w-[50%]">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-                {problemBullets.map((item, idx) => (
-                  <div
-                    key={idx}
-                    className="p-4 rounded-xl border border-white/[0.08] bg-[#0E0E0E]/90 hover:border-[#4E83FF]/40 transition-all flex flex-col justify-start text-left"
-                  >
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-[11px] font-bold text-[#4E83FF] tracking-wider font-sora">
-                        {item.number}
-                      </span>
-                      <div className="w-2 h-2 rounded-full bg-red-500/80" />
-                    </div>
-                    <h3 className="text-sm font-semibold text-white leading-snug mb-1">
-                      {item.title}
-                    </h3>
-                    <p className="text-xs text-neutral-400 leading-relaxed font-light">
-                      {item.desc}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -464,7 +462,7 @@ export default function Home() {
           ========================================================================= */}
       <section
         id="comparacao"
-        className="w-full relative py-20 border-b border-white/[0.08] bg-[#070707] bg-cover bg-top bg-no-repeat overflow-hidden"
+        className="w-full py-24 relative border-b border-white/[0.08] bg-[#070707] bg-cover bg-top bg-no-repeat overflow-hidden"
       >
         <div
           className="absolute inset-0 bg-cover bg-top bg-no-repeat pointer-events-none opacity-30"
@@ -473,7 +471,7 @@ export default function Home() {
           }}
         />
 
-        <div className="relative max-w-5xl mx-auto px-6 md:px-12 lg:px-16 w-full text-center">
+        <div className="relative max-w-6xl mx-auto px-8 md:px-16 lg:px-24 w-full text-center">
           <FadeIn direction="down">
             <p className="text-[13px] font-semibold uppercase tracking-widest text-[#4E83FF] font-sora mb-2">
               Mudança de Paradigma
@@ -535,7 +533,7 @@ export default function Home() {
           ========================================================================= */}
       <section
         id="a-solucao"
-        className="w-full relative py-20 border-b border-white/[0.08] bg-[#070707] bg-cover bg-top bg-no-repeat overflow-hidden"
+        className="w-full py-24 relative border-b border-white/[0.08] bg-[#070707] bg-cover bg-top bg-no-repeat overflow-hidden"
       >
         <div className="absolute inset-0 pointer-events-none opacity-35">
           <Image
@@ -547,7 +545,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="relative max-w-5xl mx-auto px-6 md:px-12 lg:px-16 w-full text-left">
+        <div className="relative max-w-6xl mx-auto px-8 md:px-16 lg:px-24 w-full text-left">
           <div className="max-w-3xl space-y-6">
             <FadeIn direction="left">
               <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-[#4E83FF] font-sora">
@@ -630,9 +628,9 @@ export default function Home() {
           ========================================================================= */}
       <section
         id="os-5-pilares"
-        className="w-full relative py-20 border-b border-white/[0.08] bg-[#121212] text-center"
+        className="w-full py-32 relative border-b border-white/[0.08] bg-[#121212] text-center"
       >
-        <div className="max-w-5xl mx-auto px-6 md:px-12 lg:px-16">
+        <div className="max-w-6xl mx-auto px-8 md:px-16 lg:px-24">
           <FadeIn direction="down">
             <p className="text-[13px] font-semibold uppercase tracking-widest text-[#4E83FF] font-sora mb-2">
               Infraestrutura Completa
@@ -745,9 +743,9 @@ export default function Home() {
           ========================================================================= */}
       <section
         id="como-funciona"
-        className="w-full relative py-20 border-b border-white/[0.08] bg-[#070707] overflow-hidden"
+        className="w-full py-32 relative border-b border-white/[0.08] bg-[#070707] overflow-hidden"
       >
-        <div className="max-w-5xl mx-auto px-6 md:px-12 lg:px-16 text-left">
+        <div className="max-w-6xl mx-auto px-8 md:px-16 lg:px-24 text-left">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <FadeIn direction="down">
               <p className="text-xs font-bold uppercase tracking-widest text-[#4E83FF] font-sora mb-2">
@@ -823,9 +821,9 @@ export default function Home() {
           ========================================================================= */}
       <section
         id="para-quem"
-        className="w-full relative py-20 border-b border-white/[0.08] bg-[#0E0E0E] overflow-hidden"
+        className="w-full py-24 relative border-b border-white/[0.08] bg-[#0E0E0E] overflow-hidden"
       >
-        <div className="max-w-5xl mx-auto px-6 md:px-12 lg:px-16 text-left">
+        <div className="max-w-6xl mx-auto px-8 md:px-16 lg:px-24 text-left">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <FadeIn direction="down">
               <p className="text-[13px] font-semibold uppercase tracking-widest text-[#4E83FF] font-sora mb-2">
@@ -945,61 +943,46 @@ export default function Home() {
           ========================================================================= */}
       <section
         id="sobre"
-        className="w-full relative py-20 border-b border-white/[0.08] bg-[#070707] overflow-hidden"
+        className="w-full py-24 relative border-b border-white/[0.08] bg-[#070707] overflow-hidden"
       >
-        <div className="max-w-5xl mx-auto px-6 md:px-12 lg:px-16 text-left">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-            <div className="md:col-span-4 relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/[0.1]">
+        <div className="max-w-6xl mx-auto px-8 md:px-16 lg:px-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Coluna esquerda — foto */}
+            <div className="relative">
               <Image
-                src="/images/Lucas-Gabriel-pagina-azul_06.webp"
-                alt="Sobre a Webwize e Lucas Gabriel"
-                fill
-                loading="lazy"
-                quality={80}
-                style={{ objectFit: "cover", objectPosition: "top" }}
-                sizes="(max-width: 768px) 100vw, 33vw"
+                src="/images/lucas-sobre.webp"
+                alt="Lucas Gabriel"
+                width={520}
+                height={620}
+                className="rounded-2xl object-cover object-top w-full"
               />
             </div>
 
-            <div className="md:col-span-8 space-y-5 text-left">
-              <FadeIn direction="down">
-                <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-[#4E83FF] font-sora">
-                  Quem Faz Acontecer
-                </p>
-              </FadeIn>
-
-              <FadeIn direction="left" delay={0.1}>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight font-sans">
-                  Sobre a Webwize &{" "}
-                  <em className="italic text-gradient-blue font-serif font-medium">
-                    Lucas Gabriel
-                  </em>
-                </h2>
-              </FadeIn>
-
-              <div className="rhombus-divider">
-                <div className="rhombus-dot" />
-              </div>
-
-              <div className="space-y-4 text-sm sm:text-base text-neutral-300 font-normal leading-relaxed">
-                <p>
-                  A <strong className="font-semibold text-white">Webwize</strong> nasceu para resolver o maior problema do marketing B2B: o abismo entre o que é investido em campanhas e o que de fato vira contrato fechado no time de vendas.
-                </p>
-                <p>
-                  Fundada por <strong className="font-semibold text-white">Lucas Gabriel</strong>, estrategista com sólida trajetória em geração de demanda, estruturação de CRM, automação comercial e inteligência artificial, a operação é orientada a resultados comerciais mensuráveis, sem métricas de vaidade.
-                </p>
-                <p>
-                  Atuamos como um braço estratégico e técnico integrado à sua equipe, garantindo que cada real investido em aquisição gere dados claros de CAC, ciclo de venda e retorno financeiro previsível.
-                </p>
-              </div>
-
-              <div className="pt-2 flex flex-col sm:flex-row gap-4">
+            {/* Coluna direita — texto */}
+            <div className="flex flex-col gap-6 text-left">
+              <span className="text-blue-500 text-sm font-semibold tracking-widest uppercase font-sora">
+                Quem faz acontecer
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight font-sans">
+                Sobre a Webwize & <em className="text-blue-400 not-italic">Lucas Gabriel</em>
+              </h2>
+              <div className="w-16 h-0.5 bg-blue-600" />
+              <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
+                A Webwize nasceu para resolver o maior problema do marketing B2B: o abismo entre o que é investido em campanhas e o que de fato vira contrato fechado no time de vendas.
+              </p>
+              <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
+                Fundada por <strong className="text-white font-semibold">Lucas Gabriel</strong>, estrategista com sólida trajetória em geração de demanda, estruturação de CRM, automação comercial e inteligência artificial, a operação é orientada a resultados comerciais mensuráveis, sem métricas de vaidade.
+              </p>
+              <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
+                Atuamos como um braço estratégico e técnico integrado à sua equipe, garantindo que cada real investido em aquisição gere dados claros de CAC, ciclo de venda e retorno financeiro previsível.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 mt-4">
                 <button
                   type="button"
                   data-open-lead-modal="true"
                   data-lead-source="sobre"
                   aria-label="Solicitar diagnóstico com Lucas Gabriel"
-                  className="btn-luxo-azul !py-3 !px-6 !text-sm cursor-pointer"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3.5 rounded-lg font-semibold transition-colors cursor-pointer text-center"
                 >
                   <span>Solicitar diagnóstico</span>
                 </button>
@@ -1007,7 +990,7 @@ export default function Home() {
                   href="https://wa.me/5511949845827?text=Ol%C3%A1%21%20Gostaria%20de%20conversar%20sobre%20a%20Webwize"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border border-white/[0.18] hover:border-[#4E83FF] hover:bg-white/[0.04] text-neutral-200 hover:text-white text-sm font-semibold transition-all text-center"
+                  className="border border-gray-600 hover:border-gray-400 text-white px-6 py-3.5 rounded-lg font-semibold transition-colors text-center"
                 >
                   <span>Conversar diretamente</span>
                 </a>
@@ -1022,9 +1005,9 @@ export default function Home() {
           ========================================================================= */}
       <section
         id="cta-final"
-        className="w-full relative py-20 bg-gradient-to-b from-[#66AFFF] to-[#4E83FF] border-b border-[#FF5A00]/60 text-center overflow-hidden"
+        className="w-full py-24 relative bg-gradient-to-b from-[#66AFFF] to-[#4E83FF] border-b border-[#FF5A00]/60 text-center overflow-hidden"
       >
-        <div className="max-w-5xl mx-auto px-6 md:px-12 lg:px-16 space-y-6">
+        <div className="max-w-6xl mx-auto px-8 md:px-16 lg:px-24 space-y-6">
           <FadeIn direction="left">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white leading-tight font-sans">
               Quanto da sua próxima receita <br className="hidden sm:inline" />
