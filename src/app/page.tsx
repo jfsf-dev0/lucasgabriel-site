@@ -16,46 +16,46 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const problemBullets = [
+  const problemas = [
     {
-      number: "01",
-      title: "Leads desqualificados",
-      desc: "Contatos fora do perfil de cliente ideal (ICP) que custam tempo precioso e desgastam a equipe comercial.",
+      numero: "01",
+      titulo: "Leads desqualificados",
+      descricao: "Contatos fora do perfil de cliente ideal (ICP) que custam tempo precioso e desgastam a equipe comercial.",
     },
     {
-      number: "02",
-      title: "Páginas sem conversão",
-      desc: "Tráfego pago sem páginas e mensagens desenhadas para converter tomadores de decisão corporativos.",
+      numero: "02",
+      titulo: "Páginas sem conversão",
+      descricao: "Tráfego pago sem páginas e mensagens desenhadas para converter tomadores de decisão corporativos.",
     },
     {
-      number: "03",
-      title: "Vendas e marketing desconectados",
-      desc: "Equipes desalinhadas trabalhando em silos e culpando uma à outra pela falta de reuniões fechadas.",
+      numero: "03",
+      titulo: "Vendas e marketing desconectados",
+      descricao: "Equipes desalinhadas trabalhando em silos e culpando uma à outra pela falta de reuniões fechadas.",
     },
     {
-      number: "04",
-      title: "CRM mal estruturado",
-      desc: "Pipeline abandonado, sem processos padronizados de qualificação e sem acompanhamento diário da equipe.",
+      numero: "04",
+      titulo: "CRM mal estruturado",
+      descricao: "Pipeline abandonado, sem processos padronizados de qualificação e sem acompanhamento diário da equipe.",
     },
     {
-      number: "05",
-      title: "Follow-ups lentos ou inexistentes",
-      desc: "Oportunidades quentes esfriam e se perdem por falta de agilidade no primeiro contato e ausência de automação.",
+      numero: "05",
+      titulo: "Follow-ups lentos ou inexistentes",
+      descricao: "Oportunidades quentes esfriam e se perdem por falta de agilidade no primeiro contato e ausência de automação.",
     },
     {
-      number: "06",
-      title: "Falta de clareza sobre canais",
-      desc: "Incerteza total sobre qual fonte de tráfego realmente gera reuniões de fechamento e faturamento real.",
+      numero: "06",
+      titulo: "Falta de clareza sobre canais",
+      descricao: "Incerteza total sobre qual fonte de tráfego realmente gera reuniões de fechamento e faturamento real.",
     },
     {
-      number: "07",
-      title: "Decisões no escuro",
-      desc: "Estratégias guiadas por intuição sem dados confiáveis de atribuição, CAC (Custo de Aquisição) e LTV.",
+      numero: "07",
+      titulo: "Decisões no escuro",
+      descricao: "Estratégias guiadas por intuição sem dados confiáveis de atribuição, CAC (Custo de Aquisição) e LTV.",
     },
     {
-      number: "08",
-      title: "Operação fragmentada",
-      desc: "Múltiplos fornecedores isolados que não conversam entre si e não assumem responsabilidade pelo resultado comercial.",
+      numero: "08",
+      titulo: "Operação fragmentada",
+      descricao: "Múltiplos fornecedores isolados que não conversam entre si e não assumem responsabilidade pelo resultado comercial.",
     },
   ];
 
@@ -358,70 +358,47 @@ export default function Home() {
 
         <div className="w-full px-[8vw] relative text-left">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 w-full items-center">
-            {/* Cards à esquerda — grid 2x4 */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {problemBullets.map((item, idx) => (
-                <div
-                  key={idx}
-                  className="p-5 rounded-xl border border-white/[0.08] bg-[#0E0E0E]/90 hover:border-[#4E83FF]/40 transition-all flex flex-col justify-start text-left"
-                >
-                  <div className="flex items-center justify-between mb-2.5">
-                    <span className="text-[11px] font-bold text-[#4E83FF] tracking-wider font-sora">
-                      {item.number}
-                    </span>
-                    <div className="w-2 h-2 rounded-full bg-red-500/80" />
-                  </div>
-                  <h3 className="text-sm sm:text-base font-semibold text-white leading-snug mb-1.5 font-sans">
-                    {item.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed font-light">
-                    {item.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            {/* Texto à direita */}
-            <div className="space-y-6 text-left">
-              <FadeIn direction="right">
-                <p className="text-xs sm:text-sm font-bold uppercase tracking-widest text-[#4E83FF] font-sora">
-                  O Desafio Comercial
-                </p>
-              </FadeIn>
-
-              <FadeIn direction="right" delay={0.1}>
-                <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold leading-tight tracking-tight">
-                  O problema raramente{" "}
-                  <em className="italic text-gradient-blue font-serif font-medium">
-                    é só o tráfego.
-                  </em>
-                </h2>
-              </FadeIn>
-
-              <div className="rhombus-divider">
-                <div className="rhombus-dot" />
-              </div>
-
-              <FadeIn direction="right" delay={0.2} className="space-y-4 text-sm sm:text-base md:text-lg text-neutral-300 font-normal leading-relaxed">
-                <p>
-                  A maioria das empresas que tenta crescer no B2B enfrenta o mesmo gargalo: contratam agências de anúncios, disparam e-mails e postam conteúdos, mas nada disso está conectado com o time de vendas.
-                </p>
-                <p className="font-semibold text-white pt-1">
-                  A Webwize integra todos esses pontos em uma única operação unificada de aquisição.
-                </p>
-              </FadeIn>
-
-              <div className="pt-2">
+            {/* COLUNA 1 — Texto (era a direita, agora é a esquerda) */}
+            <div className="flex flex-col gap-6">
+              <span className="text-blue-500 text-xs font-bold tracking-widest uppercase font-sora">
+                O Desafio Comercial
+              </span>
+              <h2 className="text-4xl xl:text-5xl font-bold text-white leading-tight font-sans">
+                O problema raramente{" "}
+                <em className="text-blue-400 not-italic">é só o tráfego.</em>
+              </h2>
+              <div className="w-16 h-px bg-blue-600/50" />
+              <p className="text-gray-300 text-lg leading-relaxed">
+                A maioria das empresas que tenta crescer no B2B enfrenta o mesmo gargalo: contratam agências de anúncios, disparam e-mails e postam conteúdos, mas nada disso está conectado com o time de vendas.
+              </p>
+              <p className="text-white font-semibold text-lg">
+                A Webwize integra todos esses pontos em uma única operação unificada de aquisição.
+              </p>
+              <div>
                 <button
                   type="button"
                   data-open-lead-modal="true"
                   data-lead-source="o_problema"
-                  aria-label="Diagnosticar gargalos da minha empresa"
-                  className="btn-luxo-azul !py-3.5 !px-8 !text-sm cursor-pointer"
+                  aria-label="Diagnosticar meus gargalos"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors cursor-pointer"
                 >
-                  <span>Diagnosticar meus gargalos</span>
+                  Diagnosticar meus gargalos
                 </button>
               </div>
+            </div>
+
+            {/* COLUNA 2 — Cards (era a esquerda, agora é a direita) */}
+            <div className="grid grid-cols-2 gap-3">
+              {problemas.map((p) => (
+                <div
+                  key={p.numero}
+                  className="flex flex-col gap-2 bg-white/5 border border-white/10 rounded-xl p-4 hover:border-blue-500/30 transition-colors"
+                >
+                  <span className="text-blue-500 text-xs font-bold font-sora">{p.numero}</span>
+                  <h4 className="text-white text-sm font-bold leading-snug font-sans">{p.titulo}</h4>
+                  <p className="text-gray-400 text-xs leading-relaxed">{p.descricao}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
