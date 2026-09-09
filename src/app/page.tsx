@@ -693,40 +693,65 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full mt-12">
-            {steps.map((st, idx) => (
-              <div
-                key={idx}
-                className="p-7 rounded-2xl bg-[#0E0E0E] border border-white/[0.08] hover:border-[#4E83FF]/40 transition-all flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center gap-3.5">
-                      <div className="w-10 h-10 rounded-lg bg-[#4E83FF]/15 border border-[#4E83FF]/30 text-[#66AFFF] flex items-center justify-center font-bold text-base font-sora">
-                        {st.number}
-                      </div>
-                      <h3 className="text-lg font-bold text-white font-sans">{st.title}</h3>
-                    </div>
-                    <span className="text-xs font-semibold text-neutral-400 bg-white/[0.04] px-3 py-1 rounded-full border border-white/[0.05]">
-                      {st.timeframe}
-                    </span>
-                  </div>
+          {/* 4 colunas sem borda divisória */}
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-0 w-full divide-x divide-white/10">
 
-                  <p className="text-sm text-neutral-300 font-light leading-relaxed mb-4">
-                    {st.desc}
-                  </p>
-
-                  <ul className="space-y-2 text-xs sm:text-sm text-neutral-300 pt-4 border-t border-white/[0.06]">
-                    {st.points.map((pt, pIdx) => (
-                      <li key={pIdx} className="flex items-start gap-2.5">
-                        <span className="text-[#4E83FF] mt-0.5">✓</span>
-                        <span>{pt}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+            <div className="flex flex-col gap-5 px-8 py-2">
+              <span className="text-6xl font-black text-white/5 leading-none select-none">01</span>
+              <h3 className="text-white text-lg font-bold -mt-4">Diagnóstico Estratégico</h3>
+              <div className="w-8 h-px bg-blue-600/50" />
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Mapeamento do cenário atual, personas B2B, gargalos no funil de vendas e oportunidades imediatas de receita.
+              </p>
+              <div className="flex flex-wrap gap-2 mt-auto">
+                {['Auditoria de Canais', 'ICP', 'Métricas Históricas', 'Plano Tático'].map(tag => (
+                  <span key={tag} className="text-[11px] px-3 py-1 rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20">{tag}</span>
+                ))}
               </div>
-            ))}
+            </div>
+
+            <div className="flex flex-col gap-5 px-8 py-2">
+              <span className="text-6xl font-black text-white/5 leading-none select-none">02</span>
+              <h3 className="text-white text-lg font-bold -mt-4">Estruturação e Engenharia</h3>
+              <div className="w-8 h-px bg-blue-600/50" />
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Arquitetura do funil de aquisição, mensagem de autoridade e infraestrutura técnica das páginas e CRM.
+              </p>
+              <div className="flex flex-wrap gap-2 mt-auto">
+                {['Landing Pages', 'Copy de Autoridade', 'CRM', 'SLAs Comerciais'].map(tag => (
+                  <span key={tag} className="text-[11px] px-3 py-1 rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20">{tag}</span>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-5 px-8 py-2">
+              <span className="text-6xl font-black text-white/5 leading-none select-none">03</span>
+              <h3 className="text-white text-lg font-bold -mt-4">Implementação e Ativação</h3>
+              <div className="w-8 h-px bg-blue-600/50" />
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Ativação de campanhas, automações de resposta, agentes de IA e entrega de oportunidades ao comercial.
+              </p>
+              <div className="flex flex-wrap gap-2 mt-auto">
+                {['Google Ads', 'Meta Ads', 'WhatsApp API', 'Nutrição Inteligente'].map(tag => (
+                  <span key={tag} className="text-[11px] px-3 py-1 rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20">{tag}</span>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-5 px-8 py-2">
+              <span className="text-6xl font-black text-white/5 leading-none select-none">04</span>
+              <h3 className="text-white text-lg font-bold -mt-4">Otimização e Escala</h3>
+              <div className="w-8 h-px bg-blue-600/50" />
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Análise de dados de conversão, alinhamento com o comercial e expansão orientada ao ROI real.
+              </p>
+              <div className="flex flex-wrap gap-2 mt-auto">
+                {['CAC & LTV', 'Testes A/B', 'Alinhamento Comercial', 'Escala Previsível'].map(tag => (
+                  <span key={tag} className="text-[11px] px-3 py-1 rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20">{tag}</span>
+                ))}
+              </div>
+            </div>
+
           </div>
 
           <div className="mt-12 text-center">
