@@ -1,58 +1,27 @@
 "use client";
 
-import { useEffect, useState, useCallback, useRef } from "react";
+import { useEffect, useState, useCallback } from "react";
 import FormCaptura from "./FormCaptura";
 
 export default function ExitIntent() {
   const [isOpen, setIsOpen] = useState(false);
-  const hasTriggeredRef = useRef(false);
-
-  const triggerModal = useCallback(() => {
-    if (typeof window === "undefined") return;
-    if (hasTriggeredRef.current) return;
-
-    try {
-      const alreadyShown = sessionStorage.getItem("exit_intent_shown");
-      if (alreadyShown) return;
-
-      hasTriggeredRef.current = true;
-      sessionStorage.setItem("exit_intent_shown", "true");
-      setIsOpen(true);
-    } catch {
-      // safe fallback if storage unavailable
-    }
-  }, []);
 
   const handleClose = useCallback(() => {
     setIsOpen(false);
   }, []);
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
-    try {
-      if (sessionStorage.getItem("exit_intent_shown")) return;
-    } catch {
-      return;
-    }
-
-    // 1. Desktop: evento puro de mouseleave sem medir o DOM
     const handleMouseLeave = (e: MouseEvent) => {
       if (e.clientY <= 0) {
-        triggerModal();
+        if (typeof window !== "undefined" && !sessionStorage.getItem("exit_intent_shown")) {
+          sessionStorage.setItem("exit_intent_shown", "true");
+          setIsOpen(true);
+        }
       }
     };
     document.addEventListener("mouseleave", handleMouseLeave);
-
-    // 2. Mobile: timer leve de inatividade de 30 segundos (sem event listeners contínuos)
-    const mobileTimer = setTimeout(() => {
-      triggerModal();
-    }, 30000);
-
-    return () => {
-      document.removeEventListener("mouseleave", handleMouseLeave);
-      clearTimeout(mobileTimer);
-    };
-  }, [triggerModal]);
+    return () => document.removeEventListener("mouseleave", handleMouseLeave);
+  }, []);
 
   if (!isOpen) return null;
 
