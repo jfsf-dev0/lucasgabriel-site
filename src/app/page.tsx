@@ -182,7 +182,7 @@ export default function HomePage() {
       {/* =========================================================================
           SECTION 1: HERO SECTION
           ========================================================================= */}
-      <section className="relative min-h-[800px] flex items-center justify-start border-b border-white/[0.08] overflow-hidden">
+      <section className="w-full relative min-h-[750px] flex items-center justify-start border-b border-white/[0.08] overflow-hidden">
         {/* Desktop background image with priority */}
         <div className="absolute inset-0 hidden md:block pointer-events-none">
           <Image
@@ -209,7 +209,7 @@ export default function HomePage() {
         </div>
 
         {/* Hero Content Box */}
-        <div className="relative max-w-[1140px] mx-auto px-4 w-full pt-[330px] pb-12 md:pt-[110px] md:pb-[70px] flex items-center">
+        <div className="relative max-w-6xl mx-auto px-6 w-full pt-[280px] pb-12 md:py-24 flex items-center">
           <div className="w-full md:w-[48%] border-l-[3px] border-[#4E83FF] pl-7 space-y-5 text-left">
             <FadeIn direction="left" delay={0.1}>
               <p className="text-[13px] font-semibold tracking-wider text-[#66AFFF] uppercase font-sora">
@@ -273,7 +273,7 @@ export default function HomePage() {
           ========================================================================= */}
       <section
         id="problema"
-        className="relative py-20 md:py-28 border-b border-white/[0.08] bg-[#070707] bg-cover bg-top bg-no-repeat overflow-hidden"
+        className="w-full relative py-20 md:py-28 border-b border-white/[0.08] bg-[#070707] bg-cover bg-top bg-no-repeat overflow-hidden"
       >
         <div
           className="absolute inset-0 bg-cover bg-top bg-no-repeat pointer-events-none opacity-40"
@@ -282,7 +282,7 @@ export default function HomePage() {
           }}
         />
 
-        <div className="relative max-w-[1140px] mx-auto px-4">
+        <div className="relative max-w-6xl mx-auto px-6">
           <div className="flex flex-col md:flex-row-reverse items-center justify-between gap-12 lg:gap-14">
             
             {/* RIGHT SIDE: Text Column */}
@@ -363,7 +363,7 @@ export default function HomePage() {
           SECTION 3: COMPARAÇÃO (MARKETING ISOLADO VS OPERAÇÃO ESTRUTURADA)
           ========================================================================= */}
       <section
-        className="relative py-20 md:py-28 border-b border-white/[0.08] bg-[#070707] bg-cover bg-top bg-no-repeat overflow-hidden"
+        className="w-full relative py-20 md:py-28 border-b border-white/[0.08] bg-[#070707] bg-cover bg-top bg-no-repeat overflow-hidden"
       >
         <div
           className="absolute inset-0 bg-cover bg-top bg-no-repeat pointer-events-none opacity-30"
@@ -372,7 +372,7 @@ export default function HomePage() {
           }}
         />
 
-        <div className="relative max-w-[1140px] mx-auto px-4 w-full text-center">
+        <div className="relative max-w-6xl mx-auto px-6 w-full text-center">
           <FadeIn direction="down">
             <p className="text-[13px] font-semibold uppercase tracking-widest text-[#4E83FF] font-sora mb-2">
               Mudança de Paradigma
@@ -434,7 +434,7 @@ export default function HomePage() {
           ========================================================================= */}
       <section
         id="solucao"
-        className="relative py-20 md:py-28 border-b border-white/[0.08] bg-[#070707] bg-cover bg-top bg-no-repeat overflow-hidden"
+        className="w-full relative py-20 md:py-28 border-b border-white/[0.08] bg-[#070707] bg-cover bg-top bg-no-repeat overflow-hidden"
       >
         <div className="absolute inset-0 pointer-events-none opacity-35">
           <Image
@@ -446,7 +446,7 @@ export default function HomePage() {
           />
         </div>
 
-        <div className="relative max-w-[1140px] mx-auto px-4 w-full">
+        <div className="relative max-w-6xl mx-auto px-6 w-full">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-14">
             
             {/* Left side: Text & Stats */}
@@ -629,9 +629,9 @@ export default function HomePage() {
           ========================================================================= */}
       <section
         id="pilares"
-        className="relative py-20 md:py-28 border-b border-white/[0.08] bg-[#121212] text-center"
+        className="w-full relative py-20 md:py-28 border-b border-white/[0.08] bg-[#121212] text-center"
       >
-        <div className="max-w-[1140px] mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-6">
           <FadeIn direction="down">
             <p className="text-[13px] font-semibold uppercase tracking-widest text-[#4E83FF] font-sora mb-2">
               Infraestrutura Completa
@@ -725,7 +725,7 @@ export default function HomePage() {
           ========================================================================= */}
       <section
         id="para-quem"
-        className="relative min-h-[676px] py-16 md:py-24 flex items-center border-b border-white/[0.08] bg-[#0E0E0E] bg-cover bg-top bg-no-repeat overflow-hidden"
+        className="w-full relative min-h-[676px] py-16 md:py-24 flex items-center border-b border-white/[0.08] bg-[#0E0E0E] bg-cover bg-top bg-no-repeat overflow-hidden"
       >
         <div
           className="absolute inset-0 bg-cover bg-top bg-no-repeat pointer-events-none opacity-40"
@@ -734,7 +734,7 @@ export default function HomePage() {
           }}
         />
 
-        <div className="relative max-w-[1140px] mx-auto px-4 w-full">
+        <div className="relative max-w-6xl mx-auto px-6 w-full">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <FadeIn direction="down">
               <p className="text-[13px] font-semibold uppercase tracking-widest text-[#4E83FF] font-sora mb-2">
@@ -817,7 +817,7 @@ export default function HomePage() {
           ========================================================================= */}
       <section
         id="sobre"
-        className="relative min-h-[747px] flex items-center border-b border-white/[0.08] overflow-hidden"
+        className="w-full relative min-h-[747px] flex items-center border-b border-white/[0.08] overflow-hidden"
       >
         {/* Desktop background */}
         <div className="absolute inset-0 hidden md:block pointer-events-none">
@@ -844,7 +844,7 @@ export default function HomePage() {
           />
         </div>
 
-        <div className="relative max-w-[1140px] mx-auto px-4 w-full pt-[412px] pb-12 md:py-[100px] flex justify-end">
+        <div className="relative max-w-6xl mx-auto px-6 w-full pt-[412px] pb-12 md:py-[100px] flex justify-end">
           {/* Aligned to the RIGHT side on desktop (51% width) */}
           <div className="w-full md:w-[51%] space-y-6 text-left">
             <FadeIn direction="down">
@@ -896,8 +896,8 @@ export default function HomePage() {
       {/* =========================================================================
           SECTION 8: CTA BANNER FINAL
           ========================================================================= */}
-      <section className="relative py-16 md:py-[100px] bg-gradient-to-b from-[#66AFFF] to-[#4E83FF] border-b border-[#FF5A00]/60 text-center overflow-hidden">
-        <div className="max-w-[1140px] mx-auto px-4 space-y-6">
+      <section className="w-full relative py-16 md:py-[100px] bg-gradient-to-b from-[#66AFFF] to-[#4E83FF] border-b border-[#FF5A00]/60 text-center overflow-hidden">
+        <div className="max-w-6xl mx-auto px-6 space-y-6">
           <FadeIn direction="left">
             <h2 className="text-3xl sm:text-4xl md:text-[54px] font-semibold text-white leading-tight">
               Quanto da sua próxima receita <br className="hidden sm:inline" />

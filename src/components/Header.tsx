@@ -16,9 +16,9 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 glass-nav transition-all -mb-[74px]">
-      <div className="max-w-[1140px] mx-auto px-4 sm:px-6 h-[74px] flex items-center justify-between">
-        {/* Desktop Navigation (Left aligned, exactly as original site without logo) */}
+    <header className="fixed top-0 left-0 right-0 z-50 w-full glass-nav transition-all">
+      <div className="max-w-6xl mx-auto px-6 h-[74px] flex items-center justify-between w-full">
+        {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-7" aria-label="Navegação principal">
           {navLinks.map((link) => (
             <Link
@@ -78,7 +78,7 @@ export default function Header() {
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
         <div
-          className="lg:hidden bg-neutral-950/95 border-b border-neutral-800 px-5 py-4 space-y-3 animate-fade-in"
+          className="lg:hidden bg-neutral-950/95 border-b border-neutral-800 px-6 py-4 space-y-3 animate-fade-in"
         >
           {navLinks.map((link) => (
             <Link

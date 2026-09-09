@@ -58,7 +58,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   const posts = await getPostsByCategory(slug);
 
   return (
-    <div className="max-w-[1140px] mx-auto px-4 sm:px-6 py-12">
+    <div className="max-w-6xl mx-auto px-6 py-12">
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-xs text-neutral-400 mb-6 font-sora" aria-label="Trilha de navegação">
         <Link href="/" className="hover:text-[#66AFFF] transition-colors">
